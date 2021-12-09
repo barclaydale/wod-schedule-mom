@@ -1,9 +1,7 @@
 *, div {
-    border-color: red;
-    border-radius: 1px;
+    border: 1px solid red;
 }
 
 .row {
-    border-color: red;
-    border-radius: 1px;
+    border: 1px solid red;
 }
