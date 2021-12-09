@@ -1,3 +1,7 @@
-$('#accordion .card').on('click', function () {
-    $('#accordion .collapse').collapse('toggle');
-});
+function expand() {
+    $('.collapse').collapse('show');
+}
+
+function collapse() {
+    $('.collapse').collapse('hide');
+}
