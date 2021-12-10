@@ -7,218 +7,102 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <div class="row navigation">
+            <ul class="nav">
+                <li class="nav-item" id="navFirstLink">
+                    <a class="nav-link" href="#">Alpha</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Beta</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Gamma</a>
+                </li>
+                <li class="nav-item" id="navFinalLink">
+                    <a class="nav-link" href="#">Delta</a>
+                </li>
+                <button class="button" type="button" onclick="expand()">Expand WODs</button>
+                <button class="button" type="button" onclick="collapse()">Collapse WODs</button>
+              </ul>
+        </div>
         <div class="row">
-            <div class="col-2" id="leftsidebar">
-                <div class="row">
-                    <h4>Video Library</h4>
-                </div>
-                <div class="row">
-                    <a href="https://www.youtube.com/watch?v=VIZX2Ru9qU8&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=36" target="_blank">Abmat Sit Up</a>
-                </div>
-                <div class="row">
-                    <a href="https://www.youtube.com/watch?v=rMvwVtlqjTE&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=3" target="_blank">Air Squat</a>
-                </div>
-                <div class="row">
-                    <a href="https://www.youtube.com/watch?v=QmZAiBqPvZw&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=21" target="_blank">Back Squat</a>
-                </div>
-                <div class="row">
-                    <a href="https://www.youtube.com/watch?v=-JcD5SOqW50" target="_blank">Bear Crawl</a>
-                </div>
-                <div class="row">
-                    <a href="https://www.youtube.com/watch?v=SCVCLChPQFY&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=25" target="_blank">Bench Press</a>
-                </div>
-                <div class="row">
-                    <a href="https://www.youtube.com/watch?v=NBY9-kTuHEk&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=43" target="_blank">Box Jump</a>
-                </div>
-                <div class="row">
-                    <a href="https://www.youtube.com/watch?v=5qjqDHOUh-A&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=58" target="_blank">Box Step Up</a>
-                </div>
-                <div class="row">
-                    <a href="https://www.youtube.com/watch?v=auBLPXO8Fww&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=35" target="_blank">Burpee</a>
-                </div>
-                <div class="row">
-                    <a href="https://www.youtube.com/watch?v=GLktGkmcvWE&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=62" target="_blank">Burpee Box Jump Over</a>
-                </div>
-                <div class="row">
-                    <a href="https://www.youtube.com/watch?v=Y2lGDh9wJs0" target="_blank">Chair Dips</a>
-                </div>
-                <div class="row">
-                    <a href="https://www.youtube.com/watch?v=Ty14ogq_Vok&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=26" target="_blank">Clean</a>
-                </div>
-                <div class="row">
-                    <a href="https://www.youtube.com/watch?v=PjY1rH4_MOA&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=64" target="_blank">Clean and Jerk</a>
-                </div>
-                <div class="row">
-                    <a href="https://www.youtube.com/watch?v=1ZXobu7JvvE&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4" target="_blank">Deadlift</a>
-                </div>
-                <div class="row">
-                    <a href="https://www.youtube.com/watch?v=82jNjDS19lg" target="_blank">Double Under</a>
-                </div>
-                <div class="row">
-                    <a href="https://www.youtube.com/watch?v=SYxObzJ3gn0&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=65" target="_blank">Dumbbell Clean</a>
-                </div>
-                <div class="row">
-                    <a href="https://www.youtube.com/watch?v=8r44xv_Aqbw&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=45" target="_blank">Dumbbell Hang Clean</a>
-                </div>
-                <div class="row">
-                    <a href="https://www.youtube.com/watch?v=azumEfnk-GI&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=34" target="_blank">Dumbbell Overhead Squat</a>
-                </div>
-                <div class="row">
-                    <a href="https://www.youtube.com/watch?v=viWI2rEt-HU&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=70" target="_blank">Dumbbell Power Clean</a>
-                </div>
-                <div class="row">
-                    <a href="https://www.youtube.com/watch?v=3mlhF3dptAo&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=79" target="_blank">Dumbbell Power Snatch</a>
-                </div>
-                <div class="row">
-                    <a href="https://www.youtube.com/watch?v=rnN3pYswScE&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=55" target="_blank">Dumbbell Push Jerk</a>
-                </div>
-                <div class="row">
-                    <a href="https://www.youtube.com/watch?v=4tCaD42ghlc&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=74" target="_blank">Dumbbell Push Press</a>
-                </div>
-                <div class="row">
-                    <a href="https://www.youtube.com/watch?v=t7VDDNKBNx8" target="_blank">Dumbbell Row</a>
-                </div>
-                <div class="row">
-                    <a href="https://www.youtube.com/watch?v=u3wKkZjE8QM&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=46" target="_blank">Dumbbell Thruster</a>
-                </div>
-                <div class="row">
-                    <a href="https://www.youtube.com/watch?v=p5MNNosenJc" target="_blank">Farmers Carry</a>
-                </div>
-                <div class="row">
-                    <a href="https://www.youtube.com/watch?v=6G-fNatzuSk" target="_blank">Floor Press</a>
-                </div>
-                <div class="row">
-                    <a href="https://www.youtube.com/watch?v=uYumuL_G_V0&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=9" target="_blank">Front Squat</a>
-                </div>
-                <div class="row">
-                    <a href="https://www.mayhemnation.tv/movement-library/videos/tasia-dbgobletsquat" target="_blank">Goblet Squat</a>
-                </div>
-                <div class="row">
-                    <a href="https://www.youtube.com/watch?v=0aP3tgKZcHQ&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=44" target="_blank">Hang Power Clean</a>
-                </div>
-                <div class="row">
-                    <a href="https://www.youtube.com/watch?v=-mLzQdVAwlw&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=47" target="_blank">Hang Power Snatch</a>
-                </div>
-                <div class="row">
-                    <a href="https://www.youtube.com/watch?v=SfkuOb_1GK8" target="_blank">Hollow Rock</a>
-                </div>
-                <div class="row">
-                    <a href="https://www.youtube.com/watch?v=Pm-b2XFeABA&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=49" target="_blank">Kettlebell Snatch</a>
-                </div>
-                <div class="row">
-                    <a href="https://www.youtube.com/watch?v=mKDIuUbH94Q&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=51" target="_blank">Kettlebell Swing</a>
-                </div>
-                <div class="row">
-                    <a href="https://www.youtube.com/watch?v=KVGhkHSrDJo&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=15" target="_blank">Med Ball Clean</a>
-                </div>
-                <div class="row">
-                    <a href="https://www.youtube.com/watch?v=K7CctePUCYA" target="_blank">Muscle Clean</a>
-                </div>
-                <div class="row">
-                    <a href="https://www.youtube.com/watch?v=bJYzOo1cNqY&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=73" target="_blank">Muscle Snatch</a>
-                </div>
-                <div class="row">
-                    <a href="https://www.youtube.com/watch?v=TL8SMp7RdXQ&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=33" target="_blank">Power Snatch</a>
-                </div>
-                <div class="row">
-                    <a href="https://www.youtube.com/watch?v=iaBVSJm78ko&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=14" target="_blank">Push Press</a>
-                </div>
-                <div class="row">
-                    <a href="https://www.youtube.com/watch?v=VrHNJXoSyXw" target="_blank">Push Jerk</a>
-                </div>
-                <div class="row">
-                    <a href="https://www.youtube.com/watch?v=0pkjOk0EiAk&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=11" target="_blank">Push Up</a>
-                </div>
-                <div class="row">
-                    <a href="https://www.youtube.com/watch?v=sEAOZc77wk8&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=28" target="_blank">Ring Row</a>
-                </div>
-                <div class="row">
-                    <a href="https://www.youtube.com/watch?v=fxfhQMbATCw&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=16" target="_blank">Rowing</a>
-                </div>
-                <div class="row">
-                    <a href="https://www.youtube.com/watch?v=5yWaNOvgFCM&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=4" target="_blank">Shoulder Press</a>
-                </div>
-                <div class="row">
-                    <a href="https://www.youtube.com/watch?v=k9W6g9LvXDI&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=27" target="_blank">Slam Ball</a>
-                </div>
-                <div class="row">
-                    <a href="https://www.youtube.com/watch?v=GhxhiehJcQY&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=32" target="_blank">Snatch</a>
-                </div>
-                <div class="row">
-                    <a href="https://www.youtube.com/watch?v=GUDkOtraHHY&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=50" target="_blank">Split Jerk</a>
-                </div>
-                <div class="row">
-                    <a href="https://www.youtube.com/watch?v=gh55vVlwlQg&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=10" target="_blank">Sumo Deadlift High Pull</a>
-                </div>
-                <div class="row">
-                    <a href="https://www.youtube.com/watch?v=L219ltL15zk&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=18" target="_blank">Thruster</a>
-                </div>
-                <div class="row">
-                    <a href="https://www.youtube.com/watch?v=saYKvqSscuY&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=19" target="_blank">Turkish Get Up</a>
-                </div>
-                <div class="row">
-                    <a href="https://www.youtube.com/watch?v=DlhojghkaQ0&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=24" target="_blank">Walking Lunge</a>
-                </div>
-                <div class="row">
-                    <a href="https://www.youtube.com/watch?v=EqjGKsiIMCE" target="_blank">Wall Ball</a>
-                </div>
-                <div class="row">
-                    <a href="https://www.youtube.com/watch?v=NK_OcHEm8yM&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=48" target="_blank">Wall Walk</a>
-                </div>
-                
-                <!--<div class="row">
-                    <a href="https://www.youtube.com/watch?v=Ixkmtp_ZFD8" target="_blank">Running Modifications</a>
-                </div>
-                <div class="row">
-                    <a href="https://www.youtube.com/watch?v=pnf73VvI5dY" target="_blank">Deadlift Setup Position</a>
-                </div>
-                <div class="row">
-                    <a href="https://www.youtube.com/watch?v=TlneBvU4XFY&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=52" target="_blank">Med Ball Progression</a>
-                </div>
-                <div class="row">
-                    <a href="https://www.youtube.com/watch?v=4Kg-Y9u-rkU" target="_blank">Deadlift Bar Path</a>
-                </div>
-                <div class="row">
-                    <a href="https://www.youtube.com/watch?v=m8BuWf5UsHE" target="_blank">Presses Bar Path</a>
-                </div>
-                <div class="row">
-                    <a href="https://www.youtube.com/watch?v=DfhVMMuFJKQ" target="_blank">Elbows in Front Rack</a>
-                </div>
-                <div class="row">
-                    <a href="https://www.youtube.com/watch?v=Gn0_1HAkEfE&list=PLNmWOCEX1SUYEV22aBa94WB2Z8Xi2eYGJ&index=58" target="_blank">Banded 7s</a>
-                </div>
-                <div class="row">
-                    <a href="https://www.youtube.com/watch?v=UKPD_olps0s&list=PLvAVwtyBkTrSqXaJBa_DKeBQPMimB-lNT&index=13" target="_blank">Burgener Warm Up Clean</a>
-                </div>
-                <div class="row">
-                    <a href="https://www.youtube.com/watch?v=1s_CrJgo3_U&list=PLvAVwtyBkTrSqXaJBa_DKeBQPMimB-lNT&index=15" target="_blank">Burgener Warm Up Snatch</a>
-                </div>
-                <div class="row">
-                    <a href="https://www.youtube.com/watch?v=ub0HX7JMQJY&list=PLvAVwtyBkTrSqXaJBa_DKeBQPMimB-lNT&index=14" target="_blank">Skill Transfer Exercises Snatch</a>
-                </div>
-                <div class="row">
-                    <a href="https://www.youtube.com/watch?v=h6qSHqh3XCg&list=PLvAVwtyBkTrSqXaJBa_DKeBQPMimB-lNT&index=8" target="_blank">Skill Transfer Exercises Clean</a>
-                </div> -->
-
-                <div class="row">
-                    <a href="" target="_blank"></a>
-                </div>
- 
-                <div class="row">
-                    <button type="button" onclick="expand()">Expand All</button>
-                    <button type="button" onclick="collapse()">Collapse All</button>
-                </div>
-            </div>
-            <div class="col-8">
+            <div class="col-12 main">
                 <div id="accordian">
 
+                    <!-- Week 0 Card-->
+                    <div class="card">
+                        <div class="card-header collapsed card-link" id="heading0" data-toggle="collapse" data-target="#week0">
+                            <h5 class="mb-0">
+                                Week 0
+                            </h5>
+                        </div>
+                        <div id="week0" class="collapse" aria-labelledby="heading0">
+                            <div class="card-body">
+                                <div class="row">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week0wod1" aria-expanded="false" aria-controls="week0wod1">
+                                            Day 1
+                                        </button>
+                                    </h5>
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week0wod2" aria-expanded="false" aria-controls="week0wod2">
+                                            Day 2
+                                        </button>
+                                    </h5>
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week0wod3" aria-expanded="false" aria-controls="week0wod3">
+                                            Day 3
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div class="collapse" id="week0wod1">
+                                    <div class="card card-body">
+                                        <h3>Shake It Off</h3>
+                                        <h5>Mobility</h5>
+                                        <div class="indent">
+                                            <p>This will be Mobility</p>
+                                        </div>
+                                        <h5>Warm Up</h5>
+                                        <div class="indent">
+                                            <p>This will be warm up</p>
+                                        </div>
+                                        <h5>Dry Run</h5>
+                                        <div class="indent">
+                                            <p>This will be Dry Run</p>
+                                        </div>
+                                        <h6>WOD</h6>
+                                        <div class="indent">
+                                            <p>This will be the wod</p>
+                                        </div>
+                                        <h6>Accessory</h6>
+                                        <div class="indent">
+                                            <p>This will be accessory</p>
+                                        </div>
+                                        <h6>Cool Down</h6>
+                                        <div class="indent">
+                                            <p>This will be cool down</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="collapse" id="week0wod2">
+                                    <div class="card card-body">
+                                        This is WOD 2
+                                    </div>
+                                </div>
+                                <div class="collapse" id="week0wod3">
+                                    <div class="card card-body">
+                                        This is WOD 3
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <!-- Week 1 Card-->
                     <div class="card">
-                        <div class="card-header" id="heading1">
+                        <div class="card-header collapsed card-link" id="heading1" data-toggle="collapse" data-target="#week1">
                             <h5 class="mb-0">
-                                <button class="btn btn-link" data-toggle="collapse" data-target="#week1" aria-expanded="true" aria-controls="week1">
-                                    Week 1
-                                </button>
+                                Week 1
                             </h5>
                         </div>
                         <div id="week1" class="collapse" aria-labelledby="heading1">
@@ -305,11 +189,9 @@
 
                     <!-- Week 2 card-->
                     <div class="card">
-                        <div class="card-header" id="heading2">
+                        <div class="card-header collapsed card-link" id="heading2" data-toggle="collapse" data-target="#week2">
                             <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week2" aria-expanded="false" aria-controls="week2">
-                                    Week 2
-                                </button>
+                                Week 2
                             </h5>
                         </div>
                         <div id="week2" class="collapse" aria-labelledby="heading2">
@@ -372,11 +254,9 @@
 
                     <!-- Week 3 card-->
                     <div class="card">
-                        <div class="card-header" id="heading3">
+                        <div class="card-header collapsed card-link" id="heading3" data-toggle="collapse" data-target="#week3">
                             <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week3" aria-expanded="false" aria-controls="week3">
-                                    Week 3
-                                </button>
+                                Week 3
                             </h5>
                         </div>
                         <div id="week3" class="collapse" aria-labelledby="heading3">
@@ -439,11 +319,9 @@
 
                     <!-- Week 4 card-->
                     <div class="card">
-                        <div class="card-header" id="heading4">
+                        <div class="card-header collapsed card-link" id="heading4" data-toggle="collapse" data-target="#week4">
                             <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week4" aria-expanded="false" aria-controls="week4">
-                                    Week 4
-                                </button>
+                                Week 4
                             </h5>
                         </div>
                         <div id="week4" class="collapse" aria-labelledby="heading4">
@@ -516,11 +394,9 @@
 
                     <!-- Week 5 card-->
                     <div class="card">
-                        <div class="card-header" id="heading5">
+                        <div class="card-header collapsed card-link" id="heading5" data-toggle="collapse" data-target="#week5">
                             <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week5" aria-expanded="false" aria-controls="week5">
-                                    Week 5
-                                </button>
+                                Week 5
                             </h5>
                         </div>
                         <div id="week5" class="collapse" aria-labelledby="heading5">
@@ -583,11 +459,9 @@
 
                     <!-- Week 6 card-->
                     <div class="card">
-                        <div class="card-header" id="heading6">
+                        <div class="card-header collapsed card-link" id="heading6" data-toggle="collapse" data-target="#week6">
                             <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week6" aria-expanded="false" aria-controls="week6">
-                                    Week 6
-                                </button>
+                                Week 6
                             </h5>
                         </div>
                         <div id="week6" class="collapse" aria-labelledby="heading6">
@@ -650,11 +524,9 @@
 
                     <!-- Week 7 card-->
                     <div class="card">
-                        <div class="card-header" id="heading7">
+                        <div class="card-header collapsed card-link" id="heading7" data-toggle="collapse" data-target="#week7">
                             <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week7" aria-expanded="false" aria-controls="week7">
-                                    Week 7
-                                </button>
+                                Week 7
                             </h5>
                         </div>
                         <div id="week7" class="collapse" aria-labelledby="heading7">
@@ -717,11 +589,9 @@
 
                     <!-- Week 8 card-->
                     <div class="card">
-                        <div class="card-header" id="heading8">
+                        <div class="card-header collapsed card-link" id="heading8" data-toggle="collapse" data-target="#week8">
                             <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week8" aria-expanded="false" aria-controls="week8">
-                                    Week 8
-                                </button>
+                                Week 8
                             </h5>
                         </div>
                         <div id="week8" class="collapse" aria-labelledby="heading8">
@@ -784,11 +654,9 @@
 
                     <!-- Week 9 card-->
                     <div class="card">
-                        <div class="card-header" id="heading9">
+                        <div class="card-header collapsed card-link" id="heading9" data-toggle="collapse" data-target="#week9">
                             <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week9" aria-expanded="false" aria-controls="week9">
-                                    Week 9
-                                </button>
+                                Week 9
                             </h5>
                         </div>
                         <div id="week9" class="collapse" aria-labelledby="heading9">
@@ -851,11 +719,9 @@
 
                     <!-- Week 10 card-->
                     <div class="card">
-                        <div class="card-header" id="heading10">
+                        <div class="card-header collapsed card-link" id="heading10" data-toggle="collapse" data-target="#week10">
                             <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week10" aria-expanded="false" aria-controls="week10">
-                                    Week 10
-                                </button>
+                                Week 10
                             </h5>
                         </div>
                         <div id="week10" class="collapse" aria-labelledby="heading10">
@@ -918,11 +784,9 @@
 
                     <!-- Week 11 card-->
                     <div class="card">
-                        <div class="card-header" id="heading11">
+                        <div class="card-header collapsed card-link" id="heading11" data-toggle="collapse" data-target="#week11">
                             <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week11" aria-expanded="false" aria-controls="week11">
-                                    Week 11
-                                </button>
+                                Week 11
                             </h5>
                         </div>
                         <div id="week11" class="collapse" aria-labelledby="heading11">
@@ -985,11 +849,9 @@
 
                     <!-- Week 12 card-->
                     <div class="card">
-                        <div class="card-header" id="heading12">
+                        <div class="card-header collapsed card-link" id="heading12" data-toggle="collapse" data-target="#week12">
                             <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week12" aria-expanded="false" aria-controls="week12">
-                                    Week 12
-                                </button>
+                                Week 12
                             </h5>
                         </div>
                         <div id="week12" class="collapse" aria-labelledby="heading12">
@@ -1050,23 +912,229 @@
                         </div>
                     </div>
 
-
-
-
-
                 </div>
             </div>
-            <div class="col-2">
-                <div class="row">
-                    Recent Results
-                </div>
-                <div class="row">
-                    PR's
-                </div>
-                <div class="row">
-                    10 general skills
+        </div>
+        <div class="row videos">
+            <div class="col-6">
+                <div class="movement">
+                    <div class="row" id="movementHeader">
+                        <h4><b>Movement Library</b></h4>
+                    </div>
+                    <div class="movementLinks">
+                        <div class="row">
+                            <a href="https://www.youtube.com/watch?v=VIZX2Ru9qU8&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=36" target="_blank">Abmat Sit Up</a>
+                        </div>
+                        <div class="row">
+                            <a href="https://www.youtube.com/watch?v=rMvwVtlqjTE&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=3" target="_blank">Air Squat</a>
+                        </div>
+                        <div class="row">
+                            <a href="https://www.youtube.com/watch?v=QmZAiBqPvZw&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=21" target="_blank">Back Squat</a>
+                        </div>
+                        <div class="row">
+                            <a href="https://www.youtube.com/watch?v=-JcD5SOqW50" target="_blank">Bear Crawl</a>
+                        </div>
+                        <div class="row">
+                            <a href="https://www.youtube.com/watch?v=SCVCLChPQFY&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=25" target="_blank">Bench Press</a>
+                        </div>
+                        <div class="row">
+                            <a href="https://www.youtube.com/watch?v=NBY9-kTuHEk&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=43" target="_blank">Box Jump</a>
+                        </div>
+                        <div class="row">
+                            <a href="https://www.youtube.com/watch?v=5qjqDHOUh-A&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=58" target="_blank">Box Step Up</a>
+                        </div>
+                        <div class="row">
+                            <a href="https://www.youtube.com/watch?v=auBLPXO8Fww&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=35" target="_blank">Burpee</a>
+                        </div>
+                        <div class="row">
+                            <a href="https://www.youtube.com/watch?v=GLktGkmcvWE&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=62" target="_blank">Burpee Box Jump Over</a>
+                        </div>
+                        <div class="row">
+                            <a href="https://www.youtube.com/watch?v=Y2lGDh9wJs0" target="_blank">Chair Dips</a>
+                        </div>
+                        <div class="row">
+                            <a href="https://www.youtube.com/watch?v=Ty14ogq_Vok&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=26" target="_blank">Clean</a>
+                        </div>
+                        <div class="row">
+                            <a href="https://www.youtube.com/watch?v=PjY1rH4_MOA&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=64" target="_blank">Clean and Jerk</a>
+                        </div>
+                        <div class="row">
+                            <a href="https://www.youtube.com/watch?v=1ZXobu7JvvE&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4" target="_blank">Deadlift</a>
+                        </div>
+                        <div class="row">
+                            <a href="https://www.youtube.com/watch?v=82jNjDS19lg" target="_blank">Double Under</a>
+                        </div>
+                        <div class="row">
+                            <a href="https://www.youtube.com/watch?v=SYxObzJ3gn0&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=65" target="_blank">Dumbbell Clean</a>
+                        </div>
+                        <div class="row">
+                            <a href="https://www.youtube.com/watch?v=8r44xv_Aqbw&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=45" target="_blank">Dumbbell Hang Clean</a>
+                        </div>
+                        <div class="row">
+                            <a href="https://www.youtube.com/watch?v=azumEfnk-GI&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=34" target="_blank">Dumbbell Overhead Squat</a>
+                        </div>
+                        <div class="row">
+                            <a href="https://www.youtube.com/watch?v=viWI2rEt-HU&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=70" target="_blank">Dumbbell Power Clean</a>
+                        </div>
+                        <div class="row">
+                            <a href="https://www.youtube.com/watch?v=3mlhF3dptAo&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=79" target="_blank">Dumbbell Power Snatch</a>
+                        </div>
+                        <div class="row">
+                            <a href="https://www.youtube.com/watch?v=rnN3pYswScE&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=55" target="_blank">Dumbbell Push Jerk</a>
+                        </div>
+                        <div class="row">
+                            <a href="https://www.youtube.com/watch?v=4tCaD42ghlc&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=74" target="_blank">Dumbbell Push Press</a>
+                        </div>
+                        <div class="row">
+                            <a href="https://www.youtube.com/watch?v=t7VDDNKBNx8" target="_blank">Dumbbell Row</a>
+                        </div>
+                        <div class="row">
+                            <a href="https://www.youtube.com/watch?v=u3wKkZjE8QM&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=46" target="_blank">Dumbbell Thruster</a>
+                        </div>
+                        <div class="row">
+                            <a href="https://www.youtube.com/watch?v=p5MNNosenJc" target="_blank">Farmers Carry</a>
+                        </div>
+                        <div class="row">
+                            <a href="https://www.youtube.com/watch?v=6G-fNatzuSk" target="_blank">Floor Press</a>
+                        </div>
+                        <div class="row">
+                            <a href="https://www.youtube.com/watch?v=uYumuL_G_V0&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=9" target="_blank">Front Squat</a>
+                        </div>
+                        <div class="row">
+                            <a href="https://www.mayhemnation.tv/movement-library/videos/tasia-dbgobletsquat" target="_blank">Goblet Squat</a>
+                        </div>
+                        <div class="row">
+                            <a href="https://www.mayhemnation.tv/videos/rich-handreleasepushup" target="_blank">Hand Release Push Up</a>
+                        </div>
+                        <div class="row">
+                            <a href="https://www.youtube.com/watch?v=0aP3tgKZcHQ&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=44" target="_blank">Hang Power Clean</a>
+                        </div>
+                        <div class="row">
+                            <a href="https://www.youtube.com/watch?v=-mLzQdVAwlw&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=47" target="_blank">Hang Power Snatch</a>
+                        </div>
+                        <div class="row">
+                            <a href="https://www.youtube.com/watch?v=SfkuOb_1GK8" target="_blank">Hollow Rock</a>
+                        </div>
+                        <div class="row">
+                            <a href="https://www.youtube.com/watch?v=Pm-b2XFeABA&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=49" target="_blank">Kettlebell Snatch</a>
+                        </div>
+                        <div class="row">
+                            <a href="https://www.youtube.com/watch?v=mKDIuUbH94Q&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=51" target="_blank">Kettlebell Swing</a>
+                        </div>
+                        <div class="row">
+                            <a href="https://www.youtube.com/watch?v=KVGhkHSrDJo&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=15" target="_blank">Med Ball Clean</a>
+                        </div>
+                        <div class="row">
+                            <a href="https://www.youtube.com/watch?v=K7CctePUCYA" target="_blank">Muscle Clean</a>
+                        </div>
+                        <div class="row">
+                            <a href="https://www.youtube.com/watch?v=bJYzOo1cNqY&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=73" target="_blank">Muscle Snatch</a>
+                        </div>
+                        <div class="row">
+                            <a href="https://www.youtube.com/watch?v=TL8SMp7RdXQ&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=33" target="_blank">Power Snatch</a>
+                        </div>
+                        <div class="row">
+                            <a href="https://www.youtube.com/watch?v=iaBVSJm78ko&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=14" target="_blank">Push Press</a>
+                        </div>
+                        <div class="row">
+                            <a href="https://www.youtube.com/watch?v=VrHNJXoSyXw" target="_blank">Push Jerk</a>
+                        </div>
+                        <div class="row">
+                            <a href="https://www.youtube.com/watch?v=0pkjOk0EiAk&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=11" target="_blank">Push Up</a>
+                        </div>
+                        <div class="row">
+                            <a href="https://www.youtube.com/watch?v=sEAOZc77wk8&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=28" target="_blank">Ring Row</a>
+                        </div>
+                        <div class="row">
+                            <a href="https://www.youtube.com/watch?v=fxfhQMbATCw&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=16" target="_blank">Rowing</a>
+                        </div>
+                        <div class="row">
+                            <a href="https://www.youtube.com/watch?v=5yWaNOvgFCM&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=4" target="_blank">Shoulder Press</a>
+                        </div>
+                        <div class="row">
+                            <a href="https://www.youtube.com/watch?v=k9W6g9LvXDI&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=27" target="_blank">Slam Ball</a>
+                        </div>
+                        <div class="row">
+                            <a href="https://www.youtube.com/watch?v=GhxhiehJcQY&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=32" target="_blank">Snatch</a>
+                        </div>
+                        <div class="row">
+                            <a href="https://www.youtube.com/watch?v=GUDkOtraHHY&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=50" target="_blank">Split Jerk</a>
+                        </div>
+                        <div class="row">
+                            <a href="https://www.youtube.com/watch?v=gh55vVlwlQg&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=10" target="_blank">Sumo Deadlift High Pull</a>
+                        </div>
+                        <div class="row">
+                            <a href="https://www.youtube.com/watch?v=L219ltL15zk&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=18" target="_blank">Thruster</a>
+                        </div>
+                        <div class="row">
+                            <a href="https://www.youtube.com/watch?v=saYKvqSscuY&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=19" target="_blank">Turkish Get Up</a>
+                        </div>
+                        <div class="row">
+                            <a href="https://www.youtube.com/watch?v=DlhojghkaQ0&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=24" target="_blank">Walking Lunge</a>
+                        </div>
+                        <div class="row">
+                            <a href="https://www.youtube.com/watch?v=EqjGKsiIMCE" target="_blank">Wall Ball</a>
+                        </div>
+                        <div class="row">
+                            <a href="https://www.youtube.com/watch?v=NK_OcHEm8yM&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=48" target="_blank">Wall Walk</a>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <div class="col-6">
+                <div class="technique">
+                    <div class="row" id="techniqueHeader">
+                        <h4><b>Technique Library</b></h4>
+                    </div>
+                    <div class="techniqueLinks">
+                        <div class="row">
+                            <a href="https://www.youtube.com/watch?v=Ixkmtp_ZFD8" target="_blank">Running Modifications</a>
+                        </div>
+                        <div class="row">
+                            <a href="https://www.youtube.com/watch?v=pnf73VvI5dY" target="_blank">Deadlift Setup Position</a>
+                        </div>
+                        <div class="row">
+                            <a href="https://www.youtube.com/watch?v=TlneBvU4XFY&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=52" target="_blank">Med Ball Progression</a>
+                        </div>
+                        <div class="row">
+                            <a href="https://www.youtube.com/watch?v=4Kg-Y9u-rkU" target="_blank">Deadlift Bar Path</a>
+                        </div>
+                        <div class="row">
+                            <a href="https://www.youtube.com/watch?v=m8BuWf5UsHE" target="_blank">Presses Bar Path</a>
+                        </div>
+                        <div class="row">
+                            <a href="https://www.youtube.com/watch?v=DfhVMMuFJKQ" target="_blank">Elbows in Front Rack</a>
+                        </div>
+                        <div class="row">
+                            <a href="https://www.youtube.com/watch?v=Gn0_1HAkEfE&list=PLNmWOCEX1SUYEV22aBa94WB2Z8Xi2eYGJ&index=58" target="_blank">Banded 7s</a>
+                        </div>
+                        <div class="row">
+                            <a href="https://www.youtube.com/watch?v=UKPD_olps0s&list=PLvAVwtyBkTrSqXaJBa_DKeBQPMimB-lNT&index=13" target="_blank">Burgener Warm Up Clean</a>
+                        </div>
+                        <div class="row">
+                            <a href="https://www.youtube.com/watch?v=1s_CrJgo3_U&list=PLvAVwtyBkTrSqXaJBa_DKeBQPMimB-lNT&index=15" target="_blank">Burgener Warm Up Snatch</a>
+                        </div>
+                        <div class="row">
+                            <a href="https://www.youtube.com/watch?v=ub0HX7JMQJY&list=PLvAVwtyBkTrSqXaJBa_DKeBQPMimB-lNT&index=14" target="_blank">Skill Transfer Exercises Snatch</a>
+                        </div>
+                        <div class="row">
+                            <a href="https://www.youtube.com/watch?v=h6qSHqh3XCg&list=PLvAVwtyBkTrSqXaJBa_DKeBQPMimB-lNT&index=8" target="_blank">Skill Transfer Exercises Clean</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <a href="" target="_blank"></a>
+        </div>
+        <div class="row videos">
+            Recent Results
+        </div>
+        <div class="row videos">
+            PR's
+        </div>
+        <div class="row videos">
+            10 general skills
         </div>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
