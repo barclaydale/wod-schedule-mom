@@ -1,7 +1,12 @@
-*, div {
+/*, div {
     border: 1px solid red;
+} */
+
+.indent {
+    text-indent: 50px;
 }
 
-.row {
-    border: 1px solid red;
+#leftsidebar {
+    left: 25px;
+    height: 935px;
 }
