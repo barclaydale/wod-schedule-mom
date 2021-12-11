@@ -1,6 +1,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: rgb(190, 183, 164);
+    font-size: 20px;
 }
 
 *, div {
@@ -8,13 +9,13 @@ body {
 }
 
 a {
-    color: rgb(255, 127, 17);
+    color: rgb(255, 157, 71);
 }
 .navigation {
     position: fixed;
     left: 0px;
     height: 60px;
-    background-color: rgb(255, 127, 17);
+    background-color: rgb(255, 157, 71);
     top: 0px;
     padding-left: 0px;
     align-items: center;
@@ -43,43 +44,47 @@ a {
     text-indent: 50px;
 }
 
-.movement, .technique {
+.movement, .technique, .mobility {
     border-radius: 7px;
     background-color: rgb(255, 255, 252);
     margin-top: 10px;
-    color:rgb(0, 0, 0)
+    color:rgb(41, 41, 41)
 }
 
-#movementHeader, #techniqueHeader {
+#movementHeader, #techniqueHeader, #mobilityHeader {
     margin-left: 0;
     height: 100%;
     width: 100%;
     justify-content: center;
     margin-top: 5px;
-    border-bottom: 1px solid rgb(65, 65, 65);
+    border-bottom: 1px solid rgb(41, 41, 41);
 }
 
-#movementHeader h4, #techniqueHeader h4 {
+#movementHeader h4, #techniqueHeader h4, #mobilityHeader h4 {
     margin: auto;
 }
   
-.movementLinks, .techniqueLinks {
+.movementLinks, .techniqueLinks, .mobilityLinks {
     overflow: scroll;
     height: 380px;
     width: 100%;
 }
 
-.movementLinks .row, .techniqueLinks .row {
+.movementLinks .row, .techniqueLinks .row, .mobilityLinks .row {
     margin-left: 0px;
     margin-bottom: 0px;
-    padding-left: 5px;
     border-top: 1px solid rgba(131, 131, 131, 0.692);
-    font-size: 18px;
+    font-size: 20px;
+    justify-content: center;
+    width: 100%;
 }
 
 .main {
     margin-top: 70px;
+    margin-right: auto;
+    margin-left: auto;
 }
+
 .button {
     margin-right: 1%;
     border: none;
@@ -93,24 +98,34 @@ a {
     align-items: center;
     cursor: pointer;
     height: 45px;
-    width: 140px;
+    width: 170px;
     opacity: 1;
-    color: rgb(255, 127, 17);
+    color: rgb(255, 157, 71);
 }
 
 .card {
     margin: 0 auto;
     justify-content: center;
-    width: 90%;
+    width: 100%;
     text-align: center;
     border-radius: 7px;
     margin-bottom: 3px;
     background-color: rgb(255, 255, 252);
 }
 
+#prHeader, #proficiencyHeader, #videosHeader {
+    width: 80%;
+}
+
 .section {
     margin: 0 auto;
     padding-top: 70px;
+    justify-content: center;
+    border: 1px solid red;
+}
+
+.table {
+    margin: 0 auto;
     justify-content: center;
 }
 
@@ -127,28 +142,97 @@ table {
 
 td, th {
     border: 1px solid #dddddd;
-    text-align: left;
+    text-align: center;
     padding: 8px;
     width: 200px;
 }
 
 table {
     border-collapse: collapse;
-  }
-  table td, table th {
+    color: rgb(41, 41, 41);
+}
+
+table td, table th {
     border: 1px solid #dddddd;
-  }
-  table tr:first-child th {
+}
+
+table tr:first-child th {
     border-top: 0;
-  }
-  table tr:last-child td {
+    border-bottom: 3px solid #dddddd;
+}
+
+table tr:last-child td {
     border-bottom: 0;
-  }
-  table tr td:first-child,
-  table tr th:first-child {
+}
+
+table tr td:first-child, table tr th:first-child {
     border-left: 0;
-  }
-  table tr td:last-child,
-  table tr th:last-child {
+    border-right: 3px solid #dddddd;
+}
+table tr td:last-child, table tr th:last-child {
     border-right: 0;
-  }
+}
+
+.progress {
+    height: 30px;
+    width: 100%;
+    color: rgb(255, 157, 71);
+    box-shadow: 2px 2px 15px grey;
+}
+
+.progress-bar {
+    background-color: rgb(255, 157, 71);
+}
+
+#bars {
+    width: 100%;
+    justify-content: center;
+}
+
+#bars .row{
+    padding-top: 3px;
+    padding-bottom: 3px;
+    width: 100%;
+    height: auto;
+}
+
+.entry {
+    width: 20%;
+}
+
+.col-9 {
+    height: fit-content;
+    width: 100%;
+}
+
+.col-2 p {
+    text-align: right;
+    margin: 0;
+    height: auto;
+    width: 100%;
+}
+
+.entry > * {
+    border: 1px solid red;
+}
+
+.form-group {
+    width: 200px;
+}
+
+#prHeader, #proficiencyHeader {
+    width: 80%;
+}
+
+.sectionHeader {
+    margin: 0 auto;
+    justify-content: center;
+    width: 100%;
+    font-size: 55px;
+    color: rgb(41, 41, 41);
+    padding-bottom: 5px;
+}
+
+.row {
+    border: 1px solid red;
+}
