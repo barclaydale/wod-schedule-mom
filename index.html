@@ -10,7 +10,7 @@
         <div class="row navigation">
             <ul class="nav">
                 <li class="nav-item" id="navFirstLink">
-                    <a class="nav-link" href="#"><b>Home</b></a>
+                    <a class="nav-link" href="#schedule"><b>Schedule</b></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#recent"><b>Recent Results</b></a>
@@ -28,1072 +28,882 @@
                 <button class="button" type="button" onclick="collapse()">Collapse WODs</button>
               </ul>
         </div>
-        <div class="row">
-            <div class="col-10 main">
-                <div id="accordian">
-
-                    <!-- Week 0 Card-->
-                    <div class="card">
-                        <div class="card-header collapsed card-link" id="heading0" data-toggle="collapse" data-target="#week0">
-                            <h5 class="mb-0">
-                                Week 0
-                            </h5>
-                        </div>
-                        <div id="week0" class="collapse" aria-labelledby="heading0">
-                            <div class="card-body">
-                                <div class="row">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week0wod1" aria-expanded="false" aria-controls="week0wod1">
-                                            Day 1
-                                        </button>
-                                    </h5>
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week0wod2" aria-expanded="false" aria-controls="week0wod2">
-                                            Day 2
-                                        </button>
-                                    </h5>
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week0wod3" aria-expanded="false" aria-controls="week0wod3">
-                                            Day 3
-                                        </button>
-                                    </h5>
-                                </div>
-                                <div class="collapse" id="week0wod1">
-                                    <div class="card card-body">
-                                        <h3>Shake It Off</h3>
-                                        <h5>Mobility</h5>
-                                        <div class="indent">
-                                            <p>This will be Mobility</p>
-                                        </div>
-                                        <h5>Warm Up</h5>
-                                        <div class="indent">
-                                            <p>This will be warm up</p>
-                                        </div>
-                                        <h5>Dry Run</h5>
-                                        <div class="indent">
-                                            <p>This will be Dry Run</p>
-                                        </div>
-                                        <h6>WOD</h6>
-                                        <div class="indent">
-                                            <p>This will be the wod</p>
-                                        </div>
-                                        <h6>Accessory</h6>
-                                        <div class="indent">
-                                            <p>This will be accessory</p>
-                                        </div>
-                                        <h6>Cool Down</h6>
-                                        <div class="indent">
-                                            <p>This will be cool down</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="collapse" id="week0wod2">
-                                    <div class="card card-body">
-                                        This is WOD 2
-                                    </div>
-                                </div>
-                                <div class="collapse" id="week0wod3">
-                                    <div class="card card-body">
-                                        This is WOD 3
-                                    </div>
-                                </div>
+        <div class="row section" id="schedule">
+            <div class="row" id="scheduleHeader">
+                <div class="sectionHeader">
+                    <p><b>Schedule</b></p>
+                </div>
+            </div>
+            <div class="row schedule">
+                <div class="col-8">
+                    <div id="accordian">
+    
+                        <!-- Week 0 Card-->
+                        <div class="card">
+                            <div class="card-header collapsed card-link" id="heading0" data-toggle="collapse" data-target="#week0">
+                                <h5 class="mb-0">
+                                    <b>Week 0</b>
+                                </h5>
                             </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Week 1 Card-->
-                    <div class="card">
-                        <div class="card-header collapsed card-link" id="heading1" data-toggle="collapse" data-target="#week1">
-                            <h5 class="mb-0">
-                                Week 1
-                            </h5>
-                        </div>
-                        <div id="week1" class="collapse" aria-labelledby="heading1">
-                            <div class="card-body">
-                                <div class="row">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week1wod1" aria-expanded="false" aria-controls="week1wod1">
-                                            Day 1
-                                        </button>
-                                    </h5>
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week1wod2" aria-expanded="false" aria-controls="week1wod2">
-                                            Day 2
-                                        </button>
-                                    </h5>
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week1wod3" aria-expanded="false" aria-controls="week1wod3">
-                                            Day 3
-                                        </button>
-                                    </h5>
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week1wod4" aria-expanded="false" aria-controls="week1wod4">
-                                            Day 4
-                                        </button>
-                                    </h5>
-                                </div>
-                                <div class="collapse" id="week1wod1">
-                                    <div class="card card-body">
-                                        <h3>Shake It Off</h3>
-                                        <h5>Mobility</h5>
-                                        <div class="indent">
-                                            <p>This will be Mobility</p>
+                            <div id="week0" class="collapse" aria-labelledby="heading0">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <h5 class="mb-0 col">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week0wod1" aria-expanded="false" aria-controls="week0wod1">
+                                                <p>Day 1</p>
+                                            </button>
+                                        </h5>
+                                        <h5 class="mb-0 col">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week0wod2" aria-expanded="false" aria-controls="week0wod2">
+                                                <p>Day 2</p>
+                                            </button>
+                                        </h5>
+                                        <h5 class="mb-0 col">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week0wod3" aria-expanded="false" aria-controls="week0wod3">
+                                                <p>Day 3</p>
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div class="collapse" id="week0wod1">
+                                        <div class="card card-body">
+                                            <h3>Shake It Off</h3>
+                                            <h5>Mobility</h5>
+                                            <div class="indent">
+                                                <p>This will be Mobility</p>
+                                            </div>
+                                            <h5>Warm Up</h5>
+                                            <div class="indent">
+                                                <p>This will be warm up</p>
+                                            </div>
+                                            <h5>Dry Run</h5>
+                                            <div class="indent">
+                                                <p>This will be Dry Run</p>
+                                            </div>
+                                            <h6>WOD</h6>
+                                            <div class="indent">
+                                                <p>This will be the wod</p>
+                                            </div>
+                                            <h6>Accessory</h6>
+                                            <div class="indent">
+                                                <p>This will be accessory</p>
+                                            </div>
+                                            <h6>Cool Down</h6>
+                                            <div class="indent">
+                                                <p>This will be cool down</p>
+                                            </div>
                                         </div>
-                                        <h5>Warm Up</h5>
-                                        <div class="indent">
-                                            <p>This will be warm up</p>
+                                    </div>
+                                    <div class="collapse" id="week0wod2">
+                                        <div class="card card-body">
+                                            This is WOD 2
                                         </div>
-                                        <h5>Dry Run</h5>
-                                        <div class="indent">
-                                            <p>This will be Dry Run</p>
-                                        </div>
-                                        <h6>WOD</h6>
-                                        <div class="indent">
-                                            <p>This will be the wod</p>
-                                        </div>
-                                        <h6>Accessory</h6>
-                                        <div class="indent">
-                                            <p>This will be accessory</p>
-                                        </div>
-                                        <h6>Cool Down</h6>
-                                        <div class="indent">
-                                            <p>This will be cool down</p>
+                                    </div>
+                                    <div class="collapse" id="week0wod3">
+                                        <div class="card card-body">
+                                            This is WOD 3
                                         </div>
                                     </div>
                                 </div>
-                                <div class="collapse" id="week1wod2">
-                                    <div class="card card-body">
-                                        This is WOD 2
+                            </div>
+                        </div>
+                        
+                        <!-- Week 1 Card-->
+                        <div class="card">
+                            <div class="card-header collapsed card-link" id="heading1" data-toggle="collapse" data-target="#week1">
+                                <h5 class="mb-0">
+                                    <b>Week 1</b>
+                                </h5>
+                            </div>
+                            <div id="week1" class="collapse" aria-labelledby="heading1">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <h5 class="mb-0 col">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week1wod1" aria-expanded="false" aria-controls="week1wod1">
+                                                <p>Day 1</p>
+                                            </button>
+                                        </h5>
+                                        <h5 class="mb-0 col">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week1wod2" aria-expanded="false" aria-controls="week1wod2">
+                                                <p>Day 2</p>
+                                            </button>
+                                        </h5>
+                                        <h5 class="mb-0 col">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week1wod3" aria-expanded="false" aria-controls="week1wod3">
+                                                <p>Day 3</p>
+                                            </button>
+                                        </h5>
+                                        <h5 class="mb-0 col">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week1wod4" aria-expanded="false" aria-controls="week1wod4">
+                                                <p>Day 4</p>
+                                            </button>
+                                        </h5>
                                     </div>
-                                </div>
-                                <div class="collapse" id="week1wod3">
-                                    <div class="card card-body">
-                                        This is WOD 3
+                                    <div class="collapse" id="week1wod1">
+                                        <div class="card card-body">
+                                            <h3>Shake It Off</h3>
+                                            <h5>Mobility</h5>
+                                            <div class="indent">
+                                                <p>This will be Mobility</p>
+                                            </div>
+                                            <h5>Warm Up</h5>
+                                            <div class="indent">
+                                                <p>This will be warm up</p>
+                                            </div>
+                                            <h5>Dry Run</h5>
+                                            <div class="indent">
+                                                <p>This will be Dry Run</p>
+                                            </div>
+                                            <h6>WOD</h6>
+                                            <div class="indent">
+                                                <p>This will be the wod</p>
+                                            </div>
+                                            <h6>Accessory</h6>
+                                            <div class="indent">
+                                                <p>This will be accessory</p>
+                                            </div>
+                                            <h6>Cool Down</h6>
+                                            <div class="indent">
+                                                <p>This will be cool down</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="collapse" id="week1wod4">
-                                    <div class="card card-body">
-                                        This is WOD 4
+                                    <div class="collapse" id="week1wod2">
+                                        <div class="card card-body">
+                                            This is WOD 2
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="collapse" id="week1wod5">
-                                    <div class="card card-body">
-                                        This is WOD 5
+                                    <div class="collapse" id="week1wod3">
+                                        <div class="card card-body">
+                                            This is WOD 3
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="collapse" id="week1wod6">
-                                    <div class="card card-body">
-                                        This is WOD 6
+                                    <div class="collapse" id="week1wod4">
+                                        <div class="card card-body">
+                                            This is WOD 4
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <!-- Week 2 card-->
-                    <div class="card">
-                        <div class="card-header collapsed card-link" id="heading2" data-toggle="collapse" data-target="#week2">
-                            <h5 class="mb-0">
-                                Week 2
-                            </h5>
-                        </div>
-                        <div id="week2" class="collapse" aria-labelledby="heading2">
-                            <div class="card-body">
-                                <div class="row">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week2wod1" aria-expanded="false" aria-controls="week2wod1">
-                                            Day 1
-                                        </button>
-                                    </h5>
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week2wod2" aria-expanded="false" aria-controls="week2wod2">
-                                            Day 2
-                                        </button>
-                                    </h5>
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week2wod3" aria-expanded="false" aria-controls="week2wod3">
-                                            Day 3
-                                        </button>
-                                    </h5>
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week2wod4" aria-expanded="false" aria-controls="week2wod4">
-                                            Day 4
-                                        </button>
-                                    </h5>
-                                </div>
-                                <div class="collapse" id="week2wod1">
-                                    <div class="card card-body">
-                                        This is WOD 1
+    
+                        <!-- Week 2 card-->
+                        <div class="card">
+                            <div class="card-header collapsed card-link" id="heading2" data-toggle="collapse" data-target="#week2">
+                                <h5 class="mb-0">
+                                    <b>Week 2</b>
+                                </h5>
+                            </div>
+                            <div id="week2" class="collapse" aria-labelledby="heading2">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <h5 class="mb-0 col">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week2wod1" aria-expanded="false" aria-controls="week2wod1">
+                                                <p>Day 1</p>
+                                            </button>
+                                        </h5>
+                                        <h5 class="mb-0 col">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week2wod2" aria-expanded="false" aria-controls="week2wod2">
+                                                <p>Day 2</p>
+                                            </button>
+                                        </h5>
+                                        <h5 class="mb-0 col">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week2wod3" aria-expanded="false" aria-controls="week2wod3">
+                                                <p>Day 3</p>
+                                            </button>
+                                        </h5>
+                                        <h5 class="mb-0 col">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week2wod4" aria-expanded="false" aria-controls="week2wod4">
+                                                <p>Day 4</p>
+                                            </button>
+                                        </h5>
                                     </div>
-                                </div>
-                                <div class="collapse" id="week2wod2">
-                                    <div class="card card-body">
-                                        This is WOD 2
+                                    <div class="collapse" id="week2wod1">
+                                        <div class="card card-body">
+                                            This is WOD 1
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="collapse" id="week2wod3">
-                                    <div class="card card-body">
-                                        This is WOD 3
+                                    <div class="collapse" id="week2wod2">
+                                        <div class="card card-body">
+                                            This is WOD 2
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="collapse" id="week2wod4">
-                                    <div class="card card-body">
-                                        This is WOD 4
+                                    <div class="collapse" id="week2wod3">
+                                        <div class="card card-body">
+                                            This is WOD 3
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="collapse" id="week2wod5">
-                                    <div class="card card-body">
-                                        This is WOD 5
-                                    </div>
-                                </div>
-                                <div class="collapse" id="week2wod6">
-                                    <div class="card card-body">
-                                        This is WOD 6
+                                    <div class="collapse" id="week2wod4">
+                                        <div class="card card-body">
+                                            This is WOD 4
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <!-- Week 3 card-->
-                    <div class="card">
-                        <div class="card-header collapsed card-link" id="heading3" data-toggle="collapse" data-target="#week3">
-                            <h5 class="mb-0">
-                                Week 3
-                            </h5>
-                        </div>
-                        <div id="week3" class="collapse" aria-labelledby="heading3">
-                            <div class="card-body">
-                                <div class="row">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week3wod1" aria-expanded="false" aria-controls="week3wod1">
-                                            Day 1
-                                        </button>
-                                    </h5>
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week3wod2" aria-expanded="false" aria-controls="week3wod2">
-                                            Day 2
-                                        </button>
-                                    </h5>
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week3wod3" aria-expanded="false" aria-controls="week3wod3">
-                                            Day 3
-                                        </button>
-                                    </h5>
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week3wod4" aria-expanded="false" aria-controls="week3wod4">
-                                            Day 4
-                                        </button>
-                                    </h5>
-                                </div>
-                                <div class="collapse" id="week3wod1">
-                                    <div class="card card-body">
-                                        This is WOD 1
+    
+                        <!-- Week 3 card-->
+                        <div class="card">
+                            <div class="card-header collapsed card-link" id="heading3" data-toggle="collapse" data-target="#week3">
+                                <h5 class="mb-0">
+                                    <b>Week 3</b>
+                                </h5>
+                            </div>
+                            <div id="week3" class="collapse" aria-labelledby="heading3">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <h5 class="mb-0 col">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week3wod1" aria-expanded="false" aria-controls="week3wod1">
+                                                <p>Day 1</p>
+                                            </button>
+                                        </h5>
+                                        <h5 class="mb-0 col">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week3wod2" aria-expanded="false" aria-controls="week3wod2">
+                                                <p>Day 2</p>
+                                            </button>
+                                        </h5>
+                                        <h5 class="mb-0 col">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week3wod3" aria-expanded="false" aria-controls="week3wod3">
+                                                <p>Day 3</p>
+                                            </button>
+                                        </h5>
+                                        <h5 class="mb-0 col">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week3wod4" aria-expanded="false" aria-controls="week3wod4">
+                                                <p>Day 4</p>
+                                            </button>
+                                        </h5>
                                     </div>
-                                </div>
-                                <div class="collapse" id="week3wod2">
-                                    <div class="card card-body">
-                                        This is WOD 2
+                                    <div class="collapse" id="week3wod1">
+                                        <div class="card card-body">
+                                            This is WOD 1
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="collapse" id="week3wod3">
-                                    <div class="card card-body">
-                                        This is WOD 3
+                                    <div class="collapse" id="week3wod2">
+                                        <div class="card card-body">
+                                            This is WOD 2
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="collapse" id="week3wod4">
-                                    <div class="card card-body">
-                                        This is WOD 4
+                                    <div class="collapse" id="week3wod3">
+                                        <div class="card card-body">
+                                            This is WOD 3
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="collapse" id="week3wod5">
-                                    <div class="card card-body">
-                                        This is WOD 5
-                                    </div>
-                                </div>
-                                <div class="collapse" id="week3wod6">
-                                    <div class="card card-body">
-                                        This is WOD 6
+                                    <div class="collapse" id="week3wod4">
+                                        <div class="card card-body">
+                                            This is WOD 4
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <!-- Week 4 card-->
-                    <div class="card">
-                        <div class="card-header collapsed card-link" id="heading4" data-toggle="collapse" data-target="#week4">
-                            <h5 class="mb-0">
-                                Week 4
-                            </h5>
-                        </div>
-                        <div id="week4" class="collapse" aria-labelledby="heading4">
-                            <div class="card-body">
-                                <div class="row">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week4wod1" aria-expanded="false" aria-controls="week4wod1">
-                                            Day 1
-                                        </button>
-                                    </h5>
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week4wod2" aria-expanded="false" aria-controls="week4wod2">
-                                            Day 2
-                                        </button>
-                                    </h5>
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week4wod3" aria-expanded="false" aria-controls="week4wod3">
-                                            Day 3
-                                        </button>
-                                    </h5>
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week4wod4" aria-expanded="false" aria-controls="week4wod4">
-                                            Day 4
-                                        </button>
-                                    </h5>
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week4wod5" aria-expanded="false" aria-controls="week4wod5">
-                                            Day 5
-                                        </button>
-                                    </h5>
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week4wod6" aria-expanded="false" aria-controls="week4wod6">
-                                            Day 6
-                                        </button>
-                                    </h5>
-                                </div>
-                                <div class="collapse" id="week4wod1">
-                                    <div class="card card-body">
-                                        This is WOD 1
+    
+                        <!-- Week 4 card-->
+                        <div class="card">
+                            <div class="card-header collapsed card-link" id="heading4" data-toggle="collapse" data-target="#week4">
+                                <h5 class="mb-0">
+                                    <b>Week 4</b>
+                                </h5>
+                            </div>
+                            <div id="week4" class="collapse" aria-labelledby="heading4">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <h5 class="mb-0 col">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week4wod1" aria-expanded="false" aria-controls="week4wod1">
+                                                <p>Day 1</p>
+                                            </button>
+                                        </h5>
+                                        <h5 class="mb-0 col">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week4wod2" aria-expanded="false" aria-controls="week4wod2">
+                                                <p>Day 2</p>
+                                            </button>
+                                        </h5>
+                                        <h5 class="mb-0 col">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week4wod3" aria-expanded="false" aria-controls="week4wod3">
+                                                <p>Day 3</p>
+                                            </button>
+                                        </h5>
+                                        <h5 class="mb-0 col">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week4wod4" aria-expanded="false" aria-controls="week4wod4">
+                                                <p>Day 4</p>
+                                            </button>
+                                        </h5>
+                                        <h5 class="mb-0 col">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week4wod5" aria-expanded="false" aria-controls="week4wod5">
+                                                <p>Day 5</p>
+                                            </button>
+                                        </h5>
                                     </div>
-                                </div>
-                                <div class="collapse" id="week4wod2">
-                                    <div class="card card-body">
-                                        This is WOD 2
+                                    <div class="collapse" id="week4wod1">
+                                        <div class="card card-body">
+                                            This is WOD 1
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="collapse" id="week4wod3">
-                                    <div class="card card-body">
-                                        This is WOD 3
+                                    <div class="collapse" id="week4wod2">
+                                        <div class="card card-body">
+                                            This is WOD 2
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="collapse" id="week4wod4">
-                                    <div class="card card-body">
-                                        This is WOD 4
+                                    <div class="collapse" id="week4wod3">
+                                        <div class="card card-body">
+                                            This is WOD 3
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="collapse" id="week4wod5">
-                                    <div class="card card-body">
-                                        This is WOD 5
+                                    <div class="collapse" id="week4wod4">
+                                        <div class="card card-body">
+                                            This is WOD 4
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="collapse" id="week4wod6">
-                                    <div class="card card-body">
-                                        This is WOD 6
+                                    <div class="collapse" id="week4wod5">
+                                        <div class="card card-body">
+                                            This is WOD 5
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <!-- Week 5 card-->
-                    <div class="card">
-                        <div class="card-header collapsed card-link" id="heading5" data-toggle="collapse" data-target="#week5">
-                            <h5 class="mb-0">
-                                Week 5
-                            </h5>
-                        </div>
-                        <div id="week5" class="collapse" aria-labelledby="heading5">
-                            <div class="card-body">
-                                <div class="row">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week5wod1" aria-expanded="false" aria-controls="week5wod1">
-                                            Day 1
-                                        </button>
-                                    </h5>
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week5wod2" aria-expanded="false" aria-controls="week5wod2">
-                                            Day 2
-                                        </button>
-                                    </h5>
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week5wod3" aria-expanded="false" aria-controls="week5wod3">
-                                            Day 3
-                                        </button>
-                                    </h5>
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week5wod4" aria-expanded="false" aria-controls="week5wod4">
-                                            Day 4
-                                        </button>
-                                    </h5>
-                                </div>
-                                <div class="collapse" id="week5wod1">
-                                    <div class="card card-body">
-                                        This is WOD 1
+    
+                        <!-- Week 5 card-->
+                        <div class="card">
+                            <div class="card-header collapsed card-link" id="heading5" data-toggle="collapse" data-target="#week5">
+                                <h5 class="mb-0">
+                                    <b>Week 5</b>
+                                </h5>
+                            </div>
+                            <div id="week5" class="collapse" aria-labelledby="heading5">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <h5 class="mb-0 col">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week5wod1" aria-expanded="false" aria-controls="week5wod1">
+                                                <p>Day 1</p>
+                                            </button>
+                                        </h5>
+                                        <h5 class="mb-0 col">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week5wod2" aria-expanded="false" aria-controls="week5wod2">
+                                                <p>Day 2</p>
+                                            </button>
+                                        </h5>
+                                        <h5 class="mb-0 col">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week5wod3" aria-expanded="false" aria-controls="week5wod3">
+                                                <p>Day 3</p>
+                                            </button>
+                                        </h5>
+                                        <h5 class="mb-0 col">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week5wod4" aria-expanded="false" aria-controls="week5wod4">
+                                                <p>Day 4</p>
+                                            </button>
+                                        </h5>
+                                        <h5 class="mb-0 col">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week5wod5" aria-expanded="false" aria-controls="week5wod5">
+                                                <p>Day 5</p>
+                                            </button>
+                                        </h5>
                                     </div>
-                                </div>
-                                <div class="collapse" id="week5wod2">
-                                    <div class="card card-body">
-                                        This is WOD 2
+                                    <div class="collapse" id="week5wod1">
+                                        <div class="card card-body">
+                                            This is WOD 1
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="collapse" id="week5wod3">
-                                    <div class="card card-body">
-                                        This is WOD 3
+                                    <div class="collapse" id="week5wod2">
+                                        <div class="card card-body">
+                                            This is WOD 2
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="collapse" id="week5wod4">
-                                    <div class="card card-body">
-                                        This is WOD 4
+                                    <div class="collapse" id="week5wod3">
+                                        <div class="card card-body">
+                                            This is WOD 3
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="collapse" id="week5wod5">
-                                    <div class="card card-body">
-                                        This is WOD 5
+                                    <div class="collapse" id="week5wod4">
+                                        <div class="card card-body">
+                                            This is WOD 4
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="collapse" id="week5wod6">
-                                    <div class="card card-body">
-                                        This is WOD 6
+                                    <div class="collapse" id="week5wod5">
+                                        <div class="card card-body">
+                                            This is WOD 5
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <!-- Week 6 card-->
-                    <div class="card">
-                        <div class="card-header collapsed card-link" id="heading6" data-toggle="collapse" data-target="#week6">
-                            <h5 class="mb-0">
-                                Week 6
-                            </h5>
-                        </div>
-                        <div id="week6" class="collapse" aria-labelledby="heading6">
-                            <div class="card-body">
-                                <div class="row">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week6wod1" aria-expanded="false" aria-controls="week6wod1">
-                                            Day 1
-                                        </button>
-                                    </h5>
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week6wod2" aria-expanded="false" aria-controls="week6wod2">
-                                            Day 2
-                                        </button>
-                                    </h5>
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week6wod3" aria-expanded="false" aria-controls="week6wod3">
-                                            Day 3
-                                        </button>
-                                    </h5>
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week6wod4" aria-expanded="false" aria-controls="week6wod4">
-                                            Day 4
-                                        </button>
-                                    </h5>
-                                </div>
-                                <div class="collapse" id="week6wod1">
-                                    <div class="card card-body">
-                                        This is WOD 1
+    
+                        <!-- Week 6 card-->
+                        <div class="card">
+                            <div class="card-header collapsed card-link" id="heading6" data-toggle="collapse" data-target="#week6">
+                                <h5 class="mb-0">
+                                    <b>Week 6</b>
+                                </h5>
+                            </div>
+                            <div id="week6" class="collapse" aria-labelledby="heading6">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <h5 class="mb-0 col">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week6wod1" aria-expanded="false" aria-controls="week6wod1">
+                                                <p>Day 1</p>
+                                            </button>
+                                        </h5>
+                                        <h5 class="mb-0 col">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week6wod2" aria-expanded="false" aria-controls="week6wod2">
+                                                <p>Day 2</p>
+                                            </button>
+                                        </h5>
+                                        <h5 class="mb-0 col">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week6wod3" aria-expanded="false" aria-controls="week6wod3">
+                                                <p>Day 3</p>
+                                            </button>
+                                        </h5>
+                                        <h5 class="mb-0 col">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week6wod4" aria-expanded="false" aria-controls="week6wod4">
+                                                <p>Day 4</p>
+                                            </button>
+                                        </h5>
+                                        <h5 class="mb-0 col">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week6wod5" aria-expanded="false" aria-controls="week6wod5">
+                                                <p>Day 5</p>
+                                            </button>
+                                        </h5>
                                     </div>
-                                </div>
-                                <div class="collapse" id="week6wod2">
-                                    <div class="card card-body">
-                                        This is WOD 2
+                                    <div class="collapse" id="week6wod1">
+                                        <div class="card card-body">
+                                            This is WOD 1
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="collapse" id="week6wod3">
-                                    <div class="card card-body">
-                                        This is WOD 3
+                                    <div class="collapse" id="week6wod2">
+                                        <div class="card card-body">
+                                            This is WOD 2
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="collapse" id="week6wod4">
-                                    <div class="card card-body">
-                                        This is WOD 4
+                                    <div class="collapse" id="week6wod3">
+                                        <div class="card card-body">
+                                            This is WOD 3
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="collapse" id="week6wod5">
-                                    <div class="card card-body">
-                                        This is WOD 5
+                                    <div class="collapse" id="week6wod4">
+                                        <div class="card card-body">
+                                            This is WOD 4
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="collapse" id="week6wod6">
-                                    <div class="card card-body">
-                                        This is WOD 6
+                                    <div class="collapse" id="week6wod5">
+                                        <div class="card card-body">
+                                            This is WOD 5
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <!-- Week 7 card-->
-                    <div class="card">
-                        <div class="card-header collapsed card-link" id="heading7" data-toggle="collapse" data-target="#week7">
-                            <h5 class="mb-0">
-                                Week 7
-                            </h5>
-                        </div>
-                        <div id="week7" class="collapse" aria-labelledby="heading7">
-                            <div class="card-body">
-                                <div class="row">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week7wod1" aria-expanded="false" aria-controls="week7wod1">
-                                            Day 1
-                                        </button>
-                                    </h5>
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week7wod2" aria-expanded="false" aria-controls="week7wod2">
-                                            Day 2
-                                        </button>
-                                    </h5>
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week7wod3" aria-expanded="false" aria-controls="week7wod3">
-                                            Day 3
-                                        </button>
-                                    </h5>
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week7wod4" aria-expanded="false" aria-controls="week7wod4">
-                                            Day 4
-                                        </button>
-                                    </h5>
-                                </div>
-                                <div class="collapse" id="week7wod1">
-                                    <div class="card card-body">
-                                        This is WOD 1
+    
+                        <!-- Week 7 card-->
+                        <div class="card">
+                            <div class="card-header collapsed card-link" id="heading7" data-toggle="collapse" data-target="#week7">
+                                <h5 class="mb-0">
+                                    <b>Week 7</b>
+                                </h5>
+                            </div>
+                            <div id="week7" class="collapse" aria-labelledby="heading7">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <h5 class="mb-0 col">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week7wod1" aria-expanded="false" aria-controls="week7wod1">
+                                                <p>Day 1</p>
+                                            </button>
+                                        </h5>
+                                        <h5 class="mb-0 col">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week7wod2" aria-expanded="false" aria-controls="week7wod2">
+                                                <p>Day 2</p>
+                                            </button>
+                                        </h5>
+                                        <h5 class="mb-0 col">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week7wod3" aria-expanded="false" aria-controls="week7wod3">
+                                                <p>Day 3</p>
+                                            </button>
+                                        </h5>
+                                        <h5 class="mb-0 col">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week7wod4" aria-expanded="false" aria-controls="week7wod4">
+                                                <p>Day 4</p>
+                                            </button>
+                                        </h5>
+                                        <h5 class="mb-0 col">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week7wod5" aria-expanded="false" aria-controls="week7wod5">
+                                                <p>Day 5</p>
+                                            </button>
+                                        </h5>
                                     </div>
-                                </div>
-                                <div class="collapse" id="week7wod2">
-                                    <div class="card card-body">
-                                        This is WOD 2
+                                    <div class="collapse" id="week7wod1">
+                                        <div class="card card-body">
+                                            This is WOD 1
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="collapse" id="week7wod3">
-                                    <div class="card card-body">
-                                        This is WOD 3
+                                    <div class="collapse" id="week7wod2">
+                                        <div class="card card-body">
+                                            This is WOD 2
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="collapse" id="week7wod4">
-                                    <div class="card card-body">
-                                        This is WOD 4
+                                    <div class="collapse" id="week7wod3">
+                                        <div class="card card-body">
+                                            This is WOD 3
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="collapse" id="week7wod5">
-                                    <div class="card card-body">
-                                        This is WOD 5
+                                    <div class="collapse" id="week7wod4">
+                                        <div class="card card-body">
+                                            This is WOD 4
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="collapse" id="week7wod6">
-                                    <div class="card card-body">
-                                        This is WOD 6
+                                    <div class="collapse" id="week7wod5">
+                                        <div class="card card-body">
+                                            This is WOD 5
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <!-- Week 8 card-->
-                    <div class="card">
-                        <div class="card-header collapsed card-link" id="heading8" data-toggle="collapse" data-target="#week8">
-                            <h5 class="mb-0">
-                                Week 8
-                            </h5>
-                        </div>
-                        <div id="week8" class="collapse" aria-labelledby="heading8">
-                            <div class="card-body">
-                                <div class="row">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week8wod1" aria-expanded="false" aria-controls="week8wod1">
-                                            Day 1
-                                        </button>
-                                    </h5>
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week8wod2" aria-expanded="false" aria-controls="week8wod2">
-                                            Day 2
-                                        </button>
-                                    </h5>
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week8wod3" aria-expanded="false" aria-controls="week8wod3">
-                                            Day 3
-                                        </button>
-                                    </h5>
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week8wod4" aria-expanded="false" aria-controls="week8wod4">
-                                            Day 4
-                                        </button>
-                                    </h5>
-                                </div>
-                                <div class="collapse" id="week8wod1">
-                                    <div class="card card-body">
-                                        This is WOD 1
+    
+                        <!-- Week 8 card-->
+                        <div class="card">
+                            <div class="card-header collapsed card-link" id="heading8" data-toggle="collapse" data-target="#week8">
+                                <h5 class="mb-0">
+                                    <b>Week 8</b>
+                                </h5>
+                            </div>
+                            <div id="week8" class="collapse" aria-labelledby="heading8">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <h5 class="mb-0 col">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week8wod1" aria-expanded="false" aria-controls="week8wod1">
+                                                <p>Day 1</p>
+                                            </button>
+                                        </h5>
+                                        <h5 class="mb-0 col">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week8wod2" aria-expanded="false" aria-controls="week8wod2">
+                                                <p>Day 2</p>
+                                            </button>
+                                        </h5>
+                                        <h5 class="mb-0 col">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week8wod3" aria-expanded="false" aria-controls="week8wod3">
+                                                <p>Day 3</p>
+                                            </button>
+                                        </h5>
+                                        <h5 class="mb-0 col">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week8wod4" aria-expanded="false" aria-controls="week8wod4">
+                                                <p>Day 4</p>
+                                            </button>
+                                        </h5>
+                                        <h5 class="mb-0 col">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week8wod5" aria-expanded="false" aria-controls="week8wod5">
+                                                <p>Day 5</p>
+                                            </button>
+                                        </h5>
                                     </div>
-                                </div>
-                                <div class="collapse" id="week8wod2">
-                                    <div class="card card-body">
-                                        This is WOD 2
+                                    <div class="collapse" id="week8wod1">
+                                        <div class="card card-body">
+                                            This is WOD 1
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="collapse" id="week8wod3">
-                                    <div class="card card-body">
-                                        This is WOD 3
+                                    <div class="collapse" id="week8wod2">
+                                        <div class="card card-body">
+                                            This is WOD 2
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="collapse" id="week8wod4">
-                                    <div class="card card-body">
-                                        This is WOD 4
+                                    <div class="collapse" id="week8wod3">
+                                        <div class="card card-body">
+                                            This is WOD 3
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="collapse" id="week8wod5">
-                                    <div class="card card-body">
-                                        This is WOD 5
+                                    <div class="collapse" id="week8wod4">
+                                        <div class="card card-body">
+                                            This is WOD 4
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="collapse" id="week8wod6">
-                                    <div class="card card-body">
-                                        This is WOD 6
+                                    <div class="collapse" id="week8wod5">
+                                        <div class="card card-body">
+                                            This is WOD 5
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <!-- Week 9 card-->
-                    <div class="card">
-                        <div class="card-header collapsed card-link" id="heading9" data-toggle="collapse" data-target="#week9">
-                            <h5 class="mb-0">
-                                Week 9
-                            </h5>
-                        </div>
-                        <div id="week9" class="collapse" aria-labelledby="heading9">
-                            <div class="card-body">
-                                <div class="row">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week9wod1" aria-expanded="false" aria-controls="week9wod1">
-                                            Day 1
-                                        </button>
-                                    </h5>
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week9wod2" aria-expanded="false" aria-controls="week9wod2">
-                                            Day 2
-                                        </button>
-                                    </h5>
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week9wod3" aria-expanded="false" aria-controls="week9wod3">
-                                            Day 3
-                                        </button>
-                                    </h5>
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week9wod4" aria-expanded="false" aria-controls="week9wod4">
-                                            Day 4
-                                        </button>
-                                    </h5>
-                                </div>
-                                <div class="collapse" id="week9wod1">
-                                    <div class="card card-body">
-                                        This is WOD 1
+    
+                        <!-- Week 9 card-->
+                        <div class="card">
+                            <div class="card-header collapsed card-link" id="heading9" data-toggle="collapse" data-target="#week9">
+                                <h5 class="mb-0">
+                                    <b>Week 9</b>
+                                </h5>
+                            </div>
+                            <div id="week9" class="collapse" aria-labelledby="heading9">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <h5 class="mb-0 col">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week9wod1" aria-expanded="false" aria-controls="week9wod1">
+                                                <p>Day 1</p>
+                                            </button>
+                                        </h5>
+                                        <h5 class="mb-0 col">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week9wod2" aria-expanded="false" aria-controls="week9wod2">
+                                                <p>Day 2</p>
+                                            </button>
+                                        </h5>
+                                        <h5 class="mb-0 col">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week9wod3" aria-expanded="false" aria-controls="week9wod3">
+                                                <p>Day 3</p>
+                                            </button>
+                                        </h5>
+                                        <h5 class="mb-0 col">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week9wod4" aria-expanded="false" aria-controls="week9wod4">
+                                                <p>Day 4</p>
+                                            </button>
+                                        </h5>
+                                        <h5 class="mb-0 col">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week9wod5" aria-expanded="false" aria-controls="week9wod5">
+                                                <p>Day 5</p>
+                                            </button>
+                                        </h5>
                                     </div>
-                                </div>
-                                <div class="collapse" id="week9wod2">
-                                    <div class="card card-body">
-                                        This is WOD 2
+                                    <div class="collapse" id="week9wod1">
+                                        <div class="card card-body">
+                                            This is WOD 1
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="collapse" id="week9wod3">
-                                    <div class="card card-body">
-                                        This is WOD 3
+                                    <div class="collapse" id="week9wod2">
+                                        <div class="card card-body">
+                                            This is WOD 2
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="collapse" id="week9wod4">
-                                    <div class="card card-body">
-                                        This is WOD 4
+                                    <div class="collapse" id="week9wod3">
+                                        <div class="card card-body">
+                                            This is WOD 3
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="collapse" id="week9wod5">
-                                    <div class="card card-body">
-                                        This is WOD 5
+                                    <div class="collapse" id="week9wod4">
+                                        <div class="card card-body">
+                                            This is WOD 4
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="collapse" id="week9wod6">
-                                    <div class="card card-body">
-                                        This is WOD 6
+                                    <div class="collapse" id="week9wod5">
+                                        <div class="card card-body">
+                                            This is WOD 5
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <!-- Week 10 card-->
-                    <div class="card">
-                        <div class="card-header collapsed card-link" id="heading10" data-toggle="collapse" data-target="#week10">
-                            <h5 class="mb-0">
-                                Week 10
-                            </h5>
-                        </div>
-                        <div id="week10" class="collapse" aria-labelledby="heading10">
-                            <div class="card-body">
-                                <div class="row">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week10wod1" aria-expanded="false" aria-controls="week10wod1">
-                                            Day 1
-                                        </button>
-                                    </h5>
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week10wod2" aria-expanded="false" aria-controls="week10wod2">
-                                            Day 2
-                                        </button>
-                                    </h5>
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week10wod3" aria-expanded="false" aria-controls="week10wod3">
-                                            Day 3
-                                        </button>
-                                    </h5>
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week10wod4" aria-expanded="false" aria-controls="week10wod4">
-                                            Day 4
-                                        </button>
-                                    </h5>
-                                </div>
-                                <div class="collapse" id="week10wod1">
-                                    <div class="card card-body">
-                                        This is WOD 1
+    
+                        <!-- Week 10 card-->
+                        <div class="card">
+                            <div class="card-header collapsed card-link" id="heading10" data-toggle="collapse" data-target="#week10">
+                                <h5 class="mb-0">
+                                    <b>Week 10</b>
+                                </h5>
+                            </div>
+                            <div id="week10" class="collapse" aria-labelledby="heading10">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <h5 class="mb-0 col">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week10wod1" aria-expanded="false" aria-controls="week10wod1">
+                                                <p>Day 1</p>
+                                            </button>
+                                        </h5>
+                                        <h5 class="mb-0 col">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week10wod2" aria-expanded="false" aria-controls="week10wod2">
+                                                <p>Day 2</p>
+                                            </button>
+                                        </h5>
+                                        <h5 class="mb-0 col">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week10wod3" aria-expanded="false" aria-controls="week10wod3">
+                                                <p>Day 3</p>
+                                            </button>
+                                        </h5>
+                                        <h5 class="mb-0 col">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week10wod4" aria-expanded="false" aria-controls="week10wod4">
+                                                <p>Day 4</p>
+                                            </button>
+                                        </h5>
+                                        <h5 class="mb-0 col">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week10wod5" aria-expanded="false" aria-controls="week10wod5">
+                                                <p>Day 5</p>
+                                            </button>
+                                        </h5>
                                     </div>
-                                </div>
-                                <div class="collapse" id="week10wod2">
-                                    <div class="card card-body">
-                                        This is WOD 2
+                                    <div class="collapse" id="week10wod1">
+                                        <div class="card card-body">
+                                            This is WOD 1
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="collapse" id="week10wod3">
-                                    <div class="card card-body">
-                                        This is WOD 3
+                                    <div class="collapse" id="week10wod2">
+                                        <div class="card card-body">
+                                            This is WOD 2
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="collapse" id="week10wod4">
-                                    <div class="card card-body">
-                                        This is WOD 4
+                                    <div class="collapse" id="week10wod3">
+                                        <div class="card card-body">
+                                            This is WOD 3
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="collapse" id="week10wod5">
-                                    <div class="card card-body">
-                                        This is WOD 5
+                                    <div class="collapse" id="week10wod4">
+                                        <div class="card card-body">
+                                            This is WOD 4
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="collapse" id="week10wod6">
-                                    <div class="card card-body">
-                                        This is WOD 6
+                                    <div class="collapse" id="week10wod5">
+                                        <div class="card card-body">
+                                            This is WOD 5
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <!-- Week 11 card-->
-                    <div class="card">
-                        <div class="card-header collapsed card-link" id="heading11" data-toggle="collapse" data-target="#week11">
-                            <h5 class="mb-0">
-                                Week 11
-                            </h5>
-                        </div>
-                        <div id="week11" class="collapse" aria-labelledby="heading11">
-                            <div class="card-body">
-                                <div class="row">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week11wod1" aria-expanded="false" aria-controls="week11wod1">
-                                            Day 1
-                                        </button>
-                                    </h5>
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week11wod2" aria-expanded="false" aria-controls="week11wod2">
-                                            Day 2
-                                        </button>
-                                    </h5>
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week11wod3" aria-expanded="false" aria-controls="week11wod3">
-                                            Day 3
-                                        </button>
-                                    </h5>
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week11wod4" aria-expanded="false" aria-controls="week11wod4">
-                                            Day 4
-                                        </button>
-                                    </h5>
-                                </div>
-                                <div class="collapse" id="week11wod1">
-                                    <div class="card card-body">
-                                        This is WOD 1
+    
+                        <!-- Week 11 card-->
+                        <div class="card">
+                            <div class="card-header collapsed card-link" id="heading11" data-toggle="collapse" data-target="#week11">
+                                <h5 class="mb-0">
+                                    <b>Week 11</b>
+                                </h5>
+                            </div>
+                            <div id="week11" class="collapse" aria-labelledby="heading11">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <h5 class="mb-0 col">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week11wod1" aria-expanded="false" aria-controls="week11wod1">
+                                                <p>Day 1</p>
+                                            </button>
+                                        </h5>
+                                        <h5 class="mb-0 col">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week11wod2" aria-expanded="false" aria-controls="week11wod2">
+                                                <p>Day 2</p>
+                                            </button>
+                                        </h5>
+                                        <h5 class="mb-0 col">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week11wod3" aria-expanded="false" aria-controls="week11wod3">
+                                                <p>Day 3</p>
+                                            </button>
+                                        </h5>
+                                        <h5 class="mb-0 col">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week11wod4" aria-expanded="false" aria-controls="week11wod4">
+                                                <p>Day 4</p>
+                                            </button>
+                                        </h5>
+                                        <h5 class="mb-0 col">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week11wod5" aria-expanded="false" aria-controls="week11wod5">
+                                                <p>Day 5</p>
+                                            </button>
+                                        </h5>
                                     </div>
-                                </div>
-                                <div class="collapse" id="week11wod2">
-                                    <div class="card card-body">
-                                        This is WOD 2
+                                    <div class="collapse" id="week11wod1">
+                                        <div class="card card-body">
+                                            This is WOD 1
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="collapse" id="week11wod3">
-                                    <div class="card card-body">
-                                        This is WOD 3
+                                    <div class="collapse" id="week11wod2">
+                                        <div class="card card-body">
+                                            This is WOD 2
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="collapse" id="week11wod4">
-                                    <div class="card card-body">
-                                        This is WOD 4
+                                    <div class="collapse" id="week11wod3">
+                                        <div class="card card-body">
+                                            This is WOD 3
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="collapse" id="week11wod5">
-                                    <div class="card card-body">
-                                        This is WOD 5
+                                    <div class="collapse" id="week11wod4">
+                                        <div class="card card-body">
+                                            This is WOD 4
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="collapse" id="week11wod6">
-                                    <div class="card card-body">
-                                        This is WOD 6
+                                    <div class="collapse" id="week11wod5">
+                                        <div class="card card-body">
+                                            This is WOD 5
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <!-- Week 12 card-->
-                    <div class="card">
-                        <div class="card-header collapsed card-link" id="heading12" data-toggle="collapse" data-target="#week12">
-                            <h5 class="mb-0">
-                                Week 12
-                            </h5>
-                        </div>
-                        <div id="week12" class="collapse" aria-labelledby="heading12">
-                            <div class="card-body">
-                                <div class="row">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week12wod1" aria-expanded="false" aria-controls="week12wod1">
-                                            Day 1
-                                        </button>
-                                    </h5>
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week12wod2" aria-expanded="false" aria-controls="week12wod2">
-                                            Day 2
-                                        </button>
-                                    </h5>
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week12wod3" aria-expanded="false" aria-controls="week12wod3">
-                                            Day 3
-                                        </button>
-                                    </h5>
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week12wod4" aria-expanded="false" aria-controls="week12wod4">
-                                            Day 4
-                                        </button>
-                                    </h5>
-                                </div>
-                                <div class="collapse" id="week12wod1">
-                                    <div class="card card-body">
-                                        This is WOD 1
+    
+                        <!-- Week 12 card-->
+                        <div class="card">
+                            <div class="card-header collapsed card-link" id="heading12" data-toggle="collapse" data-target="#week12">
+                                <h5 class="mb-0">
+                                    <b>Week 12</b>
+                                </h5>
+                            </div>
+                            <div id="week12" class="collapse" aria-labelledby="heading12">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <h5 class="mb-0 col">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week12wod1" aria-expanded="false" aria-controls="week12wod1">
+                                                <p>Day 1</p>
+                                            </button>
+                                        </h5>
+                                        <h5 class="mb-0 col">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week12wod2" aria-expanded="false" aria-controls="week12wod2">
+                                                <p>Day 2</p>
+                                            </button>
+                                        </h5>
+                                        <h5 class="mb-0 col">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week12wod3" aria-expanded="false" aria-controls="week12wod3">
+                                                <p>Day 3</p>
+                                            </button>
+                                        </h5>
+                                        <h5 class="mb-0 col">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week12wod4" aria-expanded="false" aria-controls="week12wod4">
+                                                <p>Day 4</p>
+                                            </button>
+                                        </h5>
+                                        <h5 class="mb-0 col">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#week12wod5" aria-expanded="false" aria-controls="week12wod5">
+                                                <p>Day 5</p>
+                                            </button>
+                                        </h5>
                                     </div>
-                                </div>
-                                <div class="collapse" id="week12wod2">
-                                    <div class="card card-body">
-                                        This is WOD 2
+                                    <div class="collapse" id="week12wod1">
+                                        <div class="card card-body">
+                                            This is WOD 1
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="collapse" id="week12wod3">
-                                    <div class="card card-body">
-                                        This is WOD 3
+                                    <div class="collapse" id="week12wod2">
+                                        <div class="card card-body">
+                                            This is WOD 2
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="collapse" id="week12wod4">
-                                    <div class="card card-body">
-                                        This is WOD 4
+                                    <div class="collapse" id="week12wod3">
+                                        <div class="card card-body">
+                                            This is WOD 3
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="collapse" id="week12wod5">
-                                    <div class="card card-body">
-                                        This is WOD 5
+                                    <div class="collapse" id="week12wod4">
+                                        <div class="card card-body">
+                                            This is WOD 4
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="collapse" id="week12wod6">
-                                    <div class="card card-body">
-                                        This is WOD 6
+                                    <div class="collapse" id="week12wod5">
+                                        <div class="card card-body">
+                                            This is WOD 5
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div>   
                     </div>
-                    
                 </div>
             </div>
         </div>
         <div class="row section" id="recent">
-            Recent Results
-            <div class="col-6">
-                <div class="movement">
-                    <div class="row" id="movementHeader">
-                        <h4><b>Movement Library</b></h4>
-                    </div>
-                    <div class="movementLinks">
-                        <div class="row">
-                            <a href="https://www.youtube.com/watch?v=VIZX2Ru9qU8&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=36" target="_blank">Abmat Sit Up</a>
-                        </div>
-                        <div class="row">
-                            <a href="https://www.youtube.com/watch?v=rMvwVtlqjTE&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=3" target="_blank">Air Squat</a>
-                        </div>
-                        <div class="row">
-                            <a href="https://www.youtube.com/watch?v=QmZAiBqPvZw&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=21" target="_blank">Back Squat</a>
-                        </div>
-                        <div class="row">
-                            <a href="https://www.youtube.com/watch?v=-JcD5SOqW50" target="_blank">Bear Crawl</a>
-                        </div>
-                        <div class="row">
-                            <a href="https://www.youtube.com/watch?v=SCVCLChPQFY&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=25" target="_blank">Bench Press</a>
-                        </div>
-                        <div class="row">
-                            <a href="https://www.youtube.com/watch?v=NBY9-kTuHEk&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=43" target="_blank">Box Jump</a>
-                        </div>
-                        <div class="row">
-                            <a href="https://www.youtube.com/watch?v=5qjqDHOUh-A&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=58" target="_blank">Box Step Up</a>
-                        </div>
-                        <div class="row">
-                            <a href="https://www.youtube.com/watch?v=auBLPXO8Fww&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=35" target="_blank">Burpee</a>
-                        </div>
-                        <div class="row">
-                            <a href="https://www.youtube.com/watch?v=GLktGkmcvWE&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=62" target="_blank">Burpee Box Jump Over</a>
-                        </div>
-                        <div class="row">
-                            <a href="https://www.youtube.com/watch?v=Y2lGDh9wJs0" target="_blank">Chair Dips</a>
-                        </div>
-                        <div class="row">
-                            <a href="https://www.youtube.com/watch?v=Ty14ogq_Vok&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=26" target="_blank">Clean</a>
-                        </div>
-                        <div class="row">
-                            <a href="https://www.youtube.com/watch?v=PjY1rH4_MOA&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=64" target="_blank">Clean and Jerk</a>
-                        </div>
-                        <div class="row">
-                            <a href="https://www.youtube.com/watch?v=1ZXobu7JvvE&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4" target="_blank">Deadlift</a>
-                        </div>
-                        <div class="row">
-                            <a href="https://www.youtube.com/watch?v=82jNjDS19lg" target="_blank">Double Under</a>
-                        </div>
-                        <div class="row">
-                            <a href="https://www.youtube.com/watch?v=SYxObzJ3gn0&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=65" target="_blank">Dumbbell Clean</a>
-                        </div>
-                        <div class="row">
-                            <a href="https://www.youtube.com/watch?v=8r44xv_Aqbw&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=45" target="_blank">Dumbbell Hang Clean</a>
-                        </div>
-                        <div class="row">
-                            <a href="https://www.youtube.com/watch?v=azumEfnk-GI&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=34" target="_blank">Dumbbell Overhead Squat</a>
-                        </div>
-                        <div class="row">
-                            <a href="https://www.youtube.com/watch?v=viWI2rEt-HU&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=70" target="_blank">Dumbbell Power Clean</a>
-                        </div>
-                        <div class="row">
-                            <a href="https://www.youtube.com/watch?v=3mlhF3dptAo&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=79" target="_blank">Dumbbell Power Snatch</a>
-                        </div>
-                        <div class="row">
-                            <a href="https://www.youtube.com/watch?v=rnN3pYswScE&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=55" target="_blank">Dumbbell Push Jerk</a>
-                        </div>
-                        <div class="row">
-                            <a href="https://www.youtube.com/watch?v=4tCaD42ghlc&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=74" target="_blank">Dumbbell Push Press</a>
-                        </div>
-                        <div class="row">
-                            <a href="https://www.youtube.com/watch?v=t7VDDNKBNx8" target="_blank">Dumbbell Row</a>
-                        </div>
-                        <div class="row">
-                            <a href="https://www.youtube.com/watch?v=u3wKkZjE8QM&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=46" target="_blank">Dumbbell Thruster</a>
-                        </div>
-                        <div class="row">
-                            <a href="https://www.youtube.com/watch?v=p5MNNosenJc" target="_blank">Farmers Carry</a>
-                        </div>
-                        <div class="row">
-                            <a href="https://www.youtube.com/watch?v=6G-fNatzuSk" target="_blank">Floor Press</a>
-                        </div>
-                        <div class="row">
-                            <a href="https://www.youtube.com/watch?v=uYumuL_G_V0&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=9" target="_blank">Front Squat</a>
-                        </div>
-                        <div class="row">
-                            <a href="https://www.mayhemnation.tv/movement-library/videos/tasia-dbgobletsquat" target="_blank">Goblet Squat</a>
-                        </div>
-                        <div class="row">
-                            <a href="https://www.mayhemnation.tv/videos/rich-handreleasepushup" target="_blank">Hand Release Push Up</a>
-                        </div>
-                        <div class="row">
-                            <a href="https://www.youtube.com/watch?v=0aP3tgKZcHQ&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=44" target="_blank">Hang Power Clean</a>
-                        </div>
-                        <div class="row">
-                            <a href="https://www.youtube.com/watch?v=-mLzQdVAwlw&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=47" target="_blank">Hang Power Snatch</a>
-                        </div>
-                        <div class="row">
-                            <a href="https://www.youtube.com/watch?v=SfkuOb_1GK8" target="_blank">Hollow Rock</a>
-                        </div>
-                        <div class="row">
-                            <a href="https://www.youtube.com/watch?v=Pm-b2XFeABA&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=49" target="_blank">Kettlebell Snatch</a>
-                        </div>
-                        <div class="row">
-                            <a href="https://www.youtube.com/watch?v=mKDIuUbH94Q&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=51" target="_blank">Kettlebell Swing</a>
-                        </div>
-                        <div class="row">
-                            <a href="https://www.youtube.com/watch?v=KVGhkHSrDJo&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=15" target="_blank">Med Ball Clean</a>
-                        </div>
-                        <div class="row">
-                            <a href="https://www.youtube.com/watch?v=K7CctePUCYA" target="_blank">Muscle Clean</a>
-                        </div>
-                        <div class="row">
-                            <a href="https://www.youtube.com/watch?v=bJYzOo1cNqY&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=73" target="_blank">Muscle Snatch</a>
-                        </div>
-                        <div class="row">
-                            <a href="https://www.youtube.com/watch?v=TL8SMp7RdXQ&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=33" target="_blank">Power Snatch</a>
-                        </div>
-                        <div class="row">
-                            <a href="https://www.youtube.com/watch?v=iaBVSJm78ko&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=14" target="_blank">Push Press</a>
-                        </div>
-                        <div class="row">
-                            <a href="https://www.youtube.com/watch?v=VrHNJXoSyXw" target="_blank">Push Jerk</a>
-                        </div>
-                        <div class="row">
-                            <a href="https://www.youtube.com/watch?v=0pkjOk0EiAk&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=11" target="_blank">Push Up</a>
-                        </div>
-                        <div class="row">
-                            <a href="https://www.youtube.com/watch?v=sEAOZc77wk8&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=28" target="_blank">Ring Row</a>
-                        </div>
-                        <div class="row">
-                            <a href="https://www.youtube.com/watch?v=fxfhQMbATCw&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=16" target="_blank">Rowing</a>
-                        </div>
-                        <div class="row">
-                            <a href="https://www.youtube.com/watch?v=5yWaNOvgFCM&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=4" target="_blank">Shoulder Press</a>
-                        </div>
-                        <div class="row">
-                            <a href="https://www.youtube.com/watch?v=k9W6g9LvXDI&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=27" target="_blank">Slam Ball</a>
-                        </div>
-                        <div class="row">
-                            <a href="https://www.youtube.com/watch?v=GhxhiehJcQY&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=32" target="_blank">Snatch</a>
-                        </div>
-                        <div class="row">
-                            <a href="https://www.youtube.com/watch?v=GUDkOtraHHY&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=50" target="_blank">Split Jerk</a>
-                        </div>
-                        <div class="row">
-                            <a href="https://www.youtube.com/watch?v=gh55vVlwlQg&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=10" target="_blank">Sumo Deadlift High Pull</a>
-                        </div>
-                        <div class="row">
-                            <a href="https://www.youtube.com/watch?v=L219ltL15zk&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=18" target="_blank">Thruster</a>
-                        </div>
-                        <div class="row">
-                            <a href="https://www.youtube.com/watch?v=saYKvqSscuY&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=19" target="_blank">Turkish Get Up</a>
-                        </div>
-                        <div class="row">
-                            <a href="https://www.youtube.com/watch?v=DlhojghkaQ0&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=24" target="_blank">Walking Lunge</a>
-                        </div>
-                        <div class="row">
-                            <a href="https://www.youtube.com/watch?v=EqjGKsiIMCE" target="_blank">Wall Ball</a>
-                        </div>
-                        <div class="row">
-                            <a href="https://www.youtube.com/watch?v=NK_OcHEm8yM&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=48" target="_blank">Wall Walk</a>
-                        </div>
-                    </div>
+            <div class="row" id="scheduleHeader">
+                <div class="sectionHeader">
+                    <p><b>Recent Results</b></p>
+                </div>
+            </div>
+            <div class="row schedule">
+                <div class="col-6">
+                    Previous Stuff here
                 </div>
             </div>
         </div>
         <div class="row section" id="pr">
             <div class="row" id="prHeader">
                 <div class="sectionHeader">
-                    <b>PR's</b>
+                    <p><b>PR's</b></p>
                 </div>
             </div>
             <div class="row table">
-                <div class="col-10">
+                <div class="col-8">
                     <table class="prtable">
                         <tr>
                             <th>
@@ -1247,7 +1057,7 @@
         <div class="row section" id="skills">
             <div class="row" id="proficiencyHeader">
                 <div class="sectionHeader">
-                    <b>Proficiency</b>
+                    <p><b>Proficiency</b></p>
                 </div>
             </div>
             <div class="row" id="bars">
@@ -1374,10 +1184,10 @@
         <div class="row section" id="videos">
             <div class="row" id="videosHeader">
                 <div class="sectionHeader">
-                    <b>Video Library</b>
+                    <p><b>Video Library</b></p>
                 </div>
             </div>
-            <div class="row">
+            <div class="row" id="videoGroups">
                 <div class="col-4">
                     <div class="movement">
                         <div class="row" id="movementHeader">

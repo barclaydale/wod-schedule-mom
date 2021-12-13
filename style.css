@@ -21,6 +21,7 @@ a {
     align-items: center;
     width: 100.9%;
     z-index: 1;
+    box-shadow: 2px 2px 25px rgb(88, 88, 88);
 }
 
 .nav {
@@ -30,6 +31,7 @@ a {
 
 .navigation a {
     color: rgb(255, 255, 252);
+    text-shadow: 1px 1px 1px rgb(136, 136, 136);
 }
 
 #navFirstLink {
@@ -40,15 +42,36 @@ a {
     margin-right: auto;
 }
 
+.card-body {
+    padding: 0px;
+    vertical-align: middle;
+}
+
+.card-body .row {
+    justify-content: center;
+    margin: 0px;
+    vertical-align: middle;
+}
+
+button p {
+    color: rgb(255, 157, 71);
+    margin: 0;
+    font-size: 28px;
+}
+
+h5 b {
+    font-size: 28px;
+    color:rgb(41, 41, 41);
+}
+
 .indent {
     text-indent: 50px;
 }
 
 .movement, .technique, .mobility {
-    border-radius: 7px;
-    background-color: rgb(255, 255, 252);
     margin-top: 10px;
-    color:rgb(41, 41, 41)
+    color:rgb(41, 41, 41);
+    background-color: rgb(190, 183, 164);
 }
 
 #movementHeader, #techniqueHeader, #mobilityHeader {
@@ -57,17 +80,20 @@ a {
     width: 100%;
     justify-content: center;
     margin-top: 5px;
-    border-bottom: 1px solid rgb(41, 41, 41);
+    padding: 3px 0px;
 }
 
 #movementHeader h4, #techniqueHeader h4, #mobilityHeader h4 {
     margin: auto;
+    font-size: 24px;
 }
   
 .movementLinks, .techniqueLinks, .mobilityLinks {
     overflow: scroll;
-    height: 380px;
+    height: 495px;
     width: 100%;
+    border-radius: 7px;
+    background-color: rgb(255, 255, 252);
 }
 
 .movementLinks .row, .techniqueLinks .row, .mobilityLinks .row {
@@ -79,10 +105,8 @@ a {
     width: 100%;
 }
 
-.main {
-    margin-top: 70px;
-    margin-right: auto;
-    margin-left: auto;
+.movementLinks .row:first-child, .techniqueLinks .row:first-child, .mobilityLinks .row:first-child {
+    border-top: 0px;
 }
 
 .button {
@@ -100,6 +124,8 @@ a {
     height: 45px;
     width: 170px;
     opacity: 1;
+    text-shadow: 1px 1px 1px rgb(226, 226, 226);
+    box-shadow: 2px 2px 5px grey;
     color: rgb(255, 157, 71);
 }
 
@@ -113,15 +139,19 @@ a {
     background-color: rgb(255, 255, 252);
 }
 
-#prHeader, #proficiencyHeader, #videosHeader {
+#scheduleHeader, #prHeader, #proficiencyHeader, #videosHeader {
     width: 80%;
 }
 
 .section {
+    padding-top: 60px;
     margin: 0 auto;
-    padding-top: 70px;
     justify-content: center;
-    border: 1px solid red;
+}
+
+.schedule {
+    width: 100%;
+    justify-content: center;
 }
 
 .table {
@@ -159,6 +189,7 @@ table td, table th {
 table tr:first-child th {
     border-top: 0;
     border-bottom: 3px solid #dddddd;
+    vertical-align: middle;
 }
 
 table tr:last-child td {
@@ -212,15 +243,11 @@ table tr td:last-child, table tr th:last-child {
     width: 100%;
 }
 
-.entry > * {
-    border: 1px solid red;
-}
-
 .form-group {
     width: 200px;
 }
 
-#prHeader, #proficiencyHeader {
+#prHeader, #proficiencyHeader, #videosHeader {
     width: 80%;
 }
 
@@ -233,6 +260,12 @@ table tr td:last-child, table tr th:last-child {
     padding-bottom: 5px;
 }
 
-.row {
-    border: 1px solid red;
+#videoGroups {
+    width: 83%;
+}
+
+.sectionHeader > p {
+    font-size: 55px;
+    text-shadow: 2px 2px 3px gray;
+    margin: 0px;
 }
