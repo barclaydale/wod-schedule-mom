@@ -231,12 +231,14 @@ table tr td:last-child, table tr th:last-child {
     width: 20%;
 }
 
-.col-9 {
+.col-7 {
     height: fit-content;
     width: 100%;
+    display: flex;
 }
 
-.col-2 p {
+
+.col-3 p {
     text-align: right;
     margin: 0;
     height: auto;
@@ -268,4 +270,38 @@ table tr td:last-child, table tr th:last-child {
     font-size: 55px;
     text-shadow: 2px 2px 3px gray;
     margin: 0px;
+}
+
+select, #score, #submit {
+    background-color: rgb(255, 255, 252);
+    border-radius: 7px;
+    height: 35px;
+    box-shadow: 2px 2px 5px grey;
+    border: none;
+    color:rgb(41, 41, 41);
+    width: fit-content;
+}
+
+#demoForm, #proficiency {
+    width: fit-content;
+}
+
+#score {
+    margin-left: 5px;
+    margin-bottom: 15px;
+}
+
+.fitnessbox {
+    width: 100%;
+}
+
+.fitnessScore {
+    display: flex;
+    width: auto;
+    margin: auto;
+}
+
+.fitnessScore p {
+    width: auto;
+    margin-bottom: 0px;
 }

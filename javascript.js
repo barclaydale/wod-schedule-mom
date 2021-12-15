@@ -49,13 +49,13 @@ var Select_List_Data = {
             text: ['Row 2000m', 'Row 5000m']
         },
         bodyweight: {
-            text: ['50 Burpees FT', '50 Abmat Sit Ups FT', '100 Abmat Sit Ups FT', 'Open 21.1 Scaled', 'AMReps 5min: Single Unders', 'AMReps 2min: Double Unders', 'CrossFit Open 12.1', 'AMRAP 15: Row 250m, 25 Push Ups', '4 RFT: 50m Walking Lunge, 50 Abmat Sit Ups']
+            text: ['50 Burpees FT', '50 Abmat Sit Ups FT', '100 Abmat Sit Ups FT', 'Open 21.1 Scaled', 'AMReps 5min: Single Unders', 'AMReps 2min: Double Unders', 'Open 12.1', 'AMRAP 15: Row 250m, 25 Push Ups', '4 RFT: 50m Walking Lunge, 50 Abmat Sit Ups']
         },
         light: {
             text: ['Grace', 'Diane', 'Elizabeth', 'Karen', 'Fight Gone Bad', 'Jack', 'The Chief', '12-9-6-3: Power Snatch, Burpee', 'Open 21.2 Scaled']
         },
         heavy: {
-            text: ['Isabel', 'DT', 'Open 13.1', 'Open 14.3', 'Regional 11.3', '2008 Games: Deadlift and Burpees', '4 RFT: Row 300m, 10-15-10-5 Push Press', '5 RFT: Row 500m, 7 Thrusters', 'Chipper: 20 Front Squats, 30 Box Jumps, 40 Kettlebell Swings, 50 Wall Balls', '5 RFT: 7 Cleans, 14 Ketllebell Swings']
+            text: ['Isabel', 'DT', 'Open 13.1', 'Open 14.3', 'Regional 11.3', '2008 Games: Deadlift and Burpees', '4 RFT: Row 300m, 20-15-10-5 Push Press', '5 RFT: Row 500m, 7 Thrusters', 'Chipper: 20 Front Squats, 30 Box Jumps, 40 Kettlebell Swings, 50 Wall Balls', '5 RFT: 7 Cleans, 14 Ketllebell Swings']
         }
     }    
 };
@@ -163,3 +163,602 @@ document.forms['demoForm'].elements['category'].onchange = function(e) {
     appendDataToSelect(rel, data);
     
 }());
+
+var numerator1 = 0;
+var numerator2 = 0;
+var numerator3 = 0;
+var numerator4 = 0;
+var numerator5 = 0;
+var numerator6 = 0;
+var numerator7 = 0;
+var ratio1 = 0;
+var ratio2 = 0;
+var ratio3 = 0;
+var ratio4 = 0;
+var ratio5 = 0;
+var ratio6 = 0;
+var ratio7 = 0;
+
+var power = new Array();
+var olympic = new Array();
+var sprint = new Array();
+var endurance = new Array();
+var bodyweight = new Array();
+var light = new Array ();
+var heavy = new Array ();
+
+var results = new Array();
+var pair = new Array();
+
+function addResult(event) {
+    results.push(event);
+
+    numerator1 = 0;
+    numerator2 = 0;
+    numerator3 = 0;
+    numerator4 = 0;
+    numerator5 = 0;
+    numerator6 = 0;
+    numerator7 = 0;
+    ratio1 = 0;
+    ratio2 = 0;
+    ratio3 = 0;
+    ratio4 = 0;
+    ratio5 = 0;
+    ratio6 = 0;
+    ratio7 = 0;
+
+    if (event.text.includes("!")) {
+        data = event.text.split("!");
+        console.log(data[0]);
+    }
+    if (data[2] == '' || data[2] == "0") {
+        return;
+    }
+
+    // Sort and get individual percentages
+
+    if (data[0] == "power") {
+        if (data[1] == "1RM Deadlift") {
+            percentage = (parseInt(data[2]) / 215 * 100);
+            pair = [data[1], percentage];
+            power.push(pair);
+        }
+        if (data[1] == "3RM Deadlift") {
+            percentage = (parseInt(data[2]) / 195 * 100);
+            pair = [data[1], percentage];
+            power.push(pair);
+        }
+        if (data[1] == "5RM Deadlift") {
+            percentage = (parseInt(data[2]) / 180 * 100);
+            pair = [data[1], percentage];
+            power.push(pair);
+        }
+        if (data[1] == "10RM Deadlift") {
+            percentage = (parseInt(data[2]) / 155 * 100);
+            pair = [data[1], percentage];
+            power.push(pair);
+        }
+        if (data[1] == "1RM Front Squat") {
+            percentage = (parseInt(data[2]) / 145 * 100);
+            pair = [data[1], percentage];
+            power.push(pair);
+        }
+        if (data[1] == "3RM Front Squat") {
+            percentage = (parseInt(data[2]) / 130 * 100);
+            pair = [data[1], percentage];
+            power.push(pair);
+        }
+        if (data[1] == "5RM Front Squat") {
+            percentage = (parseInt(data[2]) / 115 * 100);
+            pair = [data[1], percentage];
+            power.push(pair);
+        }
+        if (data[1] == "10RM Front Squat") {
+            percentage = (parseInt(data[2]) / 105 * 100);
+            pair = [data[1], percentage];
+            power.push(pair);
+        }
+        if (data[1] == "1RM Shoulder Press") {
+            percentage = (parseInt(data[2]) / 80 * 100);
+            pair = [data[1], percentage];
+            power.push(pair);
+        }
+        if (data[1] == "3RM Shoulder Press") {
+            percentage = (parseInt(data[2]) / 75 * 100);
+            pair = [data[1], percentage];
+            power.push(pair);
+        }
+        if (data[1] == "5RM Shoulder Press") {
+            percentage = (parseInt(data[2]) / 70 * 100);
+            pair = [data[1], percentage];
+            power.push(pair);
+        }
+        if (data[1] == "10RM Shoulder Press") {
+            percentage = (parseInt(data[2]) / 60 * 100);
+            pair = [data[1], percentage];
+            power.push(pair);
+        }
+    }
+    if (data[0] == "olympic") {
+        if (data[1] == "1RM Clean") {
+            percentage = (parseInt(data[2]) / 120 * 100);
+            pair = [data[1], percentage];
+            olympic.push(pair);
+        }
+        if (data[1] == "3RM Clean") {
+            percentage = (parseInt(data[2]) / 110 * 100);
+            pair = [data[1], percentage];
+            olympic.push(pair);
+        }
+        if (data[1] == "5RM Clean") {
+            percentage = (parseInt(data[2]) / 95 * 100);
+            pair = [data[1], percentage];
+            olympic.push(pair);
+        }
+        if (data[1] == "10RM Clean") {
+            percentage = (parseInt(data[2]) / 77 * 100);
+            pair = [data[1], percentage];
+            olympic.push(pair);
+        }
+        if (data[1] == "1RM Snatch") {
+            percentage = (parseInt(data[2]) / 85 * 100);
+            pair = [data[1], percentage];
+            olympic.push(pair);
+        }
+        if (data[1] == "3RM Snatch") {
+            percentage = (parseInt(data[2]) / 77 * 100);
+            pair = [data[1], percentage];
+            olympic.push(pair);
+        }
+        if (data[1] == "5RM Snatch") {
+            percentage = (parseInt(data[2]) / 66 * 100);
+            pair = [data[1], percentage];
+            olympic.push(pair);
+        }
+        if (data[1] == "10RM Snatch") {
+            percentage = (parseInt(data[2]) / 55 * 100);
+            pair = [data[1], percentage];
+            olympic.push(pair);
+        }
+        if (data[1] == "1RM Push Jerk") {
+            percentage = (parseInt(data[2]) / 115 * 100);
+            pair = [data[1], percentage];
+            olympic.push(pair);
+        }
+        if (data[1] == "3RM Push Jerk") {
+            percentage = (parseInt(data[2]) / 100 * 100);
+            pair = [data[1], percentage];
+            olympic.push(pair);
+        }
+        if (data[1] == "5RM Push Jerk") {
+            percentage = (parseInt(data[2]) / 95 * 100);
+            pair = [data[1], percentage];
+            olympic.push(pair);
+        }
+        if (data[1] == "10RM Push Jerk") {
+            percentage = (parseInt(data[2]) / 85 * 100);
+            pair = [data[1], percentage];
+            olympic.push(pair);
+        }
+        if (data[1] == "1RM Clean and Jerk") {
+            percentage = (parseInt(data[2]) / 115 * 100);
+            pair = [data[1], percentage];
+            olympic.push(pair);
+        }
+        if (data[1] == "3RM Clean and Jerk") {
+            percentage = (parseInt(data[2]) / 105 * 100);
+            pair = [data[1], percentage];
+            olympic.push(pair);
+        }
+    }
+    if (data[0] == "sprint") {
+        if (data[1] == "Row 100m") {
+            time = data[2].split(":");
+            seconds = (time[0] * 60) + (time[1] * 1);
+            percentage = (100 - ((seconds - 19) / 7 * 100));
+            pair = [data[1], percentage];
+            sprint.push(pair);
+        }
+        if (data[1] == "Row 250m") {
+            time = data[2].split(":");
+            seconds = (time[0] * 60) + (time[1] * 1);
+            percentage = (100 - ((seconds - 50) / 16 * 100));
+            pair = [data[1], percentage];
+            sprint.push(pair);
+        }
+        if (data[1] == "Row 500m") {
+            time = data[2].split(":");
+            seconds = (time[0] * 60) + (time[1] * 1);
+            percentage = (100 - ((seconds - 104) / 44 * 100));
+            pair = [data[1], percentage];
+            sprint.push(pair);
+        }
+        if (data[1] == "Row 1000m") {
+            time = data[2].split(":");
+            seconds = (time[0] * 60) + (time[1] * 1);
+            percentage = (100 - ((seconds - 230) / 78 * 100));
+            pair = [data[1], percentage];
+            sprint.push(pair);
+        }
+    }
+    if (data[0] == "endurance") {
+        if (data[1] == "Row 2000m") {
+            time = data[2].split(":");
+            seconds = (time[0] * 60) + (time[1] * 1);
+            percentage = (100 - ((seconds - 19) / 7 * 100));
+            pair = [data[1], percentage];
+            endurance.push(pair);
+        }
+        if (data[1] == "Row 5000m") {
+            time = data[2].split(":");
+            seconds = (time[0] * 60) + (time[1] * 1);
+            percentage = (100 - ((seconds - 19) / 7 * 100));
+            pair = [data[1], percentage];
+            endurance.push(pair);
+        }
+    }
+    if (data[0] == "bodyweight") {
+        if (data[1] == "50 Burpees FT") {
+            time = data[2].split(":");
+            seconds = (time[0] * 60) + (time[1] * 1);
+            percentage = (100 - ((seconds - 19) / 7 * 100));
+            pair = [data[1], percentage];
+            bodyweight.push(pair);
+        }
+        if (data[1] == "50 Abmat Sit Ups FT") {
+            time = data[2].split(":");
+            seconds = (time[0] * 60) + (time[1] * 1);
+            percentage = (100 - ((seconds - 19) / 7 * 100));
+            pair = [data[1], percentage];
+            bodyweight.push(pair);
+        }
+        if (data[1] == "100 Abmat Sit Ups FT") {
+            time = data[2].split(":");
+            seconds = (time[0] * 60) + (time[1] * 1);
+            percentage = (100 - ((seconds - 19) / 7 * 100));
+            pair = [data[1], percentage];
+            bodyweight.push(pair);
+        }
+        if (data[1] == "Open 21.1 Scaled") {
+            percentage = (parseInt(data[2]) / 155 * 100);
+            pair = [data[1], percentage];
+            bodyweight.push(pair);
+        }
+        if (data[1] == "AMReps 5min: Single Unders") {
+            percentage = (parseInt(data[2]) / 145 * 100);
+            pair = [data[1], percentage];
+            bodyweight.push(pair);
+        }
+        if (data[1] == "AMReps 2min: Double Unders") {
+            percentage = (parseInt(data[2]) / 130 * 100);
+            pair = [data[1], percentage];
+            bodyweight.push(pair);
+        }
+        if (data[1] == "CrossFit Open 12.1") {
+            percentage = (parseInt(data[2]) / 115 * 100);
+            pair = [data[1], percentage];
+            bodyweight.push(pair);
+        }
+        if (data[1] == "AMRAP 15: Row 250m, 25 Push Ups") {
+            percentage = (parseInt(data[2]) / 105 * 100);
+            pair = [data[1], percentage];
+            bodyweight.push(pair);
+        }
+        if (data[1] == "4 RFT: 50m Walking Lunge, 50 Abmat Sit Ups") {
+            time = data[2].split(":");
+            seconds = (time[0] * 60) + (time[1] * 1);
+            percentage = (100 - ((seconds - 19) / 7 * 100));
+            pair = [data[1], percentage];
+            bodyweight.push(pair);
+        }
+    }
+    if (data[0] == "light") {
+        if (data[1] == "Grace") {
+            time = data[2].split(":");
+            seconds = (time[0] * 60) + (time[1] * 1);
+            percentage = (100 - ((seconds - 19) / 7 * 100));
+            pair = [data[1], percentage];
+            light.push(pair);
+        }
+        if (data[1] == "Diane") {
+            time = data[2].split(":");
+            seconds = (time[0] * 60) + (time[1] * 1);
+            percentage = (100 - ((seconds - 19) / 7 * 100));
+            pair = [data[1], percentage];
+            light.push(pair);
+        }
+        if (data[1] == "Elizabeth") {
+            time = data[2].split(":");
+            seconds = (time[0] * 60) + (time[1] * 1);
+            percentage = (100 - ((seconds - 19) / 7 * 100));
+            pair = [data[1], percentage];
+            light.push(pair);
+        }
+        if (data[1] == "Karen") {
+            time = data[2].split(":");
+            seconds = (time[0] * 60) + (time[1] * 1);
+            percentage = (100 - ((seconds - 19) / 7 * 100));
+            pair = [data[1], percentage];
+            light.push(pair);
+        }
+        if (data[1] == "Fight Gone Bad") {
+            percentage = (parseInt(data[2]) / 145 * 100);
+            pair = [data[1], percentage];
+            light.push(pair);
+        }
+        if (data[1] == "Jack") {
+            percentage = (parseInt(data[2]) / 130 * 100);
+            pair = [data[1], percentage];
+            light.push(pair);
+        }
+        if (data[1] == "The Chief") {
+            percentage = (parseInt(data[2]) / 115 * 100);
+            pair = [data[1], percentage];
+            light.push(pair);
+        }
+        if (data[1] == "12-9-6-3: Power Snatch, Burpee") {
+            time = data[2].split(":");
+            seconds = (time[0] * 60) + (time[1] * 1);
+            percentage = (100 - ((seconds - 19) / 7 * 100));
+            pair = [data[1], percentage];
+            light.push(pair);
+        }
+        if (data[1] == "Open 21.2 Scaled") {
+            percentage = (parseInt(data[2]) / 80 * 100);
+            pair = [data[1], percentage];
+            light.push(pair);
+        }
+    }
+    if (data[0] == "heavy") {
+        if (data[1] == "Isabel") {
+            time = data[2].split(":");
+            seconds = (time[0] * 60) + (time[1] * 1);
+            percentage = (100 - ((seconds - 19) / 7 * 100));
+            pair = [data[1], percentage];
+            heavy.push(pair);
+        }
+        if (data[1] == "DT") {
+            time = data[2].split(":");
+            seconds = (time[0] * 60) + (time[1] * 1);
+            percentage = (100 - ((seconds - 19) / 7 * 100));
+            pair = [data[1], percentage];
+            heavy.push(pair);
+        }
+        if (data[1] == "Open 13.1") {
+            percentage = (parseInt(data[2]) / 180 * 100);
+            pair = [data[1], percentage];
+            heavy.push(pair);
+        }
+        if (data[1] == "Open 14.3") {
+            percentage = (parseInt(data[2]) / 155 * 100);
+            pair = [data[1], percentage];
+            heavy.push(pair);
+        }
+        if (data[1] == "Regionals 11.3") {
+            percentage = (parseInt(data[2]) / 145 * 100);
+            pair = [data[1], percentage];
+            heavy.push(pair);
+        }
+        if (data[1] == "2008 Games: Deadlift and Burpees") {
+            time = data[2].split(":");
+            seconds = (time[0] * 60) + (time[1] * 1);
+            percentage = (100 - ((seconds - 19) / 7 * 100));
+            pair = [data[1], percentage];
+            heavy.push(pair);
+        }
+        if (data[1] == "4 RFT: Row 300m, 20-15-10-5 Push Press") {
+            time = data[2].split(":");
+            seconds = (time[0] * 60) + (time[1] * 1);
+            percentage = (100 - ((seconds - 19) / 7 * 100));
+            pair = [data[1], percentage];
+            heavy.push(pair);
+        }
+        if (data[1] == "5 RFT: Row 500m, 7 Thrusters") {
+            time = data[2].split(":");
+            seconds = (time[0] * 60) + (time[1] * 1);
+            percentage = (100 - ((seconds - 19) / 7 * 100));
+            pair = [data[1], percentage];
+            heavy.push(pair);
+        }
+        if (data[1] == "Chipper: 20 Front Squats, 30 Box Jumps, 40 Kettlebell Swings, 50 Wall Balls") {
+            time = data[2].split(":");
+            seconds = (time[0] * 60) + (time[1] * 1);
+            percentage = (100 - ((seconds - 19) / 7 * 100));
+            pair = [data[1], percentage];
+            heavy.push(pair);
+        }
+        if (data[1] == "5 RFT: 7 Cleans, 14 Ketllebell Swings") {
+            time = data[2].split(":");
+            seconds = (time[0] * 60) + (time[1] * 1);
+            percentage = (100 - ((seconds - 19) / 7 * 100));
+            pair = [data[1], percentage];
+            heavy.push(pair);
+        }
+    }
+
+    // Calculate category percentage
+
+    for (var i = 0; i < power.length; i++) {
+        numerator1 += power[i][1];
+    }
+    for (var i = 0; i < olympic.length; i++) {
+        numerator2 += olympic[i][1];
+    }
+    for (var i = 0; i < sprint.length; i++) {
+        numerator3 += sprint[i][1];
+    }
+    for (var i = 0; i < endurance.length; i++) {
+        numerator4 += endurance[i][1];
+    }
+    for (var i = 0; i < bodyweight.length; i++) {
+        numerator5 += bodyweight[i][1];
+    }
+    for (var i = 0; i < light.length; i++) {
+        numerator6 += light[i][1];
+    }
+    for (var i = 0; i < heavy.length; i++) {
+        numerator7 += heavy[i][1];
+    }
+
+    ratio1 = numerator1 / power.length;
+    ratio2 = numerator2 / olympic.length;
+    ratio3 = numerator3 / sprint.length;
+    ratio4 = numerator4 / endurance.length;
+    ratio5 = numerator5 / bodyweight.length;
+    ratio6 = numerator6 / light.length;
+    ratio7 = numerator7 / heavy.length;
+
+    // Display percentages
+
+    var fitness = 0;
+    var denominator = 0;
+
+    if (isNaN(ratio1)) {
+        document.getElementById("powerlifts").style.width = "0%";
+    } else {
+        fitness += ratio1;
+        denominator += 1;
+        document.getElementById("powerlifts").style.width = ratio1.toFixed(0) + "%";
+        document.getElementById("powerlifts").innerHTML = ratio1.toFixed(0);
+    }
+    if (isNaN(ratio2)) {
+        document.getElementById("olympiclifts").style.width = "0%";
+    } else {
+        fitness += ratio2;
+        denominator += 1;
+        document.getElementById("olympiclifts").style.width = ratio2.toFixed(0) + "%";
+        document.getElementById("olympiclifts").innerHTML = ratio2.toFixed(0);
+    }
+    if (isNaN(ratio3)) {
+        document.getElementById("sprint").style.width = "0%";
+    } else {
+        fitness += ratio3;
+        denominator += 1;
+        document.getElementById("sprint").style.width = ratio3.toFixed(0) + "%";
+        document.getElementById("sprint").innerHTML = ratio3.toFixed(0);
+    }
+    if (isNaN(ratio4)) {
+        document.getElementById("endurance").style.width = "0%";
+    } else {
+        fitness += ratio4;
+        denominator += 1;
+        document.getElementById("endurance").style.width = ratio4.toFixed(0) + "%";
+        document.getElementById("endurance").innerHTML = ratio4.toFixed(0);
+    }
+    if (isNaN(ratio5)) {
+        document.getElementById("bodyweight").style.width = "0%";
+    } else {
+        fitness += ratio5;
+        denominator += 1;
+        document.getElementById("bodyweight").style.width = ratio5.toFixed(0) + "%";
+        document.getElementById("bodyweight").innerHTML = ratio5.toFixed(0);
+    }
+    if (isNaN(ratio6)) {
+        document.getElementById("light").style.width = "0%";
+    } else {
+        fitness += ratio6;
+        denominator += 1;
+        document.getElementById("light").style.width = ratio6.toFixed(0) + "%";
+        document.getElementById("light").innerHTML = ratio6.toFixed(0);
+    }
+    if (isNaN(ratio7)) {
+        document.getElementById("heavy").style.width = "0%";
+    } else {
+        fitness += ratio7;
+        denominator += 1;
+        document.getElementById("heavy").style.width = ratio7.toFixed(0) + "%";
+        document.getElementById("heavy").innerHTML = ratio7.toFixed(0);
+    }
+    fitness /= denominator;
+    console.log(fitness);
+    document.getElementById("fitnesslevel").innerHTML = ": " + fitness.toFixed(0);
+}
+
+var key = "0f4274-8917ec-d964fe-82271a-8ccd3c";
+var url = "https://cse204.work/todos";
+
+var xhttp = new XMLHttpRequest();
+
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var result = JSON.parse(this.responseText);
+        for (var i = 0; i < result.length; i++) {
+            if (result[i].text.includes("!")) {
+                checkPriorResults(result[i]);
+                addResult(result[i]);
+            }
+        }
+    }
+};
+xhttp.open("GET", url, true);
+xhttp.setRequestHeader("x-api-key",key);
+xhttp.send();
+
+document.getElementById("proficiency").addEventListener("submit", function(event) {
+    event.preventDefault();
+    var data = {
+        text: category.value + "!" + choices.value + "!" + score.value,
+    }
+
+    var xhttp2 = new XMLHttpRequest();
+    xhttp2.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            checkPriorResults(JSON.parse(this.responseText));
+            addResult(JSON.parse(this.responseText));
+        } else if (this.readyState == 4) {
+            console.log(this.responseText);
+        }
+    };
+
+    console.log(data);
+
+    xhttp2.open("POST", url, true);
+    xhttp2.setRequestHeader("Content-type", "application/json");
+    xhttp2.setRequestHeader("x-api-key", key);
+    xhttp2.send(JSON.stringify(data));
+});
+
+function checkPriorResults(event) {
+    if (event.text.includes("!")) {
+        data = event.text.split("!");
+    }
+    for (var i = 0; i < results.length; i++) {
+        if (results[i].text.includes("!")) {
+            resultText = results[i].text.split("!");
+        }
+        if (data[1] == resultText[1]) {
+            deleteResult(results[i]);
+            results.splice(i, 1);
+        }
+    }
+    for (var i = 0; i < power.length; i++) {
+        if (power[i][0] == data[1]){
+            power.splice(i, 1);
+        }
+    }
+    for (var i = 0; i < olympic.length; i++) {
+        if (olympic[i][0] == data[1]){
+            olympic.splice(i, 1);
+        }
+    }
+}
+
+function deleteResult(event) {
+    console.log("delete " + event.text);
+
+    var result = event.id;
+
+    var deletexhttp = new XMLHttpRequest();
+    deletexhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            console.log(this.responseText);
+        } else if (this.readyState == 4) {
+            console.log(this.responseText);
+        }
+    };
+    deletexhttp.open("DELETE", url + "/" + result, true);
+    deletexhttp.setRequestHeader("Content-type", "application/json");
+    deletexhttp.setRequestHeader("x-api-key", key);
+    deletexhttp.send();
+}

@@ -66,31 +66,7 @@
                                     </div>
                                     <div class="collapse" id="week0wod1">
                                         <div class="card card-body">
-                                            <h3>Shake It Off</h3>
-                                            <h5>Mobility</h5>
-                                            <div class="indent">
-                                                <p>This will be Mobility</p>
-                                            </div>
-                                            <h5>Warm Up</h5>
-                                            <div class="indent">
-                                                <p>This will be warm up</p>
-                                            </div>
-                                            <h5>Dry Run</h5>
-                                            <div class="indent">
-                                                <p>This will be Dry Run</p>
-                                            </div>
-                                            <h6>WOD</h6>
-                                            <div class="indent">
-                                                <p>This will be the wod</p>
-                                            </div>
-                                            <h6>Accessory</h6>
-                                            <div class="indent">
-                                                <p>This will be accessory</p>
-                                            </div>
-                                            <h6>Cool Down</h6>
-                                            <div class="indent">
-                                                <p>This will be cool down</p>
-                                            </div>
+                                            This is WOD 1
                                         </div>
                                     </div>
                                     <div class="collapse" id="week0wod2">
@@ -140,31 +116,7 @@
                                     </div>
                                     <div class="collapse" id="week1wod1">
                                         <div class="card card-body">
-                                            <h3>Shake It Off</h3>
-                                            <h5>Mobility</h5>
-                                            <div class="indent">
-                                                <p>This will be Mobility</p>
-                                            </div>
-                                            <h5>Warm Up</h5>
-                                            <div class="indent">
-                                                <p>This will be warm up</p>
-                                            </div>
-                                            <h5>Dry Run</h5>
-                                            <div class="indent">
-                                                <p>This will be Dry Run</p>
-                                            </div>
-                                            <h6>WOD</h6>
-                                            <div class="indent">
-                                                <p>This will be the wod</p>
-                                            </div>
-                                            <h6>Accessory</h6>
-                                            <div class="indent">
-                                                <p>This will be accessory</p>
-                                            </div>
-                                            <h6>Cool Down</h6>
-                                            <div class="indent">
-                                                <p>This will be cool down</p>
-                                            </div>
+                                            This is WOD 1
                                         </div>
                                     </div>
                                     <div class="collapse" id="week1wod2">
@@ -1061,125 +1013,108 @@
                 </div>
             </div>
             <div class="row" id="bars">
-                <form action="#" method="post" id="demoForm" class="demoForm">
-                    <fieldset>
-                        <select name="category">
-                            <option value="power">Power Lifts</option>
-                            <option value="olympic">Olympic Lifts</option>
-                            <option value="sprint">Sprint</option> 
-                            <option value="endurance">Endurance</option>
-                            <option value="bodyweight">Bodyweight</option>
-                            <option value="light">Light</option> 
-                            <option value="heavy">Heavy</option>
-                        </select>
-                        
-                        <select name="choices" id="choices">
-                            <!-- populated using JavaScript -->
-                        </select>
-                    
-                    </fieldset>
-                </form>
-                <form class="entry">
-                    <input id="search1" type='text' name='search'>
-                    <button class="proficiency" onclick="resize1()">Click here</button>
-                </form>
+                <div class="row fitnessbox">
+                    <div class="fitnessScore">
+                        <p>Fitness Level</p><p id=fitnesslevel></p>
+                    </div>
+                </div>
+                <div class="row fitnessbox">
+                    <div class="fitnessScore">
+                        <form action="#" method="post" id="demoForm" class="demoForm">
+                            <fieldset>
+                                <select name="category" id="category">
+                                    <option value="power">Power Lifts</option>
+                                    <option value="olympic">Olympic Lifts</option>
+                                    <option value="sprint">Sprint</option> 
+                                    <option value="endurance">Endurance</option>
+                                    <option value="bodyweight">Bodyweight</option>
+                                    <option value="light">Light</option> 
+                                    <option value="heavy">Heavy</option>
+                                </select>
+                                
+                                <select name="choices" id="choices">
+                                <!-- populated using JavaScript -->
+                                </select>
+                            
+                            </fieldset>
+                        </form>
+                        <form class="entry" id="proficiency">
+                            <input id="score" type='text' name='search' placeholder="Enter score here">
+                            <button id="submit" class="proficiency" >Submit</button>
+                        </form>
+                    </div>
+                </div>
                 <div class="row">
-                    <div class="col-2">
+                    <div class="col-3">
                         <p>Power Lifts</p>
                     </div>
-                    <div class="col-9">
+                    <div class="col-7">
                         <div class="progress">
-                            <div class="progress-bar" id="powerlifts" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar" id="powerlifts" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-2">
+                    <div class="col-3">
                         <p>Olympic Lifts</p>
                     </div>
-                    <div class="col-9">
+                    <div class="col-7">
                         <div class="progress">
-                            <div class="progress-bar" id="olympiclifts" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar" id="olympiclifts" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-2">
+                    <div class="col-3">
                         <p>Sprint</p>
                     </div>
-                    <div class="col-9">
+                    <div class="col-7">
                         <div class="progress">
-                            <div class="progress-bar" id="sprint" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar" id="sprint" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-2">
+                    <div class="col-3">
                         <p>Endurance</p>
                     </div>
-                    <div class="col-9">
+                    <div class="col-7">
                         <div class="progress">
-                            <div class="progress-bar" id="endurance" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar" id="endurance" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-2">
+                    <div class="col-3">
                         <p>Bodyweight</p>
                     </div>
-                    <div class="col-9">
+                    <div class="col-7">
                         <div class="progress">
-                            <div class="progress-bar" id="bodyweight" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar" id="bodyweight" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-2">
+                    <div class="col-3">
                         <p>Light</p>
                     </div>
-                    <div class="col-9">
+                    <div class="col-7">
                         <div class="progress">
-                            <div class="progress-bar" id="light" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar" id="light" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-2">
+                    <div class="col-3">
                         <p>Heavy</p>
                     </div>
-                    <div class="col-9">
+                    <div class="col-7">
                         <div class="progress">
-                            <div class="progress-bar" id="heavy" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar" id="heavy" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <!-- <div class="row">
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-                    Launch demo modal
-                </button>
-
-                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                ...
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
         </div>
         <div class="row section" id="videos">
             <div class="row" id="videosHeader">
@@ -1202,6 +1137,15 @@
                             </div>
                             <div class="row">
                                 <a href="https://www.youtube.com/watch?v=QmZAiBqPvZw&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=21" target="_blank">Back Squat</a>
+                            </div>
+                            <div class="row">
+                                <a href="https://www.mayhemnation.tv/movement-library/videos/rich-bandedpullapart" target="_blank">Banded Pull Aparts</a>
+                            </div>
+                            <div class="row">
+                                <a href="https://www.mayhemnation.tv/movement-library/videos/rich-bandedrow" target="_blank">Banded Row</a>
+                            </div>
+                            <div class="row">
+                                <a href="https://www.youtube.com/watch?v=Gn0_1HAkEfE&list=PLNmWOCEX1SUYEV22aBa94WB2Z8Xi2eYGJ&index=58" target="_blank">Banded 7s</a>
                             </div>
                             <div class="row">
                                 <a href="https://www.youtube.com/watch?v=-JcD5SOqW50" target="_blank">Bear Crawl</a>
@@ -1229,6 +1173,12 @@
                             </div>
                             <div class="row">
                                 <a href="https://www.youtube.com/watch?v=PjY1rH4_MOA&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=64" target="_blank">Clean and Jerk</a>
+                            </div>
+                            <div class="row">
+                                <a href="https://www.mayhemnation.tv/movement-library/videos/tasia-deadbug" target="_blank">Dead Bug</a>
+                            </div>
+                            <div class="row">
+                                <a href="https://www.mayhemnation.tv/movement-library/videos/tasia-deadhang" target="_blank">Dead Hang</a>
                             </div>
                             <div class="row">
                                 <a href="https://www.youtube.com/watch?v=1ZXobu7JvvE&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4" target="_blank">Deadlift</a>
@@ -1273,7 +1223,13 @@
                                 <a href="https://www.youtube.com/watch?v=uYumuL_G_V0&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=9" target="_blank">Front Squat</a>
                             </div>
                             <div class="row">
+                                <a href="https://www.mayhemnation.tv/movement-library/videos/tasia-glutebridge" target="_blank">Glute Bridge</a>
+                            </div>
+                            <div class="row">
                                 <a href="https://www.mayhemnation.tv/movement-library/videos/tasia-dbgobletsquat" target="_blank">Goblet Squat</a>
+                            </div>
+                            <div class="row">
+                                <a href="https://www.mayhemnation.tv/movement-library/videos/rich-goodmorning" target="_blank">Good Morning</a>
                             </div>
                             <div class="row">
                                 <a href="https://www.mayhemnation.tv/videos/rich-handreleasepushup" target="_blank">Hand Release Push Up</a>
@@ -1285,7 +1241,13 @@
                                 <a href="https://www.youtube.com/watch?v=-mLzQdVAwlw&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=47" target="_blank">Hang Power Snatch</a>
                             </div>
                             <div class="row">
+                                <a href="https://www.mayhemnation.tv/movement-library/videos/tasia-hollowhold" target="_blank">Hollow Hold</a>
+                            </div>
+                            <div class="row">
                                 <a href="https://www.youtube.com/watch?v=SfkuOb_1GK8" target="_blank">Hollow Rock</a>
+                            </div>
+                            <div class="row">
+                                <a href="https://www.mayhemnation.tv/movement-library/videos/tasia-inchworm" target="_blank">Inch Worm</a>
                             </div>
                             <div class="row">
                                 <a href="https://www.youtube.com/watch?v=Pm-b2XFeABA&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=49" target="_blank">Kettlebell Snatch</a>
@@ -1297,10 +1259,16 @@
                                 <a href="https://www.youtube.com/watch?v=KVGhkHSrDJo&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=15" target="_blank">Med Ball Clean</a>
                             </div>
                             <div class="row">
+                                <a href="https://www.mayhemnation.tv/movement-library/videos/tasia-mountainclimber" target="_blank">Mountain Climber</a>
+                            </div>
+                            <div class="row">
                                 <a href="https://www.youtube.com/watch?v=K7CctePUCYA" target="_blank">Muscle Clean</a>
                             </div>
                             <div class="row">
                                 <a href="https://www.youtube.com/watch?v=bJYzOo1cNqY&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=73" target="_blank">Muscle Snatch</a>
+                            </div>
+                            <div class="row">
+                                <a href="https://www.mayhemnation.tv/movement-library/videos/tasia-platehop" target="_blank">Plate Hop</a>
                             </div>
                             <div class="row">
                                 <a href="https://www.youtube.com/watch?v=TL8SMp7RdXQ&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=33" target="_blank">Power Snatch</a>
@@ -1315,6 +1283,9 @@
                                 <a href="https://www.youtube.com/watch?v=0pkjOk0EiAk&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=11" target="_blank">Push Up</a>
                             </div>
                             <div class="row">
+                                <a href="https://www.youtube.com/watch?v=xHTW5SY9HTg" target="_blank">PVC Band Pull Downs</a>
+                            </div>
+                            <div class="row">
                                 <a href="https://www.youtube.com/watch?v=sEAOZc77wk8&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=28" target="_blank">Ring Row</a>
                             </div>
                             <div class="row">
@@ -1322,6 +1293,12 @@
                             </div>
                             <div class="row">
                                 <a href="https://www.youtube.com/watch?v=5yWaNOvgFCM&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=4" target="_blank">Shoulder Press</a>
+                            </div>
+                            <div class="row">
+                                <a href="https://www.mayhemnation.tv/movement-library/videos/tasia-sideplank" target="_blank">Side Plank</a>
+                            </div>
+                            <div class="row">
+                                <a href="https://www.youtube.com/watch?v=GHFZqmB9ILU" target="_blank">Single Arm Suitcase Deadlift</a>
                             </div>
                             <div class="row">
                                 <a href="https://www.youtube.com/watch?v=hCuXYrTOMxI" target="_blank">Single Under</a>
@@ -1339,10 +1316,16 @@
                                 <a href="https://www.youtube.com/watch?v=gh55vVlwlQg&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=10" target="_blank">Sumo Deadlift High Pull</a>
                             </div>
                             <div class="row">
+                                <a href="https://www.mayhemnation.tv/movement-library/videos/tasia-superman" target="_blank">Superman</a>
+                            </div>
+                            <div class="row">
                                 <a href="https://www.youtube.com/watch?v=L219ltL15zk&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=18" target="_blank">Thruster</a>
                             </div>
                             <div class="row">
                                 <a href="https://www.youtube.com/watch?v=saYKvqSscuY&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=19" target="_blank">Turkish Get Up</a>
+                            </div>
+                            <div class="row">
+                                <a href="https://www.mayhemnation.tv/movement-library/videos/tasia-vups" target="_blank">V-Up</a>
                             </div>
                             <div class="row">
                                 <a href="https://www.youtube.com/watch?v=DlhojghkaQ0&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=24" target="_blank">Walking Lunge</a>
@@ -1352,6 +1335,9 @@
                             </div>
                             <div class="row">
                                 <a href="https://www.youtube.com/watch?v=NK_OcHEm8yM&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=48" target="_blank">Wall Walk</a>
+                            </div>
+                            <div class="row">
+                                <a href="https://www.mayhemnation.tv/movement-library/videos/tasia-windmill" target="_blank">Windmill</a>
                             </div>
                         </div>
                     </div>
@@ -1363,37 +1349,46 @@
                         </div>
                         <div class="techniqueLinks">
                             <div class="row">
+                                Running
+                            </div>
+                            <div class="row">
                                 <a href="https://www.youtube.com/watch?v=Ixkmtp_ZFD8" target="_blank">Running Modifications</a>
+                            </div>
+                            <div class="row">
+                                Deadlift
                             </div>
                             <div class="row">
                                 <a href="https://www.youtube.com/watch?v=pnf73VvI5dY" target="_blank">Deadlift Setup Position</a>
                             </div>
                             <div class="row">
-                                <a href="https://www.youtube.com/watch?v=TlneBvU4XFY&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=52" target="_blank">Med Ball Progression</a>
+                                <a href="https://www.youtube.com/watch?v=Qpr5i4DTpk0&list=PLTFXmc6Qt4tpN-YPIykgLiedMqToaP_3N&index=3" target="_blank">Deadlift Warm Up Squat University</a>
                             </div>
                             <div class="row">
                                 <a href="https://www.youtube.com/watch?v=4Kg-Y9u-rkU" target="_blank">Deadlift Bar Path</a>
                             </div>
                             <div class="row">
-                                <a href="https://www.youtube.com/watch?v=m8BuWf5UsHE" target="_blank">Presses Bar Path</a>
+                                Squats
                             </div>
                             <div class="row">
                                 <a href="https://www.youtube.com/watch?v=DfhVMMuFJKQ" target="_blank">Elbows in Front Rack</a>
                             </div>
                             <div class="row">
-                                <a href="https://www.youtube.com/watch?v=Gn0_1HAkEfE&list=PLNmWOCEX1SUYEV22aBa94WB2Z8Xi2eYGJ&index=58" target="_blank">Banded 7s</a>
+                                <a href="https://www.youtube.com/results?search_query=front+squat+technique" target="_blank">Front Squat Squat University</a>
                             </div>
                             <div class="row">
-                                <a href="https://www.youtube.com/watch?v=UKPD_olps0s&list=PLvAVwtyBkTrSqXaJBa_DKeBQPMimB-lNT&index=13" target="_blank">Burgener Warm Up Clean</a>
+                                <a href="https://www.youtube.com/watch?v=pCEpcIo-O4I&list=PLTFXmc6Qt4tpN-YPIykgLiedMqToaP_3N&index=1" target="_blank">Squat Warm Up Squat Technique</a>
                             </div>
                             <div class="row">
-                                <a href="https://www.youtube.com/watch?v=1s_CrJgo3_U&list=PLvAVwtyBkTrSqXaJBa_DKeBQPMimB-lNT&index=15" target="_blank">Burgener Warm Up Snatch</a>
+                                <a href="https://www.youtube.com/watch?v=mieC65cBFEk" target="_blank">Thruster Technique</a>
                             </div>
                             <div class="row">
-                                <a href="https://www.youtube.com/watch?v=ub0HX7JMQJY&list=PLvAVwtyBkTrSqXaJBa_DKeBQPMimB-lNT&index=14" target="_blank">Skill Transfer Exercises Snatch</a>
+                                <a href="https://www.youtube.com/watch?v=b9l8gQdizDQ" target="_blank">Thruster Technique</a>
                             </div>
                             <div class="row">
-                                <a href="https://www.youtube.com/watch?v=h6qSHqh3XCg&list=PLvAVwtyBkTrSqXaJBa_DKeBQPMimB-lNT&index=8" target="_blank">Skill Transfer Exercises Clean</a>
+                                <a href="https://www.youtube.com/watch?v=TlneBvU4XFY&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=52" target="_blank">Med Ball Progression</a>
+                            </div>
+                            <div class="row">
+                                Rowing
                             </div>
                             <div class="row">
                                 <a href="https://www.youtube.com/watch?v=8RmlzQa-IUc" target="_blank">Rowing Technique with Kristi Eramo O'Connell</a>
@@ -1405,19 +1400,10 @@
                                 <a href="https://www.youtube.com/watch?v=UlWUPkXrq24" target="_blank">Rowing Technique with Jason Khalipa</a>
                             </div>
                             <div class="row">
-                                <a href="https://www.youtube.com/results?search_query=front+squat+technique" target="_blank">Front Squat Squat University</a>
+                                Presses
                             </div>
                             <div class="row">
-                                <a href="https://www.youtube.com/watch?v=Qpr5i4DTpk0&list=PLTFXmc6Qt4tpN-YPIykgLiedMqToaP_3N&index=3" target="_blank">Deadlift Warm Up Squat University</a>
-                            </div>
-                            <div class="row">
-                                <a href="https://www.youtube.com/watch?v=pCEpcIo-O4I&list=PLTFXmc6Qt4tpN-YPIykgLiedMqToaP_3N&index=1" target="_blank">Squat Warm Up Squat Technique</a>
-                            </div>
-                            <div class="row">
-                                <a href="https://www.youtube.com/watch?v=mieC65cBFEk" target="_blank">Thruster Technique</a>
-                            </div>
-                            <div class="row">
-                                <a href="https://www.youtube.com/watch?v=b9l8gQdizDQ" target="_blank">Thruster Technique</a>
+                                <a href="https://www.youtube.com/watch?v=m8BuWf5UsHE" target="_blank">Presses Bar Path</a>
                             </div>
                             <div class="row">
                                 <a href="https://www.youtube.com/watch?v=JTgVcdhA5xs" target="_blank">Push Jerk Technique</a>
@@ -1433,6 +1419,12 @@
                             </div>
                             <div class="row">
                                 <a href="https://www.youtube.com/watch?v=Y5xpE2K660s" target="_blank">CrossFit L1 Presses</a>
+                            </div>
+                            <div class="row">
+                                Pull Ups
+                            </div>
+                            <div class="row">
+                                <a href="https://www.youtube.com/watch?v=bZcJbM_Mzxo" target="_blank">Pull Up Scales</a>
                             </div>
                         </div>
                     </div>
@@ -1467,6 +1459,40 @@
                             <div class="row">
                                 <a href="https://www.youtube.com/watch?v=DVsEN1cF3nU" target="_blank">Burgener Strength Session</a>
                             </div>
+                            <div class="row">
+                                <a href="https://www.youtube.com/watch?v=Gn0_1HAkEfE&list=PLNmWOCEX1SUYEV22aBa94WB2Z8Xi2eYGJ&index=58" target="_blank">Banded 7s</a>
+                            </div>
+                            <div class="row">
+                                <a href="https://www.youtube.com/watch?v=UKPD_olps0s&list=PLvAVwtyBkTrSqXaJBa_DKeBQPMimB-lNT&index=13" target="_blank">Burgener Warm Up Clean</a>
+                            </div>
+                            <div class="row">
+                                <a href="https://www.youtube.com/watch?v=h6qSHqh3XCg&list=PLvAVwtyBkTrSqXaJBa_DKeBQPMimB-lNT&index=8" target="_blank">Skill Transfer Exercises Clean</a>
+                            </div>
+                            <div class="row">
+                                <a href="https://www.youtube.com/watch?v=1s_CrJgo3_U&list=PLvAVwtyBkTrSqXaJBa_DKeBQPMimB-lNT&index=15" target="_blank">Burgener Warm Up Snatch</a>
+                            </div>
+                            <div class="row">
+                                <a href="https://www.youtube.com/watch?v=ub0HX7JMQJY&list=PLvAVwtyBkTrSqXaJBa_DKeBQPMimB-lNT&index=14" target="_blank">Skill Transfer Exercises Snatch</a>
+                            </div>
+                            <div class="row">
+                                Mobility
+                            </div>
+                            <div class="row">
+                                <a href="https://www.mayhemnation.tv/movement-library/videos/tasia-catcow" target="_blank">Cat Cow</a>
+                            </div>
+                            <div class="row">
+                                <a href="https://www.youtube.com/watch?v=D1M_uEYGC8U" target="_blank">Bird Dogs</a>
+                            </div>
+                            <div class="row">
+                                <a href="https://www.mayhemnation.tv/movement-library/videos/tasia-downdogtoupdog" target="_blank">Down Dog to Up Down</a>
+                            </div>
+                            <div class="row">
+                                <a href="https://www.mayhemnation.tv/movement-library/videos/tasia-scorpianstretch" target="_blank">Scorpion Stretch</a>
+                            </div>
+                            <div class="row">
+                                <a href="https://www.mayhemnation.tv/movement-library/videos/tasia-thoracicrotation" target="_blank">Thoracic Rotation</a>
+                            </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -1475,6 +1501,28 @@
         <div class="row">
             <a href="" target="_blank"></a>
         </div>
+        <div class="row">
+            <a href="" target="_blank"></a>
+        </div>
+        <div class="row">
+            <a href="" target="_blank"></a>
+        </div>
+        <div class="row">
+            <a href="" target="_blank"></a>
+        </div>
+        <div class="row">
+            <a href="" target="_blank"></a>
+        </div>
+        <div class="row">
+            <a href="" target="_blank"></a>
+        </div>
+        <div class="row">
+            <a href="" target="_blank"></a>
+        </div>
+        <div class="row">
+            <a href="" target="_blank"></a>
+        </div>
+
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
