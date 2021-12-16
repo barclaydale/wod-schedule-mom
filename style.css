@@ -231,17 +231,16 @@ table tr td:last-child, table tr th:last-child {
     width: 20%;
 }
 
-.col-7 {
+.col-7, .col-3 {
     height: fit-content;
     width: 100%;
     display: flex;
 }
 
-
-.col-3 p {
-    text-align: right;
+#a, #b, #c, #d, #e, #f, #g {
     margin: 0;
     height: auto;
+    text-align: right;
     width: 100%;
 }
 
@@ -289,6 +288,7 @@ select, #score, #submit {
 #score {
     margin-left: 5px;
     margin-bottom: 15px;
+    padding-left: 5px;
 }
 
 .fitnessbox {
@@ -304,4 +304,23 @@ select, #score, #submit {
 .fitnessScore p {
     width: auto;
     margin-bottom: 0px;
+}
+
+#fitnesstitle {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 5px;
+    font-size: 50px;
+    font-weight: bolder;
+    color: rgb(41, 41, 41);
+}
+
+#fitnesslevel {
+    font-size: 50px;
+    font-weight: bolder;
+    color:rgb(41, 41, 41);
+}
+
+.previous {
+    border: 1px solid red;
 }

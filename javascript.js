@@ -55,7 +55,7 @@ var Select_List_Data = {
             text: ['Grace', 'Diane', 'Elizabeth', 'Karen', 'Fight Gone Bad', 'Jack', 'The Chief', '12-9-6-3: Power Snatch, Burpee', 'Open 21.2 Scaled']
         },
         heavy: {
-            text: ['Isabel', 'DT', 'Open 13.1', 'Open 14.3', 'Regional 11.3', '2008 Games: Deadlift and Burpees', '4 RFT: Row 300m, 20-15-10-5 Push Press', '5 RFT: Row 500m, 7 Thrusters', 'Chipper: 20 Front Squats, 30 Box Jumps, 40 Kettlebell Swings, 50 Wall Balls', '5 RFT: 7 Cleans, 14 Ketllebell Swings']
+            text: ['Isabel', 'DT', 'Open 13.1', 'Open 14.3', 'Regional 11.3', '2008 Games: Deadlift and Burpees', '4 RFT: Row 300m, 20-15-10-5 Push Press', '5 RFT: Row 500m, 7 Thrusters', 'FT: 20 Front Squats, 30 Box Jumps, 40 KBS, 50 Wall Balls', '5 RFT: 7 Cleans, 14 KBS']
         }
     }    
 };
@@ -140,7 +140,6 @@ document.forms['demoForm'].elements['category'].onchange = function(e) {
     appendDataToSelect(relList, obj);
 };
 
-
 // populate associated select box as page loads
 (function() { // immediate function to avoid globals
     
@@ -221,39 +220,58 @@ function addResult(event) {
     if (data[0] == "power") {
         if (data[1] == "1RM Deadlift") {
             percentage = (parseInt(data[2]) / 215 * 100);
+            document.getElementById("score").style.placeholder = "Ex: 135";
         }
         if (data[1] == "3RM Deadlift") {
             percentage = (parseInt(data[2]) / 195 * 100);
+            document.getElementById("score").style.placeholder = "Ex: 135";
         }
         if (data[1] == "5RM Deadlift") {
             percentage = (parseInt(data[2]) / 180 * 100);
+            document.getElementById("score").style.placeholder = "Ex: 135";
         }
         if (data[1] == "10RM Deadlift") {
             percentage = (parseInt(data[2]) / 155 * 100);
+            document.getElementById("score").style.placeholder = "Ex: 135";
         }
         if (data[1] == "1RM Front Squat") {
             percentage = (parseInt(data[2]) / 145 * 100);
+            document.getElementById("score").style.placeholder = "Ex: 135";
         }
         if (data[1] == "3RM Front Squat") {
             percentage = (parseInt(data[2]) / 130 * 100);
+            document.getElementById("score").style.placeholder = "Ex: 135";
         }
         if (data[1] == "5RM Front Squat") {
             percentage = (parseInt(data[2]) / 115 * 100);
+            document.getElementById("score").style.placeholder = "Ex: 135";
         }
         if (data[1] == "10RM Front Squat") {
             percentage = (parseInt(data[2]) / 105 * 100);
+            document.getElementById("score").style.placeholder = "Ex: 135";
         }
         if (data[1] == "1RM Shoulder Press") {
             percentage = (parseInt(data[2]) / 80 * 100);
+            document.getElementById("score").style.placeholder = "Ex: 135";
         }
         if (data[1] == "3RM Shoulder Press") {
             percentage = (parseInt(data[2]) / 75 * 100);
+            document.getElementById("score").style.placeholder = "Ex: 135";
         }
         if (data[1] == "5RM Shoulder Press") {
             percentage = (parseInt(data[2]) / 70 * 100);
+            document.getElementById("score").style.placeholder = "Ex: 135";
         }
         if (data[1] == "10RM Shoulder Press") {
             percentage = (parseInt(data[2]) / 60 * 100);
+            document.getElementById("score").style.placeholder = "Ex: 135";
+        }
+
+        if (percentage < 0) {
+            percentage = 0;
+        }
+        if (percentage > 100) {
+            percentage = 100;
         }
         pair = [data[1], percentage];
         power.push(pair);
@@ -301,6 +319,13 @@ function addResult(event) {
         if (data[1] == "3RM Clean and Jerk") {
             percentage = (parseInt(data[2]) / 105 * 100);
         }
+
+        if (percentage < 0) {
+            percentage = 0;
+        }
+        if (percentage > 100) {
+            percentage = 100;
+        }
         pair = [data[1], percentage];
         olympic.push(pair);
     }
@@ -325,6 +350,13 @@ function addResult(event) {
             seconds = (time[0] * 60) + (time[1] * 1);
             percentage = (100 - ((seconds - 230) / 78 * 100));
         }
+
+        if (percentage < 0) {
+            percentage = 0;
+        }
+        if (percentage > 100) {
+            percentage = 100;
+        }
         pair = [data[1], percentage];
         sprint.push(pair);
     }
@@ -338,6 +370,13 @@ function addResult(event) {
             time = data[2].split(":");
             seconds = (time[0] * 60) + (time[1] * 1);
             percentage = (100 - ((seconds - 1320) / 288 * 100));
+        }
+
+        if (percentage < 0) {
+            percentage = 0;
+        }
+        if (percentage > 100) {
+            percentage = 100;
         }
         pair = [data[1], percentage];
         endurance.push(pair);
@@ -379,6 +418,13 @@ function addResult(event) {
             time = data[2].split(":");
             seconds = (time[0] * 60) + (time[1] * 1);
             percentage = (100 - ((seconds - 730) / 403 * 100));
+        }
+
+        if (percentage < 0) {
+            percentage = 0;
+        }
+        if (percentage > 100) {
+            percentage = 100;
         }
         pair = [data[1], percentage];
         bodyweight.push(pair);
@@ -427,6 +473,13 @@ function addResult(event) {
             seconds = (time[0] * 60) + (time[1] * 1);
             percentage = (100 - ((seconds - 801) / 579 * 100));
         }
+
+        if (percentage < 0) {
+            percentage = 0;
+        }
+        if (percentage > 100) {
+            percentage = 100;
+        }
         pair = [data[1], percentage];
         light.push(pair);
     }
@@ -465,15 +518,22 @@ function addResult(event) {
             seconds = (time[0] * 60) + (time[1] * 1);
             percentage = (100 - ((seconds - 835) / 424 * 100));
         }
-        if (data[1] == "Chipper: 20 Front Squats, 30 Box Jumps, 40 Kettlebell Swings, 50 Wall Balls") {
+        if (data[1] == "FT: 20 Front Squats, 30 Box Jumps, 40 KBS, 50 Wall Balls") {
             time = data[2].split(":");
             seconds = (time[0] * 60) + (time[1] * 1);
             percentage = (100 - ((seconds - 401) / 376 * 100));
         }
-        if (data[1] == "5 RFT: 7 Cleans, 14 Ketllebell Swings") {
+        if (data[1] == "5 RFT: 7 Cleans, 14 KBS") {
             time = data[2].split(":");
             seconds = (time[0] * 60) + (time[1] * 1);
             percentage = (100 - ((seconds - 432) / 448 * 100));
+        }
+
+        if (percentage < 0) {
+            percentage = 0;
+        }
+        if (percentage > 100) {
+            percentage = 100;
         }
         pair = [data[1], percentage];
         heavy.push(pair);
@@ -523,7 +583,7 @@ function addResult(event) {
         fitness += ratio1;
         denominator += 1;
         document.getElementById("powerlifts").style.width = ratio1.toFixed(0) + "%";
-        document.getElementById("powerlifts").innerHTML = ratio1.toFixed(0);
+        document.getElementById("a").innerHTML = "Power Lifts: " + ratio1.toFixed(0);
     }
     if (isNaN(ratio2)) {
         document.getElementById("olympiclifts").style.width = "0%";
@@ -531,7 +591,7 @@ function addResult(event) {
         fitness += ratio2;
         denominator += 1;
         document.getElementById("olympiclifts").style.width = ratio2.toFixed(0) + "%";
-        document.getElementById("olympiclifts").innerHTML = ratio2.toFixed(0);
+        document.getElementById("b").innerHTML = "Olympic Lifts: " + ratio2.toFixed(0);
     }
     if (isNaN(ratio3)) {
         document.getElementById("sprint").style.width = "0%";
@@ -539,7 +599,7 @@ function addResult(event) {
         fitness += ratio3;
         denominator += 1;
         document.getElementById("sprint").style.width = ratio3.toFixed(0) + "%";
-        document.getElementById("sprint").innerHTML = ratio3.toFixed(0);
+        document.getElementById("c").innerHTML = "Sprint: " +ratio3.toFixed(0);
     }
     if (isNaN(ratio4)) {
         document.getElementById("endurance").style.width = "0%";
@@ -547,7 +607,7 @@ function addResult(event) {
         fitness += ratio4;
         denominator += 1;
         document.getElementById("endurance").style.width = ratio4.toFixed(0) + "%";
-        document.getElementById("endurance").innerHTML = ratio4.toFixed(0);
+        document.getElementById("d").innerHTML = "Endurance: " +ratio4.toFixed(0);
     }
     if (isNaN(ratio5)) {
         document.getElementById("bodyweight").style.width = "0%";
@@ -555,7 +615,7 @@ function addResult(event) {
         fitness += ratio5;
         denominator += 1;
         document.getElementById("bodyweight").style.width = ratio5.toFixed(0) + "%";
-        document.getElementById("bodyweight").innerHTML = ratio5.toFixed(0);
+        document.getElementById("e").innerHTML = "Bodyweight: " + ratio5.toFixed(0);
     }
     if (isNaN(ratio6)) {
         document.getElementById("light").style.width = "0%";
@@ -563,7 +623,7 @@ function addResult(event) {
         fitness += ratio6;
         denominator += 1;
         document.getElementById("light").style.width = ratio6.toFixed(0) + "%";
-        document.getElementById("light").innerHTML = ratio6.toFixed(0);
+        document.getElementById("f").innerHTML = "Light: " + ratio6.toFixed(0);
     }
     if (isNaN(ratio7)) {
         document.getElementById("heavy").style.width = "0%";
@@ -571,10 +631,10 @@ function addResult(event) {
         fitness += ratio7;
         denominator += 1;
         document.getElementById("heavy").style.width = ratio7.toFixed(0) + "%";
-        document.getElementById("heavy").innerHTML = ratio7.toFixed(0);
+        document.getElementById("g").innerHTML = "Heavy: " + ratio7.toFixed(0);
     }
     fitness /= denominator;
-    document.getElementById("fitnesslevel").innerHTML = ": " + fitness.toFixed(0);
+    document.getElementById("fitnesslevel").innerHTML = fitness.toFixed(0);
 }
 
 var key = "0f4274-8917ec-d964fe-82271a-8ccd3c";
