@@ -6,28 +6,128 @@ function collapse() {
     $('.collapse').collapse('hide');
 }
 
-function resize1() {
-    var input = $('#search1').val() + "%";
-    console.log(input);
-    document.getElementById("try1").style.width = input;
+var key = "0f4274-8917ec-d964fe-82271a-8ccd3c";
+var url = "https://cse204.work/todos";
+var num = 0;
+
+var xhttp = new XMLHttpRequest();
+
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var result = JSON.parse(this.responseText);
+        for (var i = 0; i < result.length; i++) {
+            if (result[i].text.includes("!")) {
+                checkPriorResults(result[i]);
+                addScore(result[i]);
+            }
+            if (result[i].text.includes("%")) {
+                num += 1;
+                addResult(result[i], num);
+            }
+        }
+    }
+};
+xhttp.open("GET", url, true);
+xhttp.setRequestHeader("x-api-key",key);
+xhttp.send();
+
+function newResult(event) {
+    event.preventDefault();
+
+    var i = event.path[0].id.slice(-1);
+
+    var titleId = "WODtitle" + i;
+    var workoutId = "workout" + i;
+    var wodscoreId = "wodscore" + i;
+
+    var title = document.getElementById(titleId).innerHTML;
+    var workout = document.getElementById(workoutId).innerHTML;
+    var wodscore = document.getElementById(wodscoreId).value;
+
+    var data = {
+        text: title + "%" + workout + "%" + wodscore,
+    }
+
+    num += 1;
+
+    var xhttp2 = new XMLHttpRequest();
+    xhttp2.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            addResult(JSON.parse(this.responseText), num);
+        } else if (this.readyState == 4) {
+            console.log(this.responseText);
+        }
+    };
+
+    console.log(data);
+
+    xhttp2.open("POST", url, true);
+    xhttp2.setRequestHeader("Content-type", "application/json");
+    xhttp2.setRequestHeader("x-api-key", key);
+    xhttp2.send(JSON.stringify(data));
 }
 
-function resize2() {
-    var input = $('#search2').val() + "%";
-    console.log(input);
-    document.getElementById("try2").style.width = input;
-}
+document.getElementById("save1").addEventListener("click", function(event) {
+    newResult(event);
+});
 
-function resize3() {
-    var input = $('#search3').val() + "%";
-    console.log(input);
-    document.getElementById("try3").style.width = input;
-}
+document.getElementById("save2").addEventListener("click", function(event) {
+    newResult(event);
+});
 
-function resize4() {
-    var input = $('#search4').val() + "%";
-    console.log(input);
-    document.getElementById("try4").style.width = input;
+document.getElementById("save3").addEventListener("click", function(event) {
+    newResult(event);
+});
+
+function addResult(event, num) {
+
+    if (event.text.includes("%")) {
+        data = event.text.split("%");
+        console.log(data[0]);
+    }
+    if (data[2] == '' || data[2] == "0") {
+        return;
+    }
+
+    if (num % 3 == 1) {
+        var row = document.createElement("div");
+        row.setAttribute("id", Math.ceil(num / 3));
+        row.classList.add("row");
+    } else {
+        var row = document.getElementById(Math.ceil(num / 3));
+    }
+
+    var col = document.createElement("div");
+    col.classList.add("col");
+    col.classList.add("spacing");
+    row.appendChild(col);
+
+    var card = document.createElement("div");
+    card.classList.add("card");
+    col.appendChild(card);
+
+    var cardbody = document.createElement("div");
+    cardbody.classList.add("card-body");
+    card.appendChild(cardbody);
+
+    var cardtitle = document.createElement("h5");
+    cardtitle.classList.add("card-title");
+    cardtitle.innerHTML = data[0];
+    cardbody.appendChild(cardtitle);
+
+    var cardsubtitle = document.createElement("h6");
+    cardsubtitle.classList.add("card-subtitle");
+    cardsubtitle.classList.add("mb-2");
+    cardsubtitle.classList.add("text-muted");
+    cardsubtitle.innerHTML = data[1];
+    cardbody.appendChild(cardsubtitle);
+
+    var cardtext = document.createElement("p");
+    cardtext.classList.add("card-text");
+    cardtext.innerHTML = data[2];
+    cardbody.appendChild(cardtext);
+
+    document.getElementById("previous").appendChild(row)
 }
 
 // object literal holding data for option elements
@@ -189,7 +289,7 @@ var heavy = new Array ();
 var results = new Array();
 var pair = new Array();
 
-function addResult(event) {
+function addScore(event) {
     results.push(event);
 
     numerator1 = 0;
@@ -209,7 +309,6 @@ function addResult(event) {
 
     if (event.text.includes("!")) {
         data = event.text.split("!");
-        console.log(data[0]);
     }
     if (data[2] == '' || data[2] == "0") {
         return;
@@ -637,26 +736,6 @@ function addResult(event) {
     document.getElementById("fitnesslevel").innerHTML = fitness.toFixed(0);
 }
 
-var key = "0f4274-8917ec-d964fe-82271a-8ccd3c";
-var url = "https://cse204.work/todos";
-
-var xhttp = new XMLHttpRequest();
-
-xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-        var result = JSON.parse(this.responseText);
-        for (var i = 0; i < result.length; i++) {
-            if (result[i].text.includes("!")) {
-                checkPriorResults(result[i]);
-                addResult(result[i]);
-            }
-        }
-    }
-};
-xhttp.open("GET", url, true);
-xhttp.setRequestHeader("x-api-key",key);
-xhttp.send();
-
 document.getElementById("proficiency").addEventListener("submit", function(event) {
     event.preventDefault();
     var data = {
@@ -667,7 +746,7 @@ document.getElementById("proficiency").addEventListener("submit", function(event
     xhttp2.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             checkPriorResults(JSON.parse(this.responseText));
-            addResult(JSON.parse(this.responseText));
+            addScore(JSON.parse(this.responseText));
         } else if (this.readyState == 4) {
             console.log(this.responseText);
         }
