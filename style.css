@@ -349,3 +349,7 @@ select, #score, #submit {
     background-color: rgb(255, 157, 71) ;
     color:rgb(255, 255, 252);
 }
+
+.card-body p {
+    margin-bottom: 0px;
+}
