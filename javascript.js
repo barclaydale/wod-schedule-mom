@@ -34,7 +34,7 @@ xhttp.send();
 function newResult(event) {
     event.preventDefault();
 
-    var i = event.path[0].id.slice(-1);
+    var i = event.path[0].id;
 
     var titleId = "WODtitle" + i;
     var workoutId = "workout" + i;
@@ -67,15 +67,15 @@ function newResult(event) {
     xhttp2.send(JSON.stringify(data));
 }
 
-document.getElementById("save1").addEventListener("click", function(event) {
+document.getElementById("1").addEventListener("click", function(event) {
     newResult(event);
 });
 
-document.getElementById("save2").addEventListener("click", function(event) {
+document.getElementById("2").addEventListener("click", function(event) {
     newResult(event);
 });
 
-document.getElementById("save3").addEventListener("click", function(event) {
+document.getElementById("3").addEventListener("click", function(event) {
     newResult(event);
 });
 
