@@ -6,6 +6,13 @@ function collapse() {
     $('.collapse').collapse('hide');
 }
 
+for (var i = 1; i <= 3; i++) {
+    var titleId = "title" + i;
+    var WODtitleId = "WODtitle" + i;
+
+    document.getElementById(WODtitleId).innerHTML = document.getElementById(titleId).innerHTML;
+}
+
 var key = "0f4274-8917ec-d964fe-82271a-8ccd3c";
 var url = "https://cse204.work/todos";
 var num = 0;
@@ -31,16 +38,20 @@ xhttp.open("GET", url, true);
 xhttp.setRequestHeader("x-api-key",key);
 xhttp.send();
 
+console.log(document.getElementById("title1"));
+
 function newResult(event) {
     event.preventDefault();
 
     var i = event.path[0].id;
 
-    var titleId = "WODtitle" + i;
+    var titleId = "title" + i;
+    var WODtitleId = "WODtitle" + i;
     var workoutId = "workout" + i;
     var wodscoreId = "wodscore" + i;
 
-    var title = document.getElementById(titleId).innerHTML;
+    
+    var title = document.getElementById(WODtitleId).innerHTML;
     var workout = document.getElementById(workoutId).innerHTML;
     var wodscore = document.getElementById(wodscoreId).value;
 

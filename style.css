@@ -163,6 +163,10 @@ h5 b {
     margin-bottom: 70px;
 }
 
+#videos .row {
+    justify-content: center;
+}
+
 table {
     border: 0;
     border-radius: 7px;
@@ -339,6 +343,7 @@ select, #score, #submit {
 
 .submitScore {
     margin-bottom: 5px;
+    margin-top: 10px;
     border: 1px solid rgb(255, 157, 71);
     background-color: rgb(255, 255, 252);
     color:rgb(255, 157, 71);
