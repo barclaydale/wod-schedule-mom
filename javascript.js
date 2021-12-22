@@ -6,7 +6,7 @@ function collapse() {
     $('.collapse').collapse('hide');
 }
 
-for (var i = 1; i <= 3; i++) {
+for (var i = 1; i <= 7; i++) {
     var titleId = "title" + i;
     var WODtitleId = "WODtitle" + i;
 
@@ -45,7 +45,6 @@ function newResult(event) {
 
     var i = event.path[0].id;
 
-    var titleId = "title" + i;
     var WODtitleId = "WODtitle" + i;
     var workoutId = "workout" + i;
     var wodscoreId = "wodscore" + i;
@@ -87,6 +86,22 @@ document.getElementById("2").addEventListener("click", function(event) {
 });
 
 document.getElementById("3").addEventListener("click", function(event) {
+    newResult(event);
+});
+
+document.getElementById("4").addEventListener("click", function(event) {
+    newResult(event);
+});
+
+document.getElementById("5").addEventListener("click", function(event) {
+    newResult(event);
+});
+
+document.getElementById("6").addEventListener("click", function(event) {
+    newResult(event);
+});
+
+document.getElementById("7").addEventListener("click", function(event) {
     newResult(event);
 });
 
