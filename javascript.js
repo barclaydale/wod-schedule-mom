@@ -6,11 +6,20 @@ function collapse() {
     $('.collapse').collapse('hide');
 }
 
-for (var i = 1; i <= 7; i++) {
-    var titleId = "title" + i;
-    var WODtitleId = "WODtitle" + i;
+for (var a = 1; a <= 12; a++) {
+    var titleId = "title" + a;
+    var WODtitleId = "WODtitle" + a;
 
     document.getElementById(WODtitleId).innerHTML = document.getElementById(titleId).innerHTML;
+}
+
+var lift = ["RMDeadlift", "RMFrontSquat", "RMClean", "RMSnatch", "RMShoulderPress", "RMPushPress", "RMPushJerk", "RMThruster"];
+var count = [1, 3, 5];
+
+for (var i = 0; i < count.length; i++) {
+    for (var j = 0; j < lift.length; j++) {
+        document.getElementById(count[i] + lift[j]).innerHTML = "-";
+    }
 }
 
 var key = "0f4274-8917ec-d964fe-82271a-8ccd3c";
@@ -38,12 +47,12 @@ xhttp.open("GET", url, true);
 xhttp.setRequestHeader("x-api-key",key);
 xhttp.send();
 
-console.log(document.getElementById("title1"));
-
 function newResult(event) {
     event.preventDefault();
 
     var i = event.path[0].id;
+    i = i.slice(1);
+    console.log(i);
 
     var WODtitleId = "WODtitle" + i;
     var workoutId = "workout" + i;
@@ -77,31 +86,51 @@ function newResult(event) {
     xhttp2.send(JSON.stringify(data));
 }
 
-document.getElementById("1").addEventListener("click", function(event) {
+document.getElementById("s1").addEventListener("click", function(event) {
     newResult(event);
 });
 
-document.getElementById("2").addEventListener("click", function(event) {
+document.getElementById("s2").addEventListener("click", function(event) {
     newResult(event);
 });
 
-document.getElementById("3").addEventListener("click", function(event) {
+document.getElementById("s3").addEventListener("click", function(event) {
     newResult(event);
 });
 
-document.getElementById("4").addEventListener("click", function(event) {
+document.getElementById("s4").addEventListener("click", function(event) {
     newResult(event);
 });
 
-document.getElementById("5").addEventListener("click", function(event) {
+document.getElementById("s5").addEventListener("click", function(event) {
     newResult(event);
 });
 
-document.getElementById("6").addEventListener("click", function(event) {
+document.getElementById("s6").addEventListener("click", function(event) {
     newResult(event);
 });
 
-document.getElementById("7").addEventListener("click", function(event) {
+document.getElementById("s7").addEventListener("click", function(event) {
+    newResult(event);
+});
+
+document.getElementById("s8").addEventListener("click", function(event) {
+    newResult(event);
+});
+
+document.getElementById("s9").addEventListener("click", function(event) {
+    newResult(event);
+});
+
+document.getElementById("s10").addEventListener("click", function(event) {
+    newResult(event);
+});
+
+document.getElementById("s11").addEventListener("click", function(event) {
+    newResult(event);
+});
+
+document.getElementById("s12").addEventListener("click", function(event) {
     newResult(event);
 });
 
@@ -163,10 +192,10 @@ var Select_List_Data = {
         
         // names match option values in controlling select box
         power: {
-            text: ['1RM Deadlift', '3RM Deadlift', '5RM Deadlift', '10RM Deadlift', '1RM Front Squat', '3RM Front Squat', '5RM Front Squat', '10RM Front Squat', '1RM Shoulder Press', '3RM Shoulder Press', '5RM Shoulder Press', '10RM Shoulder Press']
+            text: ['1RM Deadlift', '3RM Deadlift', '5RM Deadlift', '1RM Front Squat', '3RM Front Squat', '5RM Front Squat', '1RM Thruster', '3RM Thruster', '5RM Thruster', '1RM Shoulder Press', '3RM Shoulder Press', '5RM Shoulder Press', '1RM Push Press', '3RM Push Press', '5RM Push Press']
         },
         olympic: {
-            text: ['1RM Clean', '3RM Clean', '5RM Clean', '10RM Clean', '1RM Snatch', '3RM Snatch', '5RM Snatch', '10RM Snatch', '1RM Push Jerk', '3RM Push Jerk', '5RM Push Jerk', '10RM Push Jerk', '1RM Clean and Jerk', '3RM Clean and Jerk']
+            text: ['1RM Clean', '3RM Clean', '5RM Clean', '1RM Snatch', '3RM Snatch', '5RM Snatch', '1RM Push Jerk', '3RM Push Jerk', '5RM Push Jerk', '1RM Clean and Jerk', '3RM Clean and Jerk']
         },
         sprint: {
             text: ['Row 100m', 'Row 250m', 'Row 500m', 'Row 1000m']
@@ -194,14 +223,14 @@ function removeAllOptions(sel, removeGrp) {
         groups = sel.getElementsByTagName('optgroup');
         len = groups.length;
         for (var i=len; i; i--) {
-            sel.removeChild( groups[i-1] );
+            sel.removeChild(groups[i-1]);
         }
     }
     
     len = sel.options.length;
     for (var i=len; i; i--) {
         par = sel.options[i-1].parentNode;
-        par.removeChild( sel.options[i-1] );
+        par.removeChild(sel.options[i-1]);
     }
 }
 
@@ -215,7 +244,7 @@ function appendDataToSelect(sel, obj) {
         
         for (var i=0, len=obj.text.length; i<len; i++) {
             o = document.createElement('option');
-            o.appendChild( document.createTextNode( obj.text[i] ) );
+            o.appendChild( document.createTextNode(obj.text[i]) );
             
             if ( obj.value ) {
                 o.value = obj.value[i];
@@ -345,51 +374,63 @@ function addScore(event) {
     if (data[0] == "power") {
         if (data[1] == "1RM Deadlift") {
             percentage = (parseInt(data[2]) / 215 * 100);
-            document.getElementById("score").style.placeholder = "Ex: 135";
+            document.getElementById("1RMDeadlift").innerHTML = parseInt(data[2]);
         }
         if (data[1] == "3RM Deadlift") {
             percentage = (parseInt(data[2]) / 195 * 100);
-            document.getElementById("score").style.placeholder = "Ex: 135";
+            document.getElementById("3RMDeadlift").innerHTML = parseInt(data[2]);
         }
         if (data[1] == "5RM Deadlift") {
             percentage = (parseInt(data[2]) / 180 * 100);
-            document.getElementById("score").style.placeholder = "Ex: 135";
-        }
-        if (data[1] == "10RM Deadlift") {
-            percentage = (parseInt(data[2]) / 155 * 100);
-            document.getElementById("score").style.placeholder = "Ex: 135";
+            document.getElementById("5RMDeadlift").innerHTML = parseInt(data[2]);
         }
         if (data[1] == "1RM Front Squat") {
             percentage = (parseInt(data[2]) / 145 * 100);
-            document.getElementById("score").style.placeholder = "Ex: 135";
+            document.getElementById("1RMFrontSquat").innerHTML = parseInt(data[2]);
         }
         if (data[1] == "3RM Front Squat") {
             percentage = (parseInt(data[2]) / 130 * 100);
-            document.getElementById("score").style.placeholder = "Ex: 135";
+            document.getElementById("3RMFrontSquat").innerHTML = parseInt(data[2]);
         }
         if (data[1] == "5RM Front Squat") {
             percentage = (parseInt(data[2]) / 115 * 100);
-            document.getElementById("score").style.placeholder = "Ex: 135";
+            document.getElementById("5RMFrontSquat").innerHTML = parseInt(data[2]);
         }
-        if (data[1] == "10RM Front Squat") {
-            percentage = (parseInt(data[2]) / 105 * 100);
-            document.getElementById("score").style.placeholder = "Ex: 135";
+        if (data[1] == "1RM Thruster") {
+            percentage = (parseInt(data[2]) / 110 * 100);
+            document.getElementById("1RMThruster").innerHTML = parseInt(data[2]);
+        }
+        if (data[1] == "3RM Thruster") {
+            percentage = (parseInt(data[2]) / 99 * 100);
+            document.getElementById("3RMThruster").innerHTML = parseInt(data[2]);
+        }
+        if (data[1] == "5RM Thruster") {
+            percentage = (parseInt(data[2]) / 88 * 100);
+            document.getElementById("5RMThruster").innerHTML = parseInt(data[2]);
         }
         if (data[1] == "1RM Shoulder Press") {
             percentage = (parseInt(data[2]) / 80 * 100);
-            document.getElementById("score").style.placeholder = "Ex: 135";
+            document.getElementById("1RMShoulderPress").innerHTML = parseInt(data[2]);
         }
         if (data[1] == "3RM Shoulder Press") {
             percentage = (parseInt(data[2]) / 75 * 100);
-            document.getElementById("score").style.placeholder = "Ex: 135";
+            document.getElementById("3RMShoulderPress").innerHTML = parseInt(data[2]);
         }
         if (data[1] == "5RM Shoulder Press") {
             percentage = (parseInt(data[2]) / 70 * 100);
-            document.getElementById("score").style.placeholder = "Ex: 135";
+            document.getElementById("5RMShoulderPress").innerHTML = parseInt(data[2]);
         }
-        if (data[1] == "10RM Shoulder Press") {
-            percentage = (parseInt(data[2]) / 60 * 100);
-            document.getElementById("score").style.placeholder = "Ex: 135";
+        if (data[1] == "1RM Push Press") {
+            percentage = (parseInt(data[2]) / 110 * 100);
+            document.getElementById("1RMPushPress").innerHTML = parseInt(data[2]);
+        }
+        if (data[1] == "3RM Push Press") {
+            percentage = (parseInt(data[2]) / 100 * 100);
+            document.getElementById("3RMPushPress").innerHTML = parseInt(data[2]);
+        }
+        if (data[1] == "5RM Push Press") {
+            percentage = (parseInt(data[2]) / 95 * 100);
+            document.getElementById("5RMPushPress").innerHTML = parseInt(data[2]);
         }
 
         if (percentage < 0) {
@@ -404,39 +445,39 @@ function addScore(event) {
     if (data[0] == "olympic") {
         if (data[1] == "1RM Clean") {
             percentage = (parseInt(data[2]) / 120 * 100);
+            document.getElementById("1RMClean").innerHTML = parseInt(data[2]);
         }
         if (data[1] == "3RM Clean") {
             percentage = (parseInt(data[2]) / 110 * 100);
+            document.getElementById("3RMClean").innerHTML = parseInt(data[2]);
         }
         if (data[1] == "5RM Clean") {
             percentage = (parseInt(data[2]) / 95 * 100);
-        }
-        if (data[1] == "10RM Clean") {
-            percentage = (parseInt(data[2]) / 77 * 100);
+            document.getElementById("5RMClean").innerHTML = parseInt(data[2]);
         }
         if (data[1] == "1RM Snatch") {
             percentage = (parseInt(data[2]) / 85 * 100);
+            document.getElementById("1RMSnatch").innerHTML = parseInt(data[2]);
         }
         if (data[1] == "3RM Snatch") {
             percentage = (parseInt(data[2]) / 77 * 100);
+            document.getElementById("3RMSnatch").innerHTML = parseInt(data[2]);
         }
         if (data[1] == "5RM Snatch") {
             percentage = (parseInt(data[2]) / 66 * 100);
-        }
-        if (data[1] == "10RM Snatch") {
-            percentage = (parseInt(data[2]) / 55 * 100);
+            document.getElementById("5RMSnatch").innerHTML = parseInt(data[2]);
         }
         if (data[1] == "1RM Push Jerk") {
             percentage = (parseInt(data[2]) / 115 * 100);
+            document.getElementById("1RMPushJerk").innerHTML = parseInt(data[2]);
         }
         if (data[1] == "3RM Push Jerk") {
             percentage = (parseInt(data[2]) / 100 * 100);
+            document.getElementById("3RMPushJerk").innerHTML = parseInt(data[2]);
         }
         if (data[1] == "5RM Push Jerk") {
             percentage = (parseInt(data[2]) / 95 * 100);
-        }
-        if (data[1] == "10RM Push Jerk") {
-            percentage = (parseInt(data[2]) / 85 * 100);
+            document.getElementById("5RMPushJerk").innerHTML = parseInt(data[2]);
         }
         if (data[1] == "1RM Clean and Jerk") {
             percentage = (parseInt(data[2]) / 115 * 100);

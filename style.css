@@ -17,9 +17,10 @@ a {
     height: 60px;
     background-color: rgb(255, 157, 71);
     top: 0px;
+    margin-left: 0px;
     padding-left: 0px;
     align-items: center;
-    width: 100.9%;
+    width: 100%;
     z-index: 1;
     box-shadow: 2px 2px 25px rgb(88, 88, 88);
 }
@@ -330,7 +331,7 @@ select, #score, #submit {
 
 #previous {
     overflow: scroll;
-    max-height: 500px;
+    max-height: 470px;
 }
 
 .spacing {
@@ -361,9 +362,17 @@ select, #score, #submit {
 
 .collapse .card {
     width: 98%;
-    margin-bottom: 5px;
+    padding: 5px;
 }
 
 .card .collapse {
     margin-bottom: 5px;
+}
+
+@media (max-width: 1074px) {
+    
+    .headerButton {
+      display: none;
+    }
+
 }

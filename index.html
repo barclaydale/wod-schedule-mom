@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta name="WOD Schedule" content="WOD Schedule">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>WOD Schedule</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="style.css">
@@ -24,8 +25,8 @@
                 <li class="nav-item" id="navFinalLink">
                     <a class="nav-link" href="#videos"><b>Video Library</b></a>
                 </li>
-                <button class="button" type="button" onclick="expand()">Expand WODs</button>
-                <button class="button" type="button" onclick="collapse()">Collapse WODs</button>
+                <button class="button headerButton" type="button" onclick="expand()">Expand WODs</button>
+                <button class="button headerButton" type="button" onclick="collapse()">Collapse WODs</button>
               </ul>
         </div>
         <div class="row section" id="schedule">
@@ -85,7 +86,7 @@
                                             <u>General</u>
                                             30s Jumping Jacks<br>
                                             <p>20 <a href="https://www.youtube.com/watch?v=tulRWLFx2rw" target="_blank">Scoop Steps</a></p>
-                                            ~1min Downward Dog, cycle ankles<br>
+                                            ~1 min Downward Dog, cycle ankles<br>
                                             <p>5 <a href="https://www.mayhemnation.tv/movement-library/videos/tasia-inchworm" target="_blank">Inch Worms</a></p>
                                             <br>
                                             <p>10 PVC <a href="https://www.mayhemnation.tv/movement-library/videos/rich-goodmorning" target="_blank">Good Mornings</a></p>
@@ -140,7 +141,7 @@
                                                         </div>
                                                         <div class="modal-footer">
                                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                                            <button type="button" class="btn btn-primary" id="1" data-dismiss="modal">Save</button>
+                                                            <button type="button" class="btn btn-primary" id="s1" data-dismiss="modal">Save</button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -183,7 +184,7 @@
                                             <br>
                                             In the video they will do:<br>
                                             Warm Up: 5 x (30s easy pace, 20s Rest, 10s sprint, record average wattage)<br>
-                                            Workout: 5 sets of (4 x (75s moderate pace, 20s Rest)), Rest 2min between sets<br>
+                                            Workout: 5 sets of (4 x (75s Row at moderate pace, 20s Rest)), Rest 2 min between sets<br>
                                             <br>
                                             You will do:<br>
                                             Warm Up: Let the video run. Just watch during the 1st set, do the next 3 sets, and calculate moderate pace during 5th set.<br>
@@ -210,14 +211,14 @@
                                                         <div class="modal-body">
                                                             <form>
                                                                 <div class="form-group">
-                                                                    <label for="wodscore2" class="col-form-label" id="workout2">3-5 Sets of<br>4x<br>75s moderate pace<br>20s rest<br>Rest 2min between sets</label>
+                                                                    <label for="wodscore2" class="col-form-label" id="workout2">3-5 Sets of<br><u>4x</u><br>75s Row at moderate pace<br>20s rest<br><br>Rest 2 min between sets</label>
                                                                     <input type="text" class="form-control" id="wodscore2" placeholder="Ex: 4+17">
                                                                 </div>
                                                             </form>
                                                         </div>
                                                         <div class="modal-footer">
                                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                                            <button type="button" class="btn btn-primary" id="2" data-dismiss="modal">Save</button>
+                                                            <button type="button" class="btn btn-primary" id="s2" data-dismiss="modal">Save</button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -273,7 +274,7 @@
                                             
                                             <hr>
                                             <b class="header" id="title3">Squats 'n' Snatches</b>
-                                            <u>4 RFT</u>
+                                            <u>4 Rounds</u>
                                             <p>16 <a href="https://www.youtube.com/watch?v=rMvwVtlqjTE&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=3" target="_blank">Air Squat</a> to Target</p>
                                             <p>8 Alternating <a href="https://www.youtube.com/watch?v=JXNPBnzBCt0" target="_blank">Hang DB Power Snatches</a></p>
 
@@ -309,7 +310,7 @@
                                                         </div>
                                                         <div class="modal-footer">
                                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                                            <button type="button" class="btn btn-primary" id="3" data-dismiss="modal">Save</button>
+                                                            <button type="button" class="btn btn-primary" id="s3" data-dismiss="modal">Save</button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -424,14 +425,14 @@
                                                         <div class="modal-body">
                                                             <form>
                                                                 <div class="form-group">
-                                                                    <label for="wodscore4" class="col-form-label" id="workout4"><u>21-15-9</u>Med Ball Cleans<br>Ring Rows</label>
-                                                                    <input type="text" class="form-control" id="wodscore4" placeholder="Ex: 4+17">
+                                                                    <label for="wodscore4" class="col-form-label" id="workout4"><u>21-15-9</u><br>Med Ball Cleans<br>Ring Rows</label>
+                                                                    <input type="text" class="form-control" id="wodscore4" placeholder="Ex: 6:54">
                                                                 </div>
                                                             </form>
                                                         </div>
                                                         <div class="modal-footer">
                                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                                            <button type="button" class="btn btn-primary" id="4" data-dismiss="modal">Save</button>
+                                                            <button type="button" class="btn btn-primary" id="s4" data-dismiss="modal">Save</button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -454,15 +455,15 @@
                                             <b class="header">Warm Up</b>
                                             <u>General</u>
                                             Find your preferred damper setting:<br>
-                                            1min row at damper 4<br>
-                                            1min row at damper 5<br>
-                                            1min row at damper 6<br>
-                                            1min row at damper 7<br>
-                                            1min row at damper 8<br>
+                                            1 min row at damper 4<br>
+                                            1 min row at damper 5<br>
+                                            1 min row at damper 6<br>
+                                            1 min row at damper 7<br>
+                                            1 min row at damper 8<br>
                                             <br>
                                             <p>Follow along with <a href="https://www.youtube.com/watch?v=8RmlzQa-IUc" target="_blank">Rowing Technique with Kristi Eramo O'Connell</a></p>
                                             <br>
-                                            1min row building to a sprint<br>
+                                            1 min row building to a sprint<br>
                                             ------------------------------<br>
                                             <u>Specific</u>
                                             30s moderate Row<br>
@@ -475,7 +476,7 @@
 
                                             <button type="button" class="btn btn-primary submitScore" data-toggle="modal" data-target="#scoring5" data-whatever="@mdo">Add Result</button>
                                             <br>
-                                            Take a few minutes once you finish but then do a 2min recovery row.
+                                            Take a few minutes once you finish but then do a 2 min recovery row.
 
                                             <hr>
                                             <b class="header">Bonus Round</b>
@@ -502,13 +503,13 @@
                                                             <form>
                                                                 <div class="form-group">
                                                                     <label for="wodscore5" class="col-form-label" id="workout5"><u>For Maximum Meters</u><br>6min Row</label>
-                                                                    <input type="text" class="form-control" id="wodscore5" placeholder="Ex: 4+17">
+                                                                    <input type="text" class="form-control" id="wodscore5" placeholder="Ex: 958">
                                                                 </div>
                                                             </form>
                                                         </div>
                                                         <div class="modal-footer">
                                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                                            <button type="button" class="btn btn-primary" id="5" data-dismiss="modal">Save</button>
+                                                            <button type="button" class="btn btn-primary" id="s5" data-dismiss="modal">Save</button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -533,20 +534,20 @@
                                             <u>General</u>
 
                                             30s Heel to Toe Rocks
-                                            <p>30s <a href="https://www.youtube.com/watch?v=tulRWLFx2rw" target="_blank">Scoop Steps</a></p>
                                             <br>
+                                            <p>30s <a href="https://www.youtube.com/watch?v=tulRWLFx2rw" target="_blank">Scoop Steps</a></p>
                                             Posterior Mobility Circuit:<br>
                                             <p>15s <a href="https://www.youtube.com/watch?v=sQ6BKxKk6t4" target="_blank">Forward Fold</a></p>
-                                            20s Downward Dog
+                                            15s Downward Dog
                                             <p>Right <a href="https://www.youtube.com/watch?v=wOJR0MXiI04" target="_blank">Groiner</a></p>
                                             5 Knee Circles each direction
                                             <p>5 Right Side <a href="https://www.youtube.com/watch?v=1usfUrVdqC0" target="_blank">Hip Openers</a></p>
                                             <p>Left <a href="https://www.youtube.com/watch?v=wOJR0MXiI04" target="_blank">Groiner</a></p>
                                             5 Knee Circles each direction
                                             <p>5 Left Side <a href="https://www.youtube.com/watch?v=1usfUrVdqC0" target="_blank">Hip Openers</a></p>
-                                            20s Downward Dog<br>
+                                            15s Downward Dog<br>
                                             <br>
-                                            <p>5 <a href="https://www.mayhemnation.tv/movement-library/videos/tasia-inchworm" target="_blank">Inchworms</a></p>
+                                            <p>5 <a href="https://www.mayhemnation.tv/movement-library/videos/tasia-inchworm" target="_blank">Inch Worms</a></p>
                                             <p>5 <a href="https://www.youtube.com/watch?v=81YB9bhQk3g" target="_blank">Up Downs</a></p>
                                             <p>5 <a href="https://www.youtube.com/watch?v=auBLPXO8Fww&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=35" target="_blank">Burpees</a></p>
                                             <br>
@@ -592,7 +593,7 @@
                                                         </div>
                                                         <div class="modal-footer">
                                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                                            <button type="button" class="btn btn-primary" id="6" data-dismiss="modal">Save</button>
+                                                            <button type="button" class="btn btn-primary" id="s6" data-dismiss="modal">Save</button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -641,15 +642,15 @@
                                             <p>10 <a href="https://www.youtube.com/watch?v=4tCaD42ghlc&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=74" target="_blank">DB Push Presses</a></p>
                                             <p>2 <a href="https://www.youtube.com/watch?v=saYKvqSscuY&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=19" target="_blank">Turkish Get Ups</a></p>
                                             <p>15s <a href="https://www.mayhemnation.tv/movement-library/videos/tasia-deadhang" target="_blank">Dead Hang</a></p>
-                                            Rest 1min
+                                            Rest 1 min
 
                                             <button type="button" class="btn btn-primary submitScore" data-toggle="modal" data-target="#scoring7" data-whatever="@mdo">Add Result</button>
                                             
                                             <hr>
                                             <b class="header">Cool Down</b>
                                             Accumulate:<br>
-                                            1min Dead Hang<br>
-                                            2min Squat Hold<br>
+                                            1 min Dead Hang<br>
+                                            2 min Squat Hold<br>
                                             Rest as needed<br>
                                             ------------------------------<br>
                                             <a href="#">ROMWOD</a>
@@ -667,13 +668,13 @@
                                                             <form>
                                                                 <div class="form-group">
                                                                     <label for="wodscore7" class="col-form-label" id="workout7"><u>6 Rounds</u><br>10 DB Push Presses<br>2 Turkish Get Ups<br>15s Dead Hang</label>
-                                                                    <input type="text" class="form-control" id="wodscore7" placeholder="Ex: 4+17">
+                                                                    <input type="text" class="form-control" id="wodscore7" placeholder="Ex: 23:03">
                                                                 </div>
                                                             </form>
                                                         </div>
                                                         <div class="modal-footer">
                                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                                            <button type="button" class="btn btn-primary" id="7" data-dismiss="modal">Save</button>
+                                                            <button type="button" class="btn btn-primary" id="s7" data-dismiss="modal">Save</button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -717,22 +718,362 @@
                                     </div>
                                     <div class="collapse" id="week2wod1">
                                         <div class="card card-body">
-                                            This is WOD 1
+                                            <!-- WOD 8 -->
+                                            <b class="header">What You'll Need</b>
+                                            Rower
+
+                                            <hr>
+                                            <b class="header">Intended Stimulus</b>
+                                            <p><b>Pacing:</b> Hold your pace! It only works if you do it as intended. Maintain your fast pace during the 200s and actively RECOVER during the 100s.</p>
+                                            <p><b>Feel:</b> This is not meant to be horrible. This is about building muscle memory, not about maxing your heart rate, but be aware there is no rest. It's 2400m straight through. Round 6 is the sticking point. Get through Round 6 and then you know you can finish.</p>
+                                            <br>
+                                            <p><b>Note:</b> Feel free to keep the video running to "row with someone" but not necessary. Be aware they will finish before you if you row with them.</p>
+                                            <hr>
+                                            <b class="header">Warm Up</b>
+                                            <u>General</u>
+
+                                            <p>Watch <a href="https://www.youtube.com/watch?v=8TgAKbFBKT4&t=212s" target="_blank">Mayhem Aerobic Capacity Rowing Week 1</a> until they start the workout (5:35)</p>
+                                            <br>
+                                            1 min Row at easy pace<br>
+                                            1 min Row at moderate pace<br>
+                                            1 min Row at fast pace<br>
+                                            ------------------------------<br>
+                                            <u>Specific</u>
+                                            15s Row at fast pace<br>
+
+                                            <hr>
+                                            <b class="header" id="title8">Looking Glass</b>
+                                            <u>8 Rounds</u>
+                                            200m Row at fast pace<br>
+                                            100m Row at easy pace<br>
+                                            <br>
+                                            Score is total time for 8 rounds (including the last 100m Row at easy pace!)
+
+                                            <button type="button" class="btn btn-primary submitScore" data-toggle="modal" data-target="#scoring8" data-whatever="@mdo">Add Result</button>
+                                            
+                                            <hr>
+                                            <b class="header">Cool Down</b>
+                                            <p>Recovery Row while watching <a href="https://www.youtube.com/watch?v=8TgAKbFBKT4&t=212s" target="_blank">Mayhem Aerobic Capacity Rowing Week 1</a> starting at (16:05)</p>
+                                            <br>
+                                            <a href="#">ROMWOD</a>
+
+                                            <div class="modal fade" id="scoring8" tabindex="-1" role="dialog" aria-labelledby="WODtitle8" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="WODtitle8"></h5>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <form>
+                                                                <div class="form-group">
+                                                                    <label for="wodscore8" class="col-form-label" id="workout8"><u>8 Rounds</u><br>200m Row at fast pace<br>100m Row at easy pace</label>
+                                                                    <input type="text" class="form-control" id="wodscore8" placeholder="Ex: 23:03">
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                                            <button type="button" class="btn btn-primary" id="s8" data-dismiss="modal">Save</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="collapse" id="week2wod2">
                                         <div class="card card-body">
-                                            This is WOD 2
+                                            <!-- WOD 9 -->
+                                            <b class="header">What You'll Need</b>
+                                            PVC<br>
+                                            Barbell
+
+                                            <hr>
+                                            <b class="header">Intended Stimulus</b>
+                                            <p><b>Pacing:</b> Should be able to do each movement in no more than 3 sets. Keep breaks short, but maintain good technique.</p>
+                                            <p><b>Feel:</b> Posterior chain and shoulders will feel this one. Stay slow on the push ups to stay balanced. Keep rings at inside shoulders width like a regular push up.</p>
+                                            <br>
+                                            <p><b>Note:</b> Pick a workout Deadlift weight that you can do 7 unbroken. Also, add your 3 rep Deadlift under the Proficiency section, and 5RM if you improve those according to the PR table.</p>
+
+                                            <hr>
+                                            <b class="header">Warm Up</b>
+                                            <u>General</u>
+                                            Posterior Mobility Circuit:<br>
+                                            <p>10 <a href="https://www.youtube.com/watch?v=tulRWLFx2rw" target="_blank">Scoop Steps</a></p>
+                                            <p>15s <a href="https://www.youtube.com/watch?v=sQ6BKxKk6t4" target="_blank">Forward Fold</a></p>
+                                            15s Downward Dog
+                                            <p>Right <a href="https://www.youtube.com/watch?v=wOJR0MXiI04" target="_blank">Groiner</a></p>
+                                            5 Knee Circles each direction
+                                            <p>5 Right Side <a href="https://www.youtube.com/watch?v=1usfUrVdqC0" target="_blank">Hip Openers</a></p>
+                                            <p>Left <a href="https://www.youtube.com/watch?v=wOJR0MXiI04" target="_blank">Groiner</a></p>
+                                            5 Knee Circles each direction
+                                            <p>5 Left Side <a href="https://www.youtube.com/watch?v=1usfUrVdqC0" target="_blank">Hip Openers</a></p>
+                                            15s Downward Dog<br>
+                                            <br>
+                                            <p>5 PVC <a href="https://www.youtube.com/watch?v=9zKNwuEendI" target="_blank">Jefferson Curls</a></p>
+                                            <p>5 <a href="https://www.youtube.com/watch?v=6MUEEnzugzU" target="_blank">Inch Worms</a></p>
+                                            <p>10 <a href="https://www.youtube.com/watch?v=haXb0FpU9uA" target="_blank">T-Spine Twists</a></p>
+                                            <br>
+                                            <p>Follow along with <a href="https://www.youtube.com/watch?v=Qpr5i4DTpk0&list=PLTFXmc6Qt4tpN-YPIykgLiedMqToaP_3N&index=3" target="_blank">Deadlift Warm Up with Squat University</a></p>
+                                            <br>
+                                            <p>Watch <a href="https://www.youtube.com/watch?v=pnf73VvI5dY" target="_blank">Deadlift Setup Position</a></p>
+                                            <br>
+                                            <p>22 empty BB <a href="https://www.youtube.com/watch?v=1ZXobu7JvvE&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4" target="_blank">Deadlifts</a> from top of deadlift (standing position):</p>
+                                            - 6: Hinge down to above the knee, squeeze glutes, and stand,<br>
+                                            - 6: Hinge down to below the knee, squeeze glutes, and stand,<br>
+                                            - 10: Hinge down to mid-shin, squeeze glutes, and stand.<br>
+                                            <br>
+                                            <p>Follow along with <a href="https://www.youtube.com/watch?v=4Kg-Y9u-rkU" target="_blank">Deadlift Bar Path</a></p>
+                                            <br>
+                                            <p>8 Knee <a href="https://www.youtube.com/watch?v=0pkjOk0EiAk&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=11" target="_blank">Push Ups</a></p>
+                                            <p>5 <a href="https://www.youtube.com/watch?v=0pkjOk0EiAk&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=11" target="_blank">Push Ups</a></p>
+
+                                            <hr>
+                                            <b class="header" id="title9">Weightlifting</b>
+                                            <u>Deadlift</u>
+                                            10-10-5-5-3-3-3<br>
+                                            <br>
+                                            Score is heaviest 3 rep Deadlift weight.<br>
+
+                                            <button type="button" class="btn btn-primary submitScore" data-toggle="modal" data-target="#scoring9" data-whatever="@mdo">Add Result</button>
+
+                                            <hr>
+                                            <b class="header">Warm Up</b>
+                                            <u>Specific</u>
+                                            <u>3-2-1</u>
+                                            <p><a href="https://www.youtube.com/watch?v=1ZXobu7JvvE&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4" target="_blank">Deadlifts</a></p>
+                                            <p><a href="https://www.youtube.com/watch?v=0pkjOk0EiAk&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=11" target="_blank">Push Ups</a></p>
+
+                                            <hr>
+                                            <b class="header" id="title10">Dainty Diane</b>
+                                            <u>15-12-9</u>
+                                            <p><a href="https://www.youtube.com/watch?v=1ZXobu7JvvE&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4" target="_blank">Deadlifts</a></p>
+                                            <p><a href="https://www.youtube.com/watch?v=0pkjOk0EiAk&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=11" target="_blank">Push Ups</a></p>
+
+                                            <button type="button" class="btn btn-primary submitScore" data-toggle="modal" data-target="#scoring10" data-whatever="@mdo">Add Result</button>
+                                            
+                                            <hr>
+                                            <b class="header">Cool Down</b>
+                                            <u>2 Rounds</u>
+                                            <p>5 empty BB <a href="https://www.youtube.com/watch?v=9zKNwuEendI" target="_blank">Jefferson Curls</a></p>
+                                            <p>30s <a href="https://www.youtube.com/watch?v=sQ6BKxKk6t4" target="_blank">Forward Fold</a></p>
+                                            <p>30s Right <a href="https://www.youtube.com/watch?v=op-eDU9eNqM" target="_blank">Pigeon Stretch</a></p>
+                                            <p>30s Left <a href="https://www.youtube.com/watch?v=op-eDU9eNqM" target="_blank">Pigeon Stretch</a></p>
+                                            ------------------------------<br>
+                                            <a href="#">ROMWOD</a>
+
+                                            <div class="modal fade" id="scoring9" tabindex="-1" role="dialog" aria-labelledby="WODtitle9" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="WODtitle9"></h5>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <form>
+                                                                <div class="form-group">
+                                                                    <label for="wodscore9" class="col-form-label" id="workout9"><u>Deadlift</u><br>10-10-5-5-3-3-3</label>
+                                                                    <input type="text" class="form-control" id="wodscore9" placeholder="Ex: 120">
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                                            <button type="button" class="btn btn-primary" id="s9" data-dismiss="modal">Save</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal fade" id="scoring10" tabindex="-1" role="dialog" aria-labelledby="WODtitle10" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="WODtitle10"></h5>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <form>
+                                                                <div class="form-group">
+                                                                    <label for="wodscore10" class="col-form-label" id="workout10"><u>15-12-9</u><br>Deadlifts<br>Push Ups</label>
+                                                                    <input type="text" class="form-control" id="wodscore10" placeholder="Ex: 8:26">
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                                            <button type="button" class="btn btn-primary" id="s10" data-dismiss="modal">Save</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="collapse" id="week2wod3">
                                         <div class="card card-body">
-                                            This is WOD 3
+                                            <!-- WOD 10 -->
+                                            <b class="header">What You'll Need</b>
+                                            Red Band<br>
+                                            Pair of Dumbbells<br>
+                                            Pull Up Bar
+
+                                            <hr>
+                                            <b class="header">Intended Stimulus</b>
+                                            <p><b>Pacing:</b> Unbroken. The purpose is to go hard for about 90-105 seconds, then rest and recover to do it again.</p>
+                                            <p><b>Feel:</b> Your shoulders will feel it. Putting the weight into your legs on the Push Presses will exponentially save your shoulders.</p>
+                                            <br>
+                                            <p><b>Note:</b> Choose a weight based on the limiting movement. You should be able to control 10 Push Presses and 2 TGUs at the weight.</p>
+                                            <hr>
+                                            <b class="header">Warm Up</b>
+                                            <u>General</u>
+                                            <p>10 reps of the <a href="https://www.youtube.com/watch?v=Gn0_1HAkEfE&list=PLNmWOCEX1SUYEV22aBa94WB2Z8Xi2eYGJ&index=58" target="_blank">Banded 7s</a></p>
+                                            <br>
+                                            30s Jumping Jacks<br>
+                                            <p>5 <a href="https://www.youtube.com/watch?v=9zKNwuEendI" target="_blank">Jefferson Curls</a></p>
+                                            <p>10 <a href="https://www.youtube.com/watch?v=AqzDJHxynwo" target="_blank">DB Shoulder Presses</a></p>
+                                            <p>10 <a href="https://www.youtube.com/watch?v=4tCaD42ghlc&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=74" target="_blank">DB Push Presses</a></p>
+                                            <p>10 <a href="https://www.youtube.com/watch?v=rnN3pYswScE&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=55" target="_blank">DB Push Jerks</a></p>
+                                            30s Jumping Jacks<br>
+                                            <br>
+                                            <p>Follow along with <a href="https://www.youtube.com/watch?v=VQq8I_n_hRE" target="_blank">Turkish Get Up Technique with Jeff Martone</a></p>
+                                            <br>
+                                            <p>10s <a href="https://www.mayhemnation.tv/movement-library/videos/tasia-deadhang" target="_blank">Dead Hang</a></p>
+                                            <p>10 <a href="https://www.youtube.com/watch?v=QEOHnH7Wpsg" target="_blank">Scap Retractions</a></p>
+                                            <p>5 <a href="https://www.youtube.com/watch?v=auBLPXO8Fww&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=35" target="_blank">Burpees</a></p>
+                                            ------------------------------<br>
+                                            <u>Specific</u>
+                                            <p>6 <a href="https://www.youtube.com/watch?v=4tCaD42ghlc&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=74" target="_blank">DB Push Presses</a></p>
+                                            <p>10s <a href="https://www.mayhemnation.tv/movement-library/videos/tasia-deadhang" target="_blank">Dead Hang</a></p>
+                                            
+                                            <hr>
+                                            <b class="header" id="title11">Shoulder Stamina</b>
+                                            <u>6 Rounds</u>
+                                            <p>10 <a href="https://www.youtube.com/watch?v=4tCaD42ghlc&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=74" target="_blank">DB Push Presses</a></p>
+                                            <p>2 <a href="https://www.youtube.com/watch?v=saYKvqSscuY&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=19" target="_blank">Turkish Get Ups</a></p>
+                                            <p>15s <a href="https://www.mayhemnation.tv/movement-library/videos/tasia-deadhang" target="_blank">Dead Hang</a></p>
+                                            Rest 1 min
+
+                                            <button type="button" class="btn btn-primary submitScore" data-toggle="modal" data-target="#scoring11" data-whatever="@mdo">Add Result</button>
+                                            
+                                            <hr>
+                                            <b class="header">Cool Down</b>
+                                            Accumulate:<br>
+                                            1 min Dead Hang<br>
+                                            2 min Squat Hold<br>
+                                            Rest as needed<br>
+                                            ------------------------------<br>
+                                            <a href="#">ROMWOD</a>
+
+                                            <div class="modal fade" id="scoring11" tabindex="-1" role="dialog" aria-labelledby="WODtitle11" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="WODtitle11"></h5>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <form>
+                                                                <div class="form-group">
+                                                                    <label for="wodscore11" class="col-form-label" id="workout11"><u>6 Rounds</u><br>10 DB Push Presses<br>2 Turkish Get Ups<br>15s Dead Hang</label>
+                                                                    <input type="text" class="form-control" id="wodscore11" placeholder="Ex: 4+17">
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                                            <button type="button" class="btn btn-primary" id="s11" data-dismiss="modal">Save</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="collapse" id="week2wod4">
                                         <div class="card card-body">
-                                            This is WOD 4
+                                            <!-- WOD 11 -->
+                                            <b class="header">What You'll Need</b>
+                                            Red Band<br>
+                                            Pair of Dumbbells<br>
+                                            Pull Up Bar
+
+                                            <hr>
+                                            <b class="header">Intended Stimulus</b>
+                                            <p><b>Pacing:</b> Unbroken. The purpose is to go hard for about 90-105 seconds, then rest and recover to do it again.</p>
+                                            <p><b>Feel:</b> Your shoulders will feel it. Putting the weight into your legs on the Push Presses will exponentially save your shoulders.</p>
+                                            <br>
+                                            <p><b>Note:</b> Choose a weight based on the limiting movement. You should be able to control 10 Push Presses and 2 TGUs at the weight.</p>
+                                            <hr>
+                                            <b class="header">Warm Up</b>
+                                            <u>General</u>
+                                            <p>10 reps of the <a href="https://www.youtube.com/watch?v=Gn0_1HAkEfE&list=PLNmWOCEX1SUYEV22aBa94WB2Z8Xi2eYGJ&index=58" target="_blank">Banded 7s</a></p>
+                                            <br>
+                                            30s Jumping Jacks<br>
+                                            <p>5 <a href="https://www.youtube.com/watch?v=9zKNwuEendI" target="_blank">Jefferson Curls</a></p>
+                                            <p>10 <a href="https://www.youtube.com/watch?v=AqzDJHxynwo" target="_blank">DB Shoulder Presses</a></p>
+                                            <p>10 <a href="https://www.youtube.com/watch?v=4tCaD42ghlc&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=74" target="_blank">DB Push Presses</a></p>
+                                            <p>10 <a href="https://www.youtube.com/watch?v=rnN3pYswScE&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=55" target="_blank">DB Push Jerks</a></p>
+                                            30s Jumping Jacks<br>
+                                            <br>
+                                            <p>Follow along with <a href="https://www.youtube.com/watch?v=VQq8I_n_hRE" target="_blank">Turkish Get Up Technique with Jeff Martone</a></p>
+                                            <br>
+                                            <p>10s <a href="https://www.mayhemnation.tv/movement-library/videos/tasia-deadhang" target="_blank">Dead Hang</a></p>
+                                            <p>10 <a href="https://www.youtube.com/watch?v=QEOHnH7Wpsg" target="_blank">Scap Retractions</a></p>
+                                            <p>5 <a href="https://www.youtube.com/watch?v=auBLPXO8Fww&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=35" target="_blank">Burpees</a></p>
+                                            ------------------------------<br>
+                                            <u>Specific</u>
+                                            <p>6 <a href="https://www.youtube.com/watch?v=4tCaD42ghlc&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=74" target="_blank">DB Push Presses</a></p>
+                                            <p>10s <a href="https://www.mayhemnation.tv/movement-library/videos/tasia-deadhang" target="_blank">Dead Hang</a></p>
+                                            
+                                            <hr>
+                                            <b class="header" id="title12">Shoulder Stamina</b>
+                                            <u>6 Rounds</u>
+                                            <p>10 <a href="https://www.youtube.com/watch?v=4tCaD42ghlc&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=74" target="_blank">DB Push Presses</a></p>
+                                            <p>2 <a href="https://www.youtube.com/watch?v=saYKvqSscuY&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=19" target="_blank">Turkish Get Ups</a></p>
+                                            <p>15s <a href="https://www.mayhemnation.tv/movement-library/videos/tasia-deadhang" target="_blank">Dead Hang</a></p>
+                                            Rest 1 min
+
+                                            <button type="button" class="btn btn-primary submitScore" data-toggle="modal" data-target="#scoring12" data-whatever="@mdo">Add Result</button>
+                                            
+                                            <hr>
+                                            <b class="header">Cool Down</b>
+                                            Accumulate:<br>
+                                            1 min Dead Hang<br>
+                                            2 min Squat Hold<br>
+                                            Rest as needed<br>
+                                            ------------------------------<br>
+                                            <a href="#">ROMWOD</a>
+
+                                            <div class="modal fade" id="scoring12" tabindex="-1" role="dialog" aria-labelledby="WODtitle12" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="WODtitle12"></h5>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <form>
+                                                                <div class="form-group">
+                                                                    <label for="wodscore12" class="col-form-label" id="workout12"><u>6 Rounds</u><br>10 DB Push Presses<br>2 Turkish Get Ups<br>15s Dead Hang</label>
+                                                                    <input type="text" class="form-control" id="wodscore12" placeholder="Ex: 4+17">
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                                            <button type="button" class="btn btn-primary" id="s12" data-dismiss="modal">Save</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -1434,116 +1775,87 @@
                             <td>
                                 1 
                             </td>
-                            <td>
-                                -
+                            <td id="1RMDeadlift">
+                                
                             </td>
-                            <td>
-                                -
+                            <td id="1RMFrontSquat">
+                                
                             </td>
-                            <td>
-                                -
+                            <td id="1RMClean">
+                                
                             </td>
-                            <td>
-                                -
+                            <td id="1RMSnatch">
+                                
                             </td>
-                            <td>
-                                60
+                            <td id="1RMShoulderPress">
+                                
                             </td>
-                            <td>
-                                70
+                            <td id="1RMPushPress">
+                                
                             </td>
-                            <td>
-                                -
+                            <td id="1RMPushJerk">
+                                
                             </td>
-                            <td>
-                                -
+                            <td id="1RMThruster">
+                                
                             </td>
                         </tr>
                         <tr>
                             <td>
                                 3
                             </td>
-                            <td>
-                                -
+                            <td id="3RMDeadlift">
+                                
                             </td>
-                            <td>
-                                -
+                            <td id="3RMFrontSquat">
+                                
                             </td>
-                            <td>
-                                50
+                            <td id="3RMClean">
+                                
                             </td>
-                            <td>
-                                -  
+                            <td id="3RMSnatch">
+                                
                             </td>
-                            <td>
-                                -
+                            <td id="3RMShoulderPress">
+                                
                             </td>
-                            <td>
-                                -
+                            <td id="3RMPushPress">
+                                
                             </td>
-                            <td>
-                                65
+                            <td id="3RMPushJerk">
+                                
                             </td>
-                            <td>
-                                60
+                            <td id="3RMThruster">
+                                
                             </td>
                         </tr>
                         <tr>
                             <td>
                                 5
                             </td>
-                            <td>
-                                150
+                            <td id="5RMDeadlift">
+                                
                             </td>
-                            <td>
-                                -
+                            <td id="5RMFrontSquat">
+                                
                             </td>
-                            <td>
-                                -
+                            <td id="5RMClean">
+                                
                             </td>
-                            <td>
-                                -
+                            <td id="5RMSnatch">
+                                
                             </td>
-                            <td>
-                                -
+                            <td id="5RMShoulderPress">
+                                
                             </td>
-                            <td>
-                                -
+                            <td id="5RMPushPress">
+                                
                             </td>
-                            <td>
-                                -
+                            <td id="5RMPushJerk">
+                                
                             </td>
-                            <td>
-                                -
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                10
-                            </td>
-                            <td>
-                                135
-                            </td>
-                            <td>
-                                -
-                            </td>
-                            <td>
-                                -
-                            </td>
-                            <td>
-                                -
-                            </td>
-                            <td>
-                                -
-                            </td>
-                            <td>
-                                -
-                            </td>
-                            <td>
-                                -
-                            </td>
-                            <td>
-                                -
+                            <td id="5RMThruster">
+                                
                             </td>
                         </tr>
                     </table>
@@ -1722,6 +2034,9 @@
                                 <a href="https://www.youtube.com/watch?v=Y2lGDh9wJs0" target="_blank">Chair Dips</a>
                             </div>
                             <div class="row">
+                                <a href="https://www.youtube.com/watch?v=XdQotJa5alU" target="_blank">Child's Pose</a>
+                            </div>
+                            <div class="row">
                                 <a href="https://www.youtube.com/watch?v=Ty14ogq_Vok&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=26" target="_blank">Clean</a>
                             </div>
                             <div class="row">
@@ -1845,7 +2160,7 @@
                                 <a href="https://www.youtube.com/watch?v=SfkuOb_1GK8" target="_blank">Hollow Rock</a>
                             </div>
                             <div class="row">
-                                <a href="https://www.mayhemnation.tv/movement-library/videos/tasia-inchworm" target="_blank">Inchworms</a>
+                                <a href="https://www.youtube.com/watch?v=6MUEEnzugzU" target="_blank">Inch Worms</a>
                             </div>
                             <div class="row">
                                 <a href="https://www.youtube.com/watch?v=9zKNwuEendI" target="_blank">Jefferson Curl</a>
@@ -1920,9 +2235,6 @@
                                 <a href="https://www.youtube.com/watch?v=tulRWLFx2rw" target="_blank">Scoop Steps</a>
                             </div>
                             <div class="row">
-                                <a href="https://www.mayhemnation.tv/movement-library/videos/tasia-scorpianstretch" target="_blank">Scorpion Stretch</a>
-                            </div>
-                            <div class="row">
                                 <a href="https://www.youtube.com/watch?v=5yWaNOvgFCM&list=PLdWvFCOAvyr3EWQhtfcEMd3DVM5sJdPL4&index=4" target="_blank">Shoulder Press</a>
                             </div>
                             <div class="row">
@@ -1984,9 +2296,6 @@
                             </div>
                             <div class="row">
                                 <a href="https://www.mayhemnation.tv/movement-library/videos/tasia-windmill" target="_blank">Windmill</a>
-                            </div>                           
-                            <div class="row">
-                                <a href="" target="_blank"></a>
                             </div>
                             <div class="row">
                                 <a href="" target="_blank"></a>
@@ -2037,7 +2346,7 @@
                                 <a href="https://www.youtube.com/watch?v=pnf73VvI5dY" target="_blank">Deadlift Setup Position</a>
                             </div>
                             <div class="row">
-                                <a href="https://www.youtube.com/watch?v=Qpr5i4DTpk0&list=PLTFXmc6Qt4tpN-YPIykgLiedMqToaP_3N&index=3" target="_blank">Deadlift Warm Up Squat University</a>
+                                <a href="https://www.youtube.com/watch?v=Qpr5i4DTpk0&list=PLTFXmc6Qt4tpN-YPIykgLiedMqToaP_3N&index=3" target="_blank">Deadlift Warm Up with Squat University</a>
                             </div>
                             <div class="row">
                                 <a href="https://www.youtube.com/watch?v=4Kg-Y9u-rkU" target="_blank">Deadlift Bar Path</a>
@@ -2103,13 +2412,13 @@
                                 Mayhem Videos
                             </div>
                             <div class="row">
+                                <a href="https://www.youtube.com/watch?v=8TgAKbFBKT4&t=212s" target="_blank">Hinshaw Rowing Week 1</a>
+                            </div>
+                            <div class="row">
                                 <a href="https://www.youtube.com/watch?v=BUg5TO89UE0" target="_blank">Hinshaw Rowing Week 6</a>
                             </div>
                             <div class="row">
                                 <a href="https://www.youtube.com/watch?v=T3YSgUBYJh0&t=280s" target="_blank">Hinshaw Rowing Week 12</a>
-                            </div>
-                            <div class="row">
-                                <a href="https://www.youtube.com/watch?v=8TgAKbFBKT4&t=212s" target="_blank">Hinshaw Rowing Week 1</a>
                             </div>
                             <div class="row">
                                 <a href="https://www.youtube.com/watch?v=WYwAW3SpY7Y" target="_blank">Hinshaw Rowing Aerobic Capacity</a>
