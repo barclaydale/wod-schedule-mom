@@ -358,3 +358,12 @@ select, #score, #submit {
 .card-body p {
     margin-bottom: 0px;
 }
+
+.collapse .card {
+    width: 98%;
+    margin-bottom: 5px;
+}
+
+.card .collapse {
+    margin-bottom: 5px;
+}
