@@ -371,7 +371,7 @@ select, #score, #submit {
     margin-bottom: 5px;
 }
 
-@media (max-width: 1074px) {
+@media (max-width: 1200px) {
 
     .headerButton {
       display: none;
