@@ -6,7 +6,7 @@ function collapse() {
     $('.collapse').collapse('hide');
 }
 
-for (var a = 1; a <= 12; a++) {
+for (var a = 1; a <= 17; a++) {
     var titleId = "title" + a;
     var WODtitleId = "WODtitle" + a;
 
@@ -131,6 +131,26 @@ document.getElementById("s11").addEventListener("click", function(event) {
 });
 
 document.getElementById("s12").addEventListener("click", function(event) {
+    newResult(event);
+});
+
+document.getElementById("s13").addEventListener("click", function(event) {
+    newResult(event);
+});
+
+document.getElementById("s14").addEventListener("click", function(event) {
+    newResult(event);
+});
+
+document.getElementById("s15").addEventListener("click", function(event) {
+    newResult(event);
+});
+
+document.getElementById("s16").addEventListener("click", function(event) {
+    newResult(event);
+});
+
+document.getElementById("s17").addEventListener("click", function(event) {
     newResult(event);
 });
 
