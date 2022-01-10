@@ -57,14 +57,17 @@ function newResult(event) {
     var WODtitleId = "WODtitle" + i;
     var workoutId = "workout" + i;
     var wodscoreId = "wodscore" + i;
-
+    var notesId = "notes" + i;
     
     var title = document.getElementById(WODtitleId).innerHTML;
     var workout = document.getElementById(workoutId).innerHTML;
     var wodscore = document.getElementById(wodscoreId).value;
+    var notes = document.getElementById(notesId).value;
+
+    console.log("notes: " + notes);
 
     var data = {
-        text: title + "%" + workout + "%" + wodscore,
+        text: title + "%" + workout + "%" + wodscore + "%" + notes,
     }
 
     num += 1;
@@ -202,7 +205,16 @@ function addResult(event, num) {
     cardtext.innerHTML = data[2];
     cardbody.appendChild(cardtext);
 
-    document.getElementById("previous").appendChild(row)
+    if (data[3] != '') {
+        var cardnotes = document.createElement("h6");
+        cardnotes.classList.add("card-subtitle");
+        cardnotes.classList.add("mb-2");
+        cardnotes.classList.add("text-muted");
+        cardnotes.innerHTML = data[3];
+        cardbody.appendChild(cardnotes);
+    }
+
+    document.getElementById("previous").appendChild(row);
 }
 
 // object literal holding data for option elements

@@ -86,7 +86,7 @@ h5 b {
 
 #movementHeader h4, #techniqueHeader h4, #mobilityHeader h4 {
     margin: auto;
-    font-size: 24px;
+    font-size: 40px;
 }
   
 .movementLinks, .techniqueLinks, .mobilityLinks {
@@ -171,6 +171,13 @@ h5 b {
 
 #videos .row {
     justify-content: center;
+}
+
+.prPerson {
+    margin-top: 10px;
+    font-size: 40px;
+    justify-content: center;
+    text-align: center;
 }
 
 table {
