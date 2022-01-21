@@ -25,6 +25,7 @@ for (var i = 0; i < count.length; i++) {
 var key = "0f4274-8917ec-d964fe-82271a-8ccd3c";
 var url = "https://cse204.work/todos";
 var num = 0;
+var easyTime = 0;
 
 var xhttp = new XMLHttpRequest();
 
@@ -228,6 +229,8 @@ function addResult(event, num) {
 
     document.getElementById("previous").appendChild(row);
 
+    // Setting Rowing Paces
+
     if (data[0] == "Rowing 0.0") {
         maxWatts = parseInt(data[2]);
         modWatts = parseInt(data[2]) / 2;
@@ -269,10 +272,50 @@ function addResult(event, num) {
         document.getElementById("fast500").innerHTML = fastPace;
 
         fastTotSeconds = parseInt(fastSec) + parseInt(fastPace[0] * 60);
-        fastTotSeconds /= 500;
-        fastWatts = 2.80 / Math.pow(fastTotSeconds, 3);
+        fastRate = fastTotSeconds / 500;
+        fastWatts = 2.80 / Math.pow(fastRate, 3);
 
         document.getElementById("fastwatts").innerHTML = fastWatts.toFixed(1);
+
+        easySeconds = (easyTime[0] * 60) + (easyTime[1] * 1);
+        easySeconds -= (1600 * fastTotSeconds / 500);
+        easySeconds = easySeconds / 800 * 500;
+        easyMinutes = (easySeconds / 60).toFixed(0);
+        easySeconds = (easySeconds - (easyMinutes * 60));
+        easyPace = easyMinutes + ":" + easySeconds.toFixed(0);
+
+        document.getElementById("easy500").innerHTML = easyPace;
+
+        easyTotSeconds = parseInt(easySeconds) + parseInt(easyMinutes * 60);
+        easyRate = easyTotSeconds / 500;
+        easyWatts = 2.80 / Math.pow(easyRate, 3);
+
+        document.getElementById("easywatts").innerHTML = easyWatts.toFixed(1);
+    }
+
+    if (data[0] == "Looking Glass") {
+        easyTime = data[2].split(":");
+    }
+
+    if (data[0] == "The Sprint Reckoning") {
+        sprintTime = 1 / parseInt(data[2]) * 500;
+
+        sprintPace = sprintTime.toFixed(2).split(".");
+        sprintMinutes = sprintPace[0];
+        sprintSeconds = (sprintTime - sprintMinutes) * 60;
+        if (sprintSeconds < 10) {
+            sprintSeconds = "0" + sprintSeconds;
+        }
+        sprintSec = sprintSeconds.toFixed(0);
+        sprintPace = sprintMinutes + ":" + sprintSec;
+
+        document.getElementById("sprint500").innerHTML = sprintPace;
+
+        sprinttTotSeconds = parseInt(sprintSec) + parseInt(sprintPace[0] * 60);
+        sprintRate = sprintTotSeconds / 500;
+        sprintWatts = 2.80 / Math.pow(sprintRate, 3);
+
+        document.getElementById("sprintwatts").innerHTML = sprintWatts.toFixed(1);
     }
 }
 
