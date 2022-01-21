@@ -6,7 +6,7 @@ function collapse() {
     $('.collapse').collapse('hide');
 }
 
-for (var a = 1; a <= 20; a++) {
+for (var a = 1; a <= 22; a++) {
     var titleId = "title" + a;
     var WODtitleId = "WODtitle" + a;
 
@@ -167,6 +167,14 @@ document.getElementById("s19").addEventListener("click", function(event) {
 });
 
 document.getElementById("s20").addEventListener("click", function(event) {
+    newResult(event);
+});
+
+document.getElementById("s21").addEventListener("click", function(event) {
+    newResult(event);
+});
+
+document.getElementById("s22").addEventListener("click", function(event) {
     newResult(event);
 });
 
