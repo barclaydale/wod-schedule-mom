@@ -6,7 +6,7 @@ function collapse() {
     $('.collapse').collapse('hide');
 }
 
-for (var a = 1; a <= 17; a++) {
+for (var a = 1; a <= 20; a++) {
     var titleId = "title" + a;
     var WODtitleId = "WODtitle" + a;
 
@@ -157,6 +157,18 @@ document.getElementById("s17").addEventListener("click", function(event) {
     newResult(event);
 });
 
+document.getElementById("s18").addEventListener("click", function(event) {
+    newResult(event);
+});
+
+document.getElementById("s19").addEventListener("click", function(event) {
+    newResult(event);
+});
+
+document.getElementById("s20").addEventListener("click", function(event) {
+    newResult(event);
+});
+
 function addResult(event, num) {
 
     if (event.text.includes("%")) {
@@ -215,6 +227,53 @@ function addResult(event, num) {
     }
 
     document.getElementById("previous").appendChild(row);
+
+    if (data[0] == "Rowing 0.0") {
+        maxWatts = parseInt(data[2]);
+        modWatts = parseInt(data[2]) / 2;
+        
+
+        document.getElementById("maxwatts").innerHTML = maxWatts.toFixed(1);
+        document.getElementById("modwatts").innerHTML = modWatts.toFixed(1);
+
+        maxConstant = 2.80 / maxWatts;
+        maxPace = (Math.cbrt(maxConstant) * 500).toFixed(0);
+        maxMinutes = maxPace / 60;
+        maxSeconds = maxPace % 60;
+        maxPace = Math.floor(maxMinutes) + ":" + maxSeconds;
+
+        document.getElementById("max500").innerHTML = maxPace;
+
+        modConstant = 2.80 / modWatts;
+        modPace = (Math.cbrt(modConstant) * 500).toFixed(0);
+        modMinutes = modPace / 60;
+        modSeconds = modPace % 60;
+        modPace = Math.floor(modMinutes) + ":" + modSeconds;
+
+        document.getElementById("mod500").innerHTML = modPace;
+
+    }
+
+    if (data[0] == "The Reckoning") {
+        fastTime = 6 / parseInt(data[2]) * 500;
+
+        fastPace = fastTime.toFixed(2).split(".");
+        fastMinutes = fastPace[0];
+        fastSeconds = (fastTime - fastMinutes) * 60;
+        if (fastSeconds < 10) {
+            fastSeconds = "0" + fastSeconds;
+        }
+        fastSec = fastSeconds.toFixed(0);
+        fastPace = fastMinutes + ":" + fastSec;
+
+        document.getElementById("fast500").innerHTML = fastPace;
+
+        fastTotSeconds = parseInt(fastSec) + parseInt(fastPace[0] * 60);
+        fastTotSeconds /= 500;
+        fastWatts = 2.80 / Math.pow(fastTotSeconds, 3);
+
+        document.getElementById("fastwatts").innerHTML = fastWatts.toFixed(1);
+    }
 }
 
 // object literal holding data for option elements
