@@ -159,6 +159,7 @@ h5 b {
 .table {
     margin: 0 auto;
     justify-content: center;
+    width: 100%;
 }
 
 .table .col-8 {
