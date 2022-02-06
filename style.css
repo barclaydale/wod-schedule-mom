@@ -11,6 +11,29 @@ body {
 a {
     color: rgb(255, 157, 71);
 }
+
+.quote {
+    margin: auto;
+    font-size: 30px;
+}
+
+#overall {
+    padding-top: 100px;
+}
+
+.overall-progress {
+    height: 50px;
+    width: 110%;
+    color: rgb(255, 157, 71);
+    box-shadow: 2px 2px 15px grey;
+    border-radius: 15px;
+    background-color: rgb(255, 255, 252);
+}
+
+#overall-bar {
+    height: 50px;
+}
+
 .navigation {
     position: fixed;
     left: 0px;

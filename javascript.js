@@ -6,13 +6,6 @@ function collapse() {
     $('.collapse').collapse('hide');
 }
 
-for (var a = 1; a <= 22; a++) {
-    var titleId = "title" + a;
-    var WODtitleId = "WODtitle" + a;
-
-    document.getElementById(WODtitleId).innerHTML = document.getElementById(titleId).innerHTML;
-}
-
 var lift = ["RMDeadlift", "RMFrontSquat", "RMClean", "RMSnatch", "RMShoulderPress", "RMPushPress", "RMPushJerk", "RMThruster"];
 var count = [1, 3, 5];
 
@@ -26,6 +19,20 @@ var key = "0f4274-8917ec-d964fe-82271a-8ccd3c";
 var url = "https://cse204.work/todos";
 var num = 0;
 var easyTime = 0;
+var entries = 37;
+
+document.getElementById("overall-bar").style.width = "0%";
+
+for (var a = 1; a <= entries; a++) {
+    var titleId = "title" + a;
+    var WODtitleId = "WODtitle" + a;
+
+    if (a == 32) {
+        titleId = "title31";
+    }
+
+    document.getElementById(WODtitleId).innerHTML = document.getElementById(titleId).innerHTML;
+}
 
 var xhttp = new XMLHttpRequest();
 
@@ -178,11 +185,69 @@ document.getElementById("s22").addEventListener("click", function(event) {
     newResult(event);
 });
 
-function addResult(event, num) {
+document.getElementById("s23").addEventListener("click", function(event) {
+    newResult(event);
+});
 
+document.getElementById("s24").addEventListener("click", function(event) {
+    newResult(event);
+});
+
+document.getElementById("s25").addEventListener("click", function(event) {
+    newResult(event);
+});
+
+document.getElementById("s26").addEventListener("click", function(event) {
+    newResult(event);
+});
+
+document.getElementById("s27").addEventListener("click", function(event) {
+    newResult(event);
+});
+
+document.getElementById("s28").addEventListener("click", function(event) {
+    newResult(event);
+});
+
+document.getElementById("s29").addEventListener("click", function(event) {
+    newResult(event);
+});
+
+document.getElementById("s30").addEventListener("click", function(event) {
+    newResult(event);
+});
+
+document.getElementById("s31").addEventListener("click", function(event) {
+    newResult(event);
+});
+
+document.getElementById("s32").addEventListener("click", function(event) {
+    newResult(event);
+});
+
+document.getElementById("s33").addEventListener("click", function(event) {
+    newResult(event);
+});
+
+document.getElementById("s34").addEventListener("click", function(event) {
+    newResult(event);
+});
+
+document.getElementById("s35").addEventListener("click", function(event) {
+    newResult(event);
+});
+
+document.getElementById("s36").addEventListener("click", function(event) {
+    newResult(event);
+});
+
+document.getElementById("s37").addEventListener("click", function(event) {
+    newResult(event);
+});
+
+function addResult(event, num) {
     if (event.text.includes("%")) {
         data = event.text.split("%");
-        console.log(data[0]);
     }
     if (data[2] == '' || data[2] == "0") {
         return;
@@ -285,24 +350,33 @@ function addResult(event, num) {
 
         document.getElementById("fastwatts").innerHTML = fastWatts.toFixed(1);
 
-        easySeconds = (easyTime[0] * 60) + (easyTime[1] * 1);
-        easySeconds -= (1600 * fastTotSeconds / 500);
-        easySeconds = easySeconds / 800 * 500;
-        easyMinutes = (easySeconds / 60).toFixed(0);
-        easySeconds = (easySeconds - (easyMinutes * 60));
-        easyPace = easyMinutes + ":" + easySeconds.toFixed(0);
+        if (easyTime == 0) {} 
+        else {
+            easyTotSeconds= (easyTime[0] * 60) + (easyTime[1] * 1);
+            easyTotSeconds -= (1600 * fastTotSeconds / 500);
+            easySeconds = easyTotSeconds / 800 * 500;
+            easyMinutes = Math.floor(easySeconds / 60);
+            easySeconds = (easySeconds - (easyMinutes * 60)).toFixed(0);
+            if (easySeconds < 10) {
+                easySec = "0" + easySeconds;
+            } else {
+                easySec = easySeconds;
+            }
+            easyPace = easyMinutes + ":" + easySec;
 
-        document.getElementById("easy500").innerHTML = easyPace;
+            document.getElementById("easy500").innerHTML = easyPace;
 
-        easyTotSeconds = parseInt(easySeconds) + parseInt(easyMinutes * 60);
-        easyRate = easyTotSeconds / 500;
-        easyWatts = 2.80 / Math.pow(easyRate, 3);
+            easyTotSeconds = parseInt(easySeconds) + parseInt(easyMinutes * 60);
+            easyRate = easyTotSeconds / 500;
+            easyWatts = 2.80 / Math.pow(easyRate, 3);
 
-        document.getElementById("easywatts").innerHTML = easyWatts.toFixed(1);
+            document.getElementById("easywatts").innerHTML = easyWatts.toFixed(1);
+        }
     }
 
     if (data[0] == "Looking Glass") {
         easyTime = data[2].split(":");
+        console.log(easyTime);
     }
 
     if (data[0] == "The Sprint Reckoning") {
@@ -310,21 +384,25 @@ function addResult(event, num) {
 
         sprintPace = sprintTime.toFixed(2).split(".");
         sprintMinutes = sprintPace[0];
-        sprintSeconds = (sprintTime - sprintMinutes) * 60;
+        sprintSeconds = ((sprintTime - sprintMinutes) * 60).toFixed(0);
         if (sprintSeconds < 10) {
-            sprintSeconds = "0" + sprintSeconds;
+            sprintSec = "0" + sprintSeconds;
+        } else {
+            sprintSec = sprintSeconds;
         }
-        sprintSec = sprintSeconds.toFixed(0);
         sprintPace = sprintMinutes + ":" + sprintSec;
 
         document.getElementById("sprint500").innerHTML = sprintPace;
 
-        sprinttTotSeconds = parseInt(sprintSec) + parseInt(sprintPace[0] * 60);
+        sprintTotSeconds = parseInt(sprintSeconds) + parseInt(sprintMinutes * 60);
         sprintRate = sprintTotSeconds / 500;
         sprintWatts = 2.80 / Math.pow(sprintRate, 3);
 
         document.getElementById("sprintwatts").innerHTML = sprintWatts.toFixed(1);
     }
+
+    document.getElementById("overall-bar").style.width = num / entries * 100 + "%";
+    console.log(num / entries * 100);
 }
 
 // object literal holding data for option elements
@@ -846,7 +924,7 @@ function addScore(event) {
         pair = [data[1], percentage];
         heavy.push(pair);
     }
-    console.log(pair);
+    // console.log(pair);
 
     // Calculate category percentage
 
