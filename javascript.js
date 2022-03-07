@@ -19,7 +19,7 @@ var key = "0f4274-8917ec-d964fe-82271a-8ccd3c";
 var url = "https://cse204.work/todos";
 var num = 0;
 var easyTime = 0;
-var entries = 37;
+var entries = 41;
 
 document.getElementById("overall-bar").style.width = "0%";
 
@@ -245,6 +245,22 @@ document.getElementById("s37").addEventListener("click", function(event) {
     newResult(event);
 });
 
+document.getElementById("s38").addEventListener("click", function(event) {
+    newResult(event);
+});
+
+document.getElementById("s39").addEventListener("click", function(event) {
+    newResult(event);
+});
+
+document.getElementById("s40").addEventListener("click", function(event) {
+    newResult(event);
+});
+
+document.getElementById("s41").addEventListener("click", function(event) {
+    newResult(event);
+});
+
 function addResult(event, num) {
     if (event.text.includes("%")) {
         data = event.text.split("%");
@@ -328,6 +344,8 @@ function addResult(event, num) {
 
         document.getElementById("mod500").innerHTML = modPace;
 
+        document.getElementById("modPace").innerHTML = modPace + " / " + modWatts.toFixed(1);
+        document.getElementById("maxPace").innerHTML = maxPace + " / " + maxWatts.toFixed(1);
     }
 
     if (data[0] == "The Reckoning") {
@@ -371,7 +389,11 @@ function addResult(event, num) {
             easyWatts = 2.80 / Math.pow(easyRate, 3);
 
             document.getElementById("easywatts").innerHTML = easyWatts.toFixed(1);
+
+            document.getElementById("easyPace").innerHTML = easyPace + " / " + easyWatts.toFixed(1);
         }
+
+        document.getElementById("fastPace").innerHTML = fastPace + " / " + fastWatts.toFixed(1);
     }
 
     if (data[0] == "Looking Glass") {
@@ -399,6 +421,8 @@ function addResult(event, num) {
         sprintWatts = 2.80 / Math.pow(sprintRate, 3);
 
         document.getElementById("sprintwatts").innerHTML = sprintWatts.toFixed(1);
+
+        document.getElementById("sprintPace").innerHTML = sprintPace + " / " + sprintWatts.toFixed(1);
     }
 
     document.getElementById("overall-bar").style.width = num / entries * 100 + "%";
