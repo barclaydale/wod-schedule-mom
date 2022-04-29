@@ -19,7 +19,7 @@ var key = "0f4274-8917ec-d964fe-82271a-8ccd3c";
 var url = "https://cse204.work/todos";
 var num = 0;
 var easyTime = 0;
-var entries = 41;
+var entries = 43;
 
 document.getElementById("overall-bar").style.width = "0%";
 
@@ -261,6 +261,14 @@ document.getElementById("s41").addEventListener("click", function(event) {
     newResult(event);
 });
 
+document.getElementById("s42").addEventListener("click", function(event) {
+    newResult(event);
+});
+
+document.getElementById("s43").addEventListener("click", function(event) {
+    newResult(event);
+});
+
 function addResult(event, num) {
     if (event.text.includes("%")) {
         data = event.text.split("%");
@@ -454,7 +462,7 @@ var Select_List_Data = {
             text: ['Grace', 'Diane', 'Elizabeth', 'Karen', 'Fight Gone Bad', 'Jack', 'The Chief', '12-9-6-3: Power Snatch, Burpee', 'Open 21.2 Scaled']
         },
         heavy: {
-            text: ['Isabel', 'DT', 'Open 13.1', 'Open 14.3', 'Regional 11.3', '2008 Games: Deadlift and Burpees', '4 RFT: Row 300m, 20-15-10-5 Push Press', '5 RFT: Row 500m, 7 Thrusters', 'FT: 20 Front Squats, 30 Box Jumps, 40 KBS, 50 Wall Balls', '5 RFT: 7 Cleans, 14 KBS']
+            text: ['Isabel', 'DT', 'Open 13.1', 'Open 14.3', 'Regional 11.3', '2008 Games: Deadlift and Burpees', '4 RFT: Row 300m, 20-15-10-5 Push Press', '5 RFT: Row 500m, 7 Thrusters', 'FT: 20 Front Squats, 30 Box Jumps, 40 KBS, 50 Wall Balls', 'Clean Swings']
         }
     }    
 };
