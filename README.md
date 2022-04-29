@@ -1,1 +1,1 @@
-# wod-schedule
+# wod-schedule-mom
